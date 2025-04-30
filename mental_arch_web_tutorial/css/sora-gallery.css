@@ -1,0 +1,474 @@
+/* Sora Gallery Styling for Cognitive Blueprint Builder */
+
+/* Image Container Styling */
+.sora-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    margin: 1.5rem 0;
+    box-shadow: var(--card-shadow);
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
+    min-height: 240px; /* Minimum height instead of fixed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sora-image-container.animated {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Hero container specific styling */
+.animation-container .sora-image-container {
+    height: 400px;
+    margin: 0 auto;
+    max-width: 800px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sora-image {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    transition: transform 0.5s ease;
+}
+
+.sora-image-container:hover .sora-image {
+    transform: scale(1.03);
+}
+
+/* Image Caption Styling */
+.sora-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.5) 60%, rgba(0,0,0,0));
+    color: #fff;
+    border-radius: 0 0 16px 16px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    pointer-events: none; /* Ensures the caption doesn't interfere with interactions */
+    z-index: 10;
+}
+
+.animation-container .sora-caption {
+    padding: 2.5rem 2rem 2rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.6) 70%, rgba(0,0,0,0));
+}
+
+.sora-image-container:hover .sora-caption {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.sora-caption h4 {
+    color: #fff;
+    font-weight: 700;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    letter-spacing: 0.5px;
+}
+
+.animation-container .sora-caption h4 {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+}
+
+.sora-caption p {
+    color: rgba(255,255,255,0.95);
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    margin-bottom: 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    max-width: 90%;
+}
+
+/* Meme Text Styling */
+.meme-text {
+    position: absolute;
+    text-align: center;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000;
+    padding: 0.5rem;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.meme-text.top {
+    top: 20px;
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
+}
+
+.meme-text.bottom {
+    bottom: 20px;
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
+}
+
+.animation-container .meme-text.top {
+    top: 40px;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+.animation-container .meme-text.bottom {
+    bottom: 40px;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+/* Sora Gallery Layout - Using better flexbox structure */
+.sora-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+/* Gallery Item Sizing */
+.sora-image-container {
+    flex: 1 1 100%; /* Default for mobile: full width */
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Allow images to display side by side with varying widths for visual interest */
+.sora-image-container.half-width {
+    max-height: 280px;
+}
+
+.sora-image-container.tall {
+    height: 420px;
+}
+
+.sora-image-container.short {
+    height: 260px;
+}
+
+/* Staggered layout for visual interest */
+.staggered-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.staggered-gallery .sora-image-container:nth-child(odd) {
+    margin-top: 2rem;
+}
+
+/* Extra styling for content cards */
+.content-card .sora-image-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Animation Classes */
+.fade-in-up {
+    animation: fadeInUp 0.8s forwards;
+    opacity: 0;
+}
+
+.fade-in-right {
+    animation: fadeInRight 0.8s forwards;
+    opacity: 0;
+}
+
+.fade-in-left {
+    animation: fadeInLeft 0.8s forwards;
+    opacity: 0;
+}
+
+.zoom-in {
+    animation: zoomIn 0.8s forwards;
+    opacity: 0;
+}
+
+/* Interactive hover effects for desktop */
+@media (min-width: 992px) {
+    .sora-gallery {
+        perspective: 1000px;
+    }
+    
+    .sora-image-container {
+        transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    }
+    
+    .sora-image-container:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        z-index: 5;
+    }
+    
+    .sora-image-container:hover .meme-text {
+        transform: scale(1.05);
+        text-shadow: 
+            3px 3px 0 #000,
+            -3px -3px 0 #000,
+            3px -3px 0 #000,
+            -3px 3px 0 #000,
+            0 3px 0 #000,
+            3px 0 0 #000,
+            0 -3px 0 #000,
+            -3px 0 0 #000;
+    }
+    
+    /* Create a staggered, more interesting layout */
+    .sora-gallery .sora-image-container:nth-child(3n+1) {
+        transform: perspective(1000px) rotateY(-1deg);
+    }
+    
+    .sora-gallery .sora-image-container:nth-child(3n+2) {
+        transform: perspective(1000px) rotateY(1deg);
+    }
+    
+    .sora-gallery .sora-image-container:nth-child(3n+3) {
+        transform: perspective(1000px) rotateX(1deg);
+    }
+
+    /* Reset transforms on hover */
+    .sora-gallery .sora-image-container:hover {
+        transform: perspective(1000px) translateY(-10px) scale(1.02);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Mobile Friendly Adjustments */
+@media (max-width: 575px) {
+    .sora-image-container {
+        height: 280px;
+    }
+    
+    .animation-container .sora-image-container {
+        height: 300px;
+        margin: 0 -10px;
+        width: calc(100% + 20px);
+    }
+    
+    .meme-text.top,
+    .meme-text.bottom {
+        padding: 0.3rem;
+    }
+    
+    .sora-caption h4 {
+        font-size: 1.2rem;
+    }
+    
+    .sora-caption p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 576px) {
+    .sora-image-container {
+        flex: 0 1 calc(50% - 1rem); /* Two items per row on small tablets */
+    }
+    
+    .sora-image-container.full-width {
+        flex: 0 1 100%;
+    }
+}
+
+/* Fix for animation container */
+.animation-container .sora-image-container {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .sora-gallery {
+        justify-content: space-between;
+    }
+    
+    /* Create a more dynamic layout for desktop */
+    .sora-image-container {
+        flex: 0 1 calc(33.333% - 1.5rem); /* Three items per row by default */
+        transition: flex 0.3s ease-in-out;
+    }
+    
+    .sora-image-container.full-width {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+    
+    .sora-image-container.half-width {
+        flex: 0 1 calc(50% - 1rem);
+        max-width: calc(50% - 1rem);
+    }
+    
+    /* Alternating sizes for visual interest */
+    .sora-gallery.alternating .sora-image-container:nth-child(4n+1),
+    .sora-gallery.alternating .sora-image-container:nth-child(4n+4) {
+        flex: 0 1 calc(40% - 1rem);
+    }
+    
+    .sora-gallery.alternating .sora-image-container:nth-child(4n+2),
+    .sora-gallery.alternating .sora-image-container:nth-child(4n+3) {
+        flex: 0 1 calc(60% - 1rem);
+    }
+}
+
+@media (min-width: 992px) {
+    /* Even more refined desktop layout */
+    .content-card .sora-gallery {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        width: calc(100% + 2rem);
+    }
+    
+    .sora-image-container:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--card-shadow-hover);
+        z-index: 2;
+    }
+}
+
+/* Special effect for meme images */
+.meme-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.meme-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+    transform: skewX(-25deg);
+    transition: all 0.75s ease;
+    z-index: 2;
+}
+
+.meme-effect:hover::before {
+    animation: shine 1.5s;
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+/* Placeholder styling */
+.sora-placeholder {
+    background: linear-gradient(120deg, #e0e0e0, #f5f5f5, #e0e0e0);
+    background-size: 200% 200%;
+    animation: placeholderGradient 2.5s ease infinite;
+    height: 100%;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.animation-container .sora-placeholder {
+    background: linear-gradient(120deg, rgba(75, 108, 183, 0.1), rgba(75, 108, 183, 0.2), rgba(75, 108, 183, 0.1));
+    border: 1px solid rgba(75, 108, 183, 0.2);
+}
+
+@keyframes placeholderGradient {
+    0% {background-position: 0% 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0% 50%}
+}
+
+body.dark-theme .sora-placeholder {
+    background: linear-gradient(120deg, #2a2a2a, #3a3a3a, #2a2a2a);
+    background-size: 200% 200%;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme .animation-container .sora-placeholder {
+    background: linear-gradient(120deg, rgba(75, 108, 183, 0.2), rgba(75, 108, 183, 0.3), rgba(75, 108, 183, 0.2));
+    border: 1px solid rgba(75, 108, 183, 0.3);
+}
+
+.placeholder-icon {
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: rgba(75, 108, 183, 0.6);
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+body.dark-theme .placeholder-icon {
+    color: rgba(75, 108, 183, 0.5);
+}

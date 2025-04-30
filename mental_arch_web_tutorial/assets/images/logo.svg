@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle with Blueprint Grid -->
+  <circle cx="100" cy="100" r="90" fill="rgba(75, 108, 183, 0.1)" stroke="#4b6cb7" stroke-width="2" stroke-dasharray="4 2"/>
+  
+  <!-- Blueprint Grid Lines -->
+  <path d="M30 100 L170 100" stroke="rgba(75, 108, 183, 0.3)" stroke-width="1" stroke-dasharray="4 2"/>
+  <path d="M100 30 L100 170" stroke="rgba(75, 108, 183, 0.3)" stroke-width="1" stroke-dasharray="4 2"/>
+  
+  <!-- Diagonal Grid Lines -->
+  <path d="M40 40 L160 160" stroke="rgba(75, 108, 183, 0.2)" stroke-width="1" stroke-dasharray="4 2"/>
+  <path d="M160 40 L40 160" stroke="rgba(75, 108, 183, 0.2)" stroke-width="1" stroke-dasharray="4 2"/>
+  
+  <!-- Brain Outline -->
+  <path d="M100 160 C140 160 165 130 165 100 C165 70 150 50 130 50 C110 50 105 70 100 70 C95 70 90 50 70 50 C50 50 35 70 35 100 C35 130 60 160 100 160 Z" 
+        fill="none" 
+        stroke="#4b6cb7" 
+        stroke-width="3" 
+        stroke-linecap="round"/>
+  
+  <!-- Left Hemisphere Connections -->
+  <circle cx="60" cy="90" r="8" fill="#5d7dcb" opacity="0.8"/>
+  <circle cx="75" cy="70" r="6" fill="#5d7dcb" opacity="0.8"/>
+  <circle cx="55" cy="120" r="7" fill="#5d7dcb" opacity="0.8"/>
+  
+  <!-- Connection Lines -->
+  <path d="M60 90 Q70 75 75 70" stroke="#4b6cb7" stroke-width="2" fill="none"/>
+  <path d="M60 90 Q55 105 55 120" stroke="#4b6cb7" stroke-width="2" fill="none"/>
+  
+  <!-- Right Hemisphere Connections -->
+  <circle cx="140" cy="90" r="8" fill="#ff9d00" opacity="0.8"/>
+  <circle cx="125" cy="70" r="6" fill="#ff9d00" opacity="0.8"/>
+  <circle cx="145" cy="120" r="7" fill="#ff9d00" opacity="0.8"/>
+  
+  <!-- Connection Lines -->
+  <path d="M140 90 Q130 75 125 70" stroke="#4b6cb7" stroke-width="2" fill="none"/>
+  <path d="M140 90 Q145 105 145 120" stroke="#4b6cb7" stroke-width="2" fill="none"/>
+  
+  <!-- Cross Hemisphere Connection -->
+  <path d="M60 90 Q100 50 140 90" stroke="#4b6cb7" stroke-width="2" fill="none" stroke-dasharray="4 2"/>
+  <path d="M55 120 Q100 150 145 120" stroke="#4b6cb7" stroke-width="2" fill="none" stroke-dasharray="4 2"/>
+  
+  <!-- Measurement Lines/Engineering Elements -->
+  <path d="M25 175 L65 175" stroke="#4b6cb7" stroke-width="1"/>
+  <path d="M25 175 L25 180" stroke="#4b6cb7" stroke-width="1"/>
+  <path d="M65 175 L65 180" stroke="#4b6cb7" stroke-width="1"/>
+  <text x="45" y="190" font-family="monospace" font-size="8" fill="#4b6cb7">40px</text>
+  
+  <path d="M135 175 L175 175" stroke="#4b6cb7" stroke-width="1"/>
+  <path d="M135 175 L135 180" stroke="#4b6cb7" stroke-width="1"/>
+  <path d="M175 175 L175 180" stroke="#4b6cb7" stroke-width="1"/>
+  <text x="155" y="190" font-family="monospace" font-size="8" fill="#4b6cb7">40px</text>
+  
+  <!-- Central Gear -->
+  <circle cx="100" cy="100" r="12" fill="rgba(75, 108, 183, 0.1)" stroke="#4b6cb7" stroke-width="2"/>
+  
+  <!-- Gear Teeth -->
+  <path d="M100 88 L100 82" stroke="#4b6cb7" stroke-width="2"/>
+  <path d="M106 89 L109 84" stroke="#4b6cb7" stroke-width="2"/>
+  <path d="M111 94 L117 91" stroke="#4b6cb7" stroke-width="2"/>
+  <path d="M112 100 L118 100" stroke="#4b6cb7" stroke-width="2"/>
+  <path d="M111 106 L117 109" stroke="#4b6cb7" stroke-width="2"/>
+  <path d="M106 111 L109 116" stroke="#4b6cb7" stroke-width="2"/>
+  <path d="M100 112 L100 118" stroke="#4b6cb7" stroke-width="2"/>
+  <path d="M94 111 L91 116" stroke="#4b6cb7" stroke-width="2"/>
+  <path d="M89 106 L84 109" stroke="#4b6cb7" stroke-width="2"/>
+  <path d="M88 100 L82 100" stroke="#4b6cb7" stroke-width="2"/>
+  <path d="M89 94 L84 91" stroke="#4b6cb7" stroke-width="2"/>
+  <path d="M94 89 L91 84" stroke="#4b6cb7" stroke-width="2"/>
+  
+  <!-- Central Hub -->
+  <circle cx="100" cy="100" r="5" fill="#4b6cb7"/>
+</svg>

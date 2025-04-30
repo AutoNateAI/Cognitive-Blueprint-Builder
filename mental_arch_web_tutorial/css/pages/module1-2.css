@@ -1,0 +1,199 @@
+/* Module 1.2 Specific Styling */
+
+/* Component Types Styling */
+.component-type {
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    border-left: 5px solid var(--primary-color);
+}
+
+.component-type:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.component-type h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.component-type.thoughts {
+    border-left-color: #4b6cb7;
+}
+
+.component-type.emotions {
+    border-left-color: #ff9d00;
+}
+
+.component-type.beliefs {
+    border-left-color: #4CAF50;
+}
+
+.component-type.habits {
+    border-left-color: #9C27B0;
+}
+
+.component-type.values {
+    border-left-color: #2196F3;
+}
+
+/* Component List Styling */
+.component-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.component-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.1);
+}
+
+.component-list li strong {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+body.dark-theme .component-list li {
+    border-bottom-color: rgba(255,255,255,0.1);
+}
+
+/* Taxonomy Building Steps */
+.taxonomy-steps {
+    counter-reset: step-counter;
+    list-style: none;
+    padding-left: 0;
+    margin: 1.5rem 0;
+}
+
+.taxonomy-steps li {
+    position: relative;
+    padding-left: 3rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.taxonomy-steps li::before {
+    content: counter(step-counter);
+    counter-increment: step-counter;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.taxonomy-steps li strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+/* Pattern Analysis Box */
+.pattern-analysis {
+    background: linear-gradient(135deg, rgba(75, 108, 183, 0.1), rgba(255, 157, 0, 0.1));
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.pattern-analysis h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.pattern-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.pattern-list li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.pattern-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* Component Carousel */
+.component-carousel {
+    margin: 2rem 0;
+}
+
+.component-carousel .carousel-inner {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+.component-carousel .carousel-item {
+    padding: 2rem;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.component-carousel .carousel-indicators {
+    bottom: -40px;
+}
+
+.component-carousel .carousel-indicators button {
+    background-color: var(--primary-color);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+    opacity: 0.5;
+}
+
+.component-carousel .carousel-indicators button.active {
+    opacity: 1;
+}
+
+body.dark-theme .component-carousel .carousel-indicators button {
+    background-color: #fff;
+}
+
+/* Dark mode adjustments */
+body.dark-theme .component-type {
+    background-color: rgba(42, 42, 42, 0.7);
+}
+
+body.dark-theme .pattern-analysis {
+    background: linear-gradient(135deg, rgba(75, 108, 183, 0.2), rgba(255, 157, 0, 0.2));
+}
+
+/* Pulse animation for component counters */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse-animation {
+    animation: pulse 0.5s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .pulse-animation {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}

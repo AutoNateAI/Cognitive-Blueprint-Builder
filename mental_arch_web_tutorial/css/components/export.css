@@ -1,0 +1,131 @@
+/* Export Component Styles */
+
+/* Export button */
+.export-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.export-btn i {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.export-btn:hover i {
+    color: var(--primary-color);
+}
+
+/* Restart button */
+.restart-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.restart-btn i {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.restart-btn:hover i {
+    color: #dc3545; /* Bootstrap danger color */
+}
+
+/* Export modal */
+.modal-content {
+    background-color: var(--card-background);
+    color: var(--text-color);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-footer {
+    border-top: 1px solid var(--border-color);
+}
+
+.modal-title {
+    color: var(--secondary-color);
+}
+
+body.dark-theme .modal-title {
+    color: var(--text-color);
+}
+
+/* Form elements in modal */
+.modal .form-check-label {
+    cursor: pointer;
+}
+
+.modal .form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Export options */
+.export-option {
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.export-option:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-color: var(--primary-color);
+}
+
+body.dark-theme .export-option:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.export-option.selected {
+    border-color: var(--primary-color);
+    background-color: rgba(75, 108, 183, 0.1);
+}
+
+/* Loading state for export */
+.export-loading {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 0.5rem;
+}
+
+body.dark-theme .export-loading {
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top-color: var(--primary-color);
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Success state */
+.export-success {
+    color: #28a745;
+    margin-right: 0.5rem;
+}
+
+/* Error state */
+.export-error {
+    color: #dc3545;
+    margin-right: 0.5rem;
+}

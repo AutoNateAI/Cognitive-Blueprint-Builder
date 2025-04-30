@@ -1,0 +1,563 @@
+/* Module 2.2 Specific Styling */
+
+/* Flow Patterns */
+.flow-container {
+    position: relative;
+    height: 300px;
+    margin: 2rem 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(75, 108, 183, 0.1), rgba(255, 255, 255, 0));
+    border: 1px solid rgba(75, 108, 183, 0.2);
+    overflow: hidden;
+}
+
+.flow-node {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    box-shadow: var(--card-shadow);
+    z-index: 2;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.flow-node:hover {
+    transform: scale(1.1);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.flow-node i {
+    font-size: 1.8rem;
+}
+
+.flow-node.attention {
+    background: linear-gradient(135deg, #e91e63, #ad1457);
+}
+
+.flow-node.energy {
+    background: linear-gradient(135deg, #ff9800, #e65100);
+}
+
+.flow-node.willpower {
+    background: linear-gradient(135deg, #673ab7, #4527a0);
+}
+
+.flow-node.memory {
+    background: linear-gradient(135deg, #2196f3, #0d47a1);
+}
+
+.flow-node.creativity {
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+}
+
+.flow-node.emotional {
+    background: linear-gradient(135deg, #9c27b0, #6a1b9a);
+}
+
+.flow-line {
+    position: absolute;
+    height: 4px;
+    background: rgb(75, 108, 183, 0.5);
+    transform-origin: left center;
+    z-index: 1;
+}
+
+.flow-line.bidirectional {
+    background: linear-gradient(90deg, rgb(75, 108, 183, 0.6), rgb(106, 27, 154, 0.6));
+}
+
+.flow-line.branching {
+    background: linear-gradient(90deg, rgb(75, 108, 183, 0.6), rgb(46, 125, 50, 0.6));
+}
+
+.flow-line.merging {
+    background: linear-gradient(90deg, rgb(75, 108, 183, 0.6), rgb(173, 20, 87, 0.6));
+}
+
+.flow-particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    z-index: 3;
+}
+
+/* Flow Pattern Cards */
+.flow-pattern-card {
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    border-left: 5px solid var(--primary-color);
+    height: 100%;
+}
+
+.flow-pattern-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.flow-pattern-card h4 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.flow-pattern-card h4 i {
+    margin-right: 0.75rem;
+    opacity: 0.9;
+}
+
+.flow-pattern-card p {
+    margin-bottom: 1rem;
+}
+
+.flow-pattern-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.flow-pattern-card ul li {
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.flow-pattern-card ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.flow-pattern-card.directed {
+    border-left-color: #2196f3;
+}
+
+.flow-pattern-card.bidirectional {
+    border-left-color: #9c27b0;
+}
+
+.flow-pattern-card.branching {
+    border-left-color: #4caf50;
+}
+
+.flow-pattern-card.merging {
+    border-left-color: #ff9800;
+}
+
+/* Resource Exchange Section */
+.exchange-simulator {
+    background: linear-gradient(135deg, rgba(75, 108, 183, 0.1), rgba(255, 255, 255, 0));
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border: 1px solid rgba(75, 108, 183, 0.2);
+}
+
+.exchange-simulator h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.exchange-simulator .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.exchange-simulator .exchange-visualization {
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.exchange-rate {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+}
+
+.exchange-rate:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.exchange-rate .resource-icons {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    flex: 0 0 100px;
+}
+
+.exchange-rate .resource-icons i {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.exchange-rate .arrow {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    color: var(--text-muted);
+}
+
+.exchange-rate .description {
+    flex: 1;
+}
+
+.exchange-rate .roi {
+    flex: 0 0 70px;
+    text-align: right;
+    font-weight: 600;
+}
+
+.exchange-rate .roi.positive {
+    color: #4caf50;
+}
+
+.exchange-rate .roi.negative {
+    color: #f44336;
+}
+
+.exchange-rate .roi.neutral {
+    color: #ff9800;
+}
+
+/* Flow Efficiency Section */
+.flow-comparison {
+    display: flex;
+    margin: 2rem 0;
+}
+
+.flow-type {
+    flex: 1;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.flow-type h4 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.flow-type .flow-animation {
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.flow-type ul {
+    text-align: left;
+    list-style: none;
+    padding-left: 0;
+}
+
+.flow-type ul li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.flow-type ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.smooth-flow {
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.1), rgba(255, 255, 255, 0));
+    border: 1px solid rgba(33, 150, 243, 0.2);
+}
+
+.smooth-flow h4 {
+    color: #2196f3;
+}
+
+.turbulent-flow {
+    background: linear-gradient(135deg, rgba(244, 67, 54, 0.1), rgba(255, 255, 255, 0));
+    border: 1px solid rgba(244, 67, 54, 0.2);
+}
+
+.turbulent-flow h4 {
+    color: #f44336;
+}
+
+/* Heatmap Section */
+.heatmap-container {
+    height: 400px;
+    position: relative;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.05);
+    margin: 2rem 0;
+    overflow: hidden;
+}
+
+.heatmap-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 30%, rgba(233, 30, 99, 0.6) 0%, rgba(233, 30, 99, 0) 50%),
+               radial-gradient(circle at 70% 60%, rgba(156, 39, 176, 0.6) 0%, rgba(156, 39, 176, 0) 60%),
+               radial-gradient(circle at 20% 80%, rgba(33, 150, 243, 0.5) 0%, rgba(33, 150, 243, 0) 45%);
+    opacity: 0.7;
+}
+
+.component-node {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.component-node:hover {
+    transform: scale(1.1);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.component-node i {
+    font-size: 1.5rem;
+}
+
+.component-label {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 3;
+}
+
+.resource-magnet, .resource-desert {
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--card-shadow);
+}
+
+.resource-magnet {
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.1), rgba(255, 255, 255, 0));
+    border: 1px solid rgba(33, 150, 243, 0.2);
+}
+
+.resource-desert {
+    background: linear-gradient(135deg, rgba(255, 152, 0, 0.1), rgba(255, 255, 255, 0));
+    border: 1px solid rgba(255, 152, 0, 0.2);
+}
+
+.resource-magnet h5, .resource-desert h5 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.resource-magnet h5 i, .resource-desert h5 i {
+    margin-right: 0.75rem;
+}
+
+.resource-magnet h5 {
+    color: #2196f3;
+}
+
+.resource-desert h5 {
+    color: #ff9800;
+}
+
+.resource-magnet ul, .resource-desert ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.resource-magnet ul li, .resource-desert ul li {
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.resource-magnet ul li::before, .resource-desert ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.resource-magnet ul li::before {
+    color: #2196f3;
+}
+
+.resource-desert ul li::before {
+    color: #ff9800;
+}
+
+/* Flow State Designer */
+.flow-state-designer {
+    background: linear-gradient(135deg, rgba(75, 108, 183, 0.1), rgba(255, 255, 255, 0));
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border: 1px solid rgba(75, 108, 183, 0.2);
+}
+
+.designer-controls {
+    margin-bottom: 1.5rem;
+}
+
+.resource-allocation {
+    margin-bottom: 1rem;
+}
+
+.resource-allocation label {
+    display: flex;
+    align-items: center;
+}
+
+.resource-allocation label i {
+    margin-right: 0.5rem;
+}
+
+.resource-allocation .form-range {
+    margin-top: 0.25rem;
+}
+
+.flow-canvas {
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Personal Flow Mapping */
+.flow-pattern-list {
+    border-radius: 12px;
+    background-color: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.flow-pattern-list h5 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.pattern-item {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.pattern-item:last-child {
+    border-bottom: none;
+}
+
+.pattern-item .title {
+    font-weight: 600;
+}
+
+.pattern-item .description {
+    font-size: 0.95rem;
+    margin-top: 0.25rem;
+    color: var(--text-muted);
+}
+
+/* Dark Mode Adjustments */
+body.dark-theme .flow-pattern-card,
+body.dark-theme .exchange-rate,
+body.dark-theme .flow-pattern-list {
+    background-color: rgba(42, 42, 42, 0.7);
+}
+
+body.dark-theme .flow-type ul li::before,
+body.dark-theme .resource-magnet ul li::before,
+body.dark-theme .resource-desert ul li::before {
+    color: inherit;
+}
+
+body.dark-theme .pattern-item {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .flow-canvas,
+body.dark-theme .exchange-simulator .exchange-visualization,
+body.dark-theme .flow-type .flow-animation,
+body.dark-theme .heatmap-container {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Animation Effects */
+@keyframes flowParticle {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0) scale(0.8);
+    }
+    20% {
+        opacity: 1;
+        transform: translate(20%, 0) scale(1);
+    }
+    80% {
+        opacity: 1;
+        transform: translate(80%, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(100%, 0) scale(0.8);
+    }
+}
+
+.animate-flow .flow-particle {
+    animation: flowParticle 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(75, 108, 183, 0.4);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(75, 108, 183, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(75, 108, 183, 0);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}

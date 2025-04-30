@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompts Guide | Cognitive Blueprint Builder</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components/navigation.css">
+    <link rel="stylesheet" href="css/components/theme.css">
+    <link rel="stylesheet" href="css/components/export.css">
+    <link rel="stylesheet" href="css/pages/module.css">
+    <link rel="stylesheet" href="css/pages/ai-prompts.css">
+    <link rel="stylesheet" href="css/sora-gallery.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler border-0" type="button" id="sidebarToggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.svg" width="30" height="30" alt="Cognitive Blueprint Builder Logo" class="d-inline-block align-top">
+                <span class="ms-2 d-none d-sm-inline-block">Cognitive Blueprint Builder</span>
+            </a>
+            <div class="d-flex align-items-center">
+                <button class="btn theme-toggle-btn" id="themeToggle">
+                    <i class="bi bi-sun-fill light-icon"></i>
+                    <i class="bi bi-moon-fill dark-icon"></i>
+                </button>
+                <button class="btn export-btn ms-2" id="exportBtn">
+                    <i class="bi bi-download"></i>
+                </button>
+                <button class="btn restart-btn ms-2" id="restartBtn">
+                    <i class="bi bi-arrow-counterclockwise"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar and Main Content -->
+    <div class="wrapper">
+        <!-- Sidebar Navigation -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h5>Tutorial Navigation</h5>
+                <button type="button" id="sidebarCollapseIn" class="btn">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <div class="progress-indicator">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small class="text-muted">0% Complete</small>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="index.html">Introduction</a>
+                </li>
+                <!-- Phase 1 -->
+                <li>
+                    <a href="#phase1Submenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        Phase 1: Foundations
+                    </a>
+                    <ul class="collapse list-unstyled" id="phase1Submenu">
+                        <li>
+                            <a href="module1-1.html">1.1: Welcome to Mental Architecture</a>
+                        </li>
+                        <li>
+                            <a href="module1-2.html">1.2: Creating Your Mental Taxonomy</a>
+                        </li>
+                        <li>
+                            <a href="module1-3.html">1.3: Hierarchies, Networks, & Mental Models</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Phase 2 -->
+                <li>
+                    <a href="#phase2Submenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        Phase 2: Dynamics
+                    </a>
+                    <ul class="collapse list-unstyled" id="phase2Submenu">
+                        <li>
+                            <a href="module2-1.html">2.1: Understanding Mental Resources</a>
+                        </li>
+                        <li>
+                            <a href="module2-2.html">2.2: Resource Flows and Exchanges</a>
+                        </li>
+                        <li>
+                            <a href="module2-3.html">2.3: Cycles, Leaks, and Generators</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Phase 3 -->
+                <li>
+                    <a href="#phase3Submenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        Phase 3: Integration
+                    </a>
+                    <ul class="collapse list-unstyled" id="phase3Submenu">
+                        <li>
+                            <a href="module3-1.html">3.1: Creating Your Unified Mental Resource Map</a>
+                        </li>
+                        <li>
+                            <a href="module3-2.html">3.2: High-Leverage Points and Optimization</a>
+                        </li>
+                        <li>
+                            <a href="module3-3.html">3.3: From Map to Action</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Additional Pages -->
+                <li class="active">
+                    <a href="ai-prompts.html">AI Prompts Guide</a>
+                </li>
+                <li>
+                    <a href="conclusion.html">Conclusion</a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <p class="small text-muted">&copy; 2025 AutoNate</p>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <!-- Overlay for sidebar on mobile -->
+            <div class="overlay"></div>
+            
+            <!-- Main Content Area -->
+            <div class="container-fluid px-md-5 py-5">
+                <!-- Module Content -->
+                <section class="module-section">
+                    <div class="module-header mb-4">
+                        <h1 class="display-5 fw-bold mb-3">AI Prompts Guide</h1>
+                    </div>
+                    
+                    <!-- AI Prompts Introduction - Hero Section -->
+                    <div class="ai-hero mb-5">
+                        <div class="ai-hero-content">
+                            <h2 class="mb-3">Leverage AI to Amplify Your Mental Architecture Insights</h2>
+                            <p class="lead mb-4">Use artificial intelligence as your thinking partner to analyze your mental resource map, identify hidden patterns, and develop precision strategies for optimization.</p>
+                            <p>The prompts in this guide are designed to extract maximum value from your mental architecture map by engaging AI systems in specialized analysis tasks. Each prompt follows a carefully engineered pattern to elicit the most useful insights.</p>
+                        </div>
+                        <i class="bi bi-robot ai-floating-icon ai-icon-1"></i>
+                        <i class="bi bi-braces-asterisk ai-floating-icon ai-icon-2"></i>
+                        <i class="bi bi-cpu ai-floating-icon ai-icon-3"></i>
+                    </div>
+                    
+                    <!-- AI-Enhanced Analysis Visualization -->
+                    <div class="sora-image-container fade-in-up mb-5" data-delay="0.2">
+                        <div class="sora-placeholder">
+                            <i class="bi bi-braces placeholder-icon"></i>
+                        </div>
+                        <div class="sora-caption">
+                            <h4>AI-Enhanced Mental Architecture Analysis</h4>
+                            <p>Visualization of how AI systems can identify non-obvious patterns and insights in your mental resource map</p>
+                        </div>
+                    </div>
+                    
+                    <!-- How to Use AI Prompts Guide -->
+                    <div class="usage-guide mb-5">
+                        <h3 class="mb-4">How to Use These AI Prompts</h3>
+                        
+                        <div class="usage-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h5>Complete Your Mental Architecture Map</h5>
+                                <p>Finish your mapping process to ensure you have comprehensive data to feed into the AI system. The more detailed your map, the better the AI insights will be.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="usage-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h5>Select the Right Prompt Type</h5>
+                                <p>Choose from analysis prompts (for understanding patterns), optimization prompts (for identifying leverage points), or action plan prompts (for implementation strategies).</p>
+                            </div>
+                        </div>
+                        
+                        <div class="usage-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h5>Copy and Customize the Prompt</h5>
+                                <p>Replace the placeholder text with your specific mental architecture details. Be precise and include as much relevant information as possible.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="usage-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h5>Paste into GPT-4 or Claude</h5>
+                                <p>These prompts are optimized for advanced AI models. Alternating between different models can provide complementary perspectives.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="usage-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h5>Integrate AI Insights into Your Blueprint</h5>
+                                <p>Incorporate valuable AI-generated insights back into your master mental architecture blueprint, creating a feedback loop for continuous evolution.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-primary mt-4">
+                            <i class="bi bi-lightbulb-fill me-2"></i>
+                            <strong>Pro tip:</strong> Use AI insights as a starting point for deeper exploration, not as definitive answers. Your own understanding of your mental architecture is the ultimate authority.
+                        </div>
+                    </div>
+                    
+                    <!-- Prompt Categories Header -->
+                    <h2 class="mb-4 fade-in-up" style="--delay: 0.3s">Prompt Categories</h2>
+                    
+                    <!-- Prompt Categories -->
+                    <div class="row mb-5">
+                        <div class="col-md-4 mb-4 fade-in-up" style="--delay: 0.4s">
+                            <div class="card h-100 prompt-card">
+                                <div class="sora-placeholder" style="height: 160px; border-radius: 10px 10px 0 0;">
+                                    <i class="bi bi-diagram-3 placeholder-icon"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title"><i class="bi bi-diagram-3 me-2 text-primary"></i>Analysis Prompts</h3>
+                                    <p class="card-text">Deep-dive into patterns, connections, and blind spots in your mental architecture to understand the hidden structure of your thinking.</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0">
+                                    <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#analysisPrompts" aria-expanded="false" aria-controls="analysisPrompts">
+                                        View Prompts <i class="bi bi-chevron-down ms-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 mb-4 fade-in-up" style="--delay: 0.5s">
+                            <div class="card h-100 prompt-card">
+                                <div class="sora-placeholder" style="height: 160px; border-radius: 10px 10px 0 0;">
+                                    <i class="bi bi-gear-wide-connected placeholder-icon"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title"><i class="bi bi-gear-wide-connected me-2 text-success"></i>Optimization Prompts</h3>
+                                    <p class="card-text">Identify high-leverage intervention points and develop precision strategies for maximizing efficiency in your mental resource allocation.</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0">
+                                    <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse" data-bs-target="#optimizationPrompts" aria-expanded="false" aria-controls="optimizationPrompts">
+                                        View Prompts <i class="bi bi-chevron-down ms-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 mb-4 fade-in-up" style="--delay: 0.6s">
+                            <div class="card h-100 prompt-card">
+                                <div class="sora-placeholder" style="height: 160px; border-radius: 10px 10px 0 0;">
+                                    <i class="bi bi-check2-square placeholder-icon"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title"><i class="bi bi-check2-square me-2 text-danger"></i>Action Plan Prompts</h3>
+                                    <p class="card-text">Translate insights into executable action steps with detailed implementation plans, success metrics, and accountability structures.</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0">
+                                    <button class="btn btn-outline-danger" type="button" data-bs-toggle="collapse" data-bs-target="#actionPrompts" aria-expanded="false" aria-controls="actionPrompts">
+                                        View Prompts <i class="bi bi-chevron-down ms-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Analysis Prompts Collapse -->
+                    <div class="collapse mb-5" id="analysisPrompts">
+                        <div class="card card-body">
+                            <h4 class="mb-4">Analysis Prompt Templates</h4>
+                            
+                            <div class="prompt-template mb-4">
+                                <h5>Pattern Identification</h5>
+                                <div class="prompt-box">
+                                    <p class="prompt-text">I've created a mental resource map that includes the following categories, hierarchies, and connections:<br>
+                                    [PASTE YOUR MENTAL RESOURCE MAP DETAILS HERE]<br><br>
+                                    Please analyze this map and identify any recurring patterns or themes. What mental models seem to dominate my thinking? Are there any feedback loops or cyclical patterns that might be important to understand?</p>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            
+                            <div class="prompt-template mb-4">
+                                <h5>Resource Flow Analysis</h5>
+                                <div class="prompt-box">
+                                    <p class="prompt-text">Based on my mental resource map:<br>
+                                    [PASTE YOUR MENTAL RESOURCE MAP DETAILS HERE]<br><br>
+                                    Please analyze how mental resources (attention, energy, motivation, etc.) flow through my system. Where do resources seem to accumulate? Where might there be bottlenecks or congestion? Are there any areas that seem to be resource-starved?</p>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            
+                            <div class="prompt-template">
+                                <h5>Blind Spot Detection</h5>
+                                <div class="prompt-box">
+                                    <p class="prompt-text">Here is my mental resource map:<br>
+                                    [PASTE YOUR MENTAL RESOURCE MAP DETAILS HERE]<br><br>
+                                    Based on this map, what potential blind spots might I have in my thinking or perception? Are there any cognitive biases that might be influencing my mental architecture? What aspects of my mental functioning might I be overlooking or underestimating?</p>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Optimization Prompts Collapse -->
+                    <div class="collapse mb-5" id="optimizationPrompts">
+                        <div class="card card-body">
+                            <h4 class="mb-4">Optimization Prompt Templates</h4>
+                            
+                            <div class="prompt-template mb-4">
+                                <h5>High-Leverage Points</h5>
+                                <div class="prompt-box">
+                                    <p class="prompt-text">Based on my mental resource map:<br>
+                                    [PASTE YOUR MENTAL RESOURCE MAP DETAILS HERE]<br><br>
+                                    Please identify 3-5 high-leverage points where small changes might lead to significant improvements. For each point, explain why it's influential and what specific interventions might be most effective.</p>
+                                    <button class="btn btn-sm btn-outline-success copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            
+                            <div class="prompt-template mb-4">
+                                <h5>Resource Reallocation</h5>
+                                <div class="prompt-box">
+                                    <p class="prompt-text">Looking at my mental resource map:<br>
+                                    [PASTE YOUR MENTAL RESOURCE MAP DETAILS HERE]<br><br>
+                                    Please suggest how I might reallocate mental resources for better efficiency and effectiveness. Which areas are receiving too many resources? Which might benefit from more attention or energy? How can I optimize the flow of resources in my system?</p>
+                                    <button class="btn btn-sm btn-outline-success copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            
+                            <div class="prompt-template">
+                                <h5>System Optimization</h5>
+                                <div class="prompt-box">
+                                    <p class="prompt-text">Based on my mental resource map:<br>
+                                    [PASTE YOUR MENTAL RESOURCE MAP DETAILS HERE]<br><br>
+                                    Please provide a systems-thinking approach to optimizing my mental architecture. How might I reduce friction in my thinking processes? How can I enhance positive feedback loops and mitigate negative ones? What structural changes might lead to better overall functioning?</p>
+                                    <button class="btn btn-sm btn-outline-success copy-btn">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Plan Prompts Collapse -->
+                    <div class="collapse mb-5" id="actionPrompts">
+                        <div class="card card-body">
+                            <h4 class="mb-4">Action Plan Prompt Templates</h4>
+                            
+                            <div class="prompt-template mb-4">
+                                <h5>30-Day Implementation Plan</h5>
+                                <div class="prompt-box">
+                                    <p class="prompt-text">Based on my mental resource map and the high-leverage points identified:<br>
+                                    [PASTE YOUR MENTAL RESOURCE MAP AND KEY INSIGHTS HERE]<br><br>
+                                    Please create a 30-day implementation plan with specific, actionable steps I can take to improve my mental architecture. Include daily or weekly practices, checkpoints for measuring progress, and potential obstacles I might face along with strategies to overcome them.</p>
+                                    <button class="btn btn-sm btn-outline-danger copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            
+                            <div class="prompt-template mb-4">
+                                <h5>Habit Formation Strategy</h5>
+                                <div class="prompt-box">
+                                    <p class="prompt-text">Based on my mental resource map:<br>
+                                    [PASTE YOUR MENTAL RESOURCE MAP DETAILS HERE]<br><br>
+                                    Please suggest 3-5 key habits I could develop to strengthen positive aspects of my mental architecture and address weaknesses. For each habit, provide a specific implementation strategy using habit stacking, environmental design, or other evidence-based approaches to habit formation.</p>
+                                    <button class="btn btn-sm btn-outline-danger copy-btn">Copy</button>
+                                </div>
+                            </div>
+                            
+                            <div class="prompt-template">
+                                <h5>Progress Tracking Framework</h5>
+                                <div class="prompt-box">
+                                    <p class="prompt-text">Based on my goals for optimizing my mental architecture:<br>
+                                    [PASTE YOUR GOALS AND KEY AREAS FOR IMPROVEMENT HERE]<br><br>
+                                    Please create a comprehensive framework for tracking my progress over the next 3 months. Include specific metrics or indicators I should monitor, methods for tracking changes, reflection prompts for weekly reviews, and criteria for determining success.</p>
+                                    <button class="btn btn-sm btn-outline-danger copy-btn">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tips for using AI effectively -->
+                    <div class="content-card mb-5">
+                        <h2 class="section-header">Tips for Effective AI Interaction</h2>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4><i class="bi bi-check-circle-fill text-success me-2"></i>Best Practices</h4>
+                                <ul class="list-group list-group-flush mb-4">
+                                    <li class="list-group-item">Be specific and detailed when describing your mental architecture</li>
+                                    <li class="list-group-item">Include concrete examples from your life to help the AI understand your context</li>
+                                    <li class="list-group-item">Ask follow-up questions to clarify or deepen the AI's responses</li>
+                                    <li class="list-group-item">Critically evaluate AI suggestions before implementing them</li>
+                                    <li class="list-group-item">Use multiple prompts to explore different perspectives on your mental architecture</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <h4><i class="bi bi-x-circle-fill text-danger me-2"></i>Common Pitfalls</h4>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Being too vague or abstract in your descriptions</li>
+                                    <li class="list-group-item">Accepting AI suggestions without critical reflection</li>
+                                    <li class="list-group-item">Focusing only on weaknesses instead of a balanced view of your mental architecture</li>
+                                    <li class="list-group-item">Overlooking the role of emotions in your mental resource map</li>
+                                    <li class="list-group-item">Trying to implement too many changes at once</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation Buttons -->
+                    <div class="module-navigation d-flex justify-content-between">
+                        <a href="module3-3.html" class="btn btn-outline-primary">
+                            <i class="bi bi-arrow-left me-2"></i> Back to Module 3.3
+                        </a>
+                        <a href="conclusion.html" class="btn btn-primary">
+                            Go to Conclusion <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Footer -->
+            <footer class="mt-auto py-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="mb-0">&copy; 2025 AutoNate - Cognitive Blueprint Builder</p>
+                        </div>
+                        <div class="col-md-6 text-md-end">
+                            <p class="mb-0">
+                                <a href="#" class="text-decoration-none">Privacy Policy</a> | 
+                                <a href="#" class="text-decoration-none">Terms of Use</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Restart Confirmation Modal -->
+    <div class="modal fade" id="restartModal" tabindex="-1" aria-labelledby="restartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="restartModalLabel">Restart Tutorial</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to restart the tutorial? This will clear all your saved progress and responses.</p>
+                    <p class="text-danger"><strong>This action cannot be undone.</strong></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirmRestart">Yes, Restart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Export Modal -->
+    <div class="modal fade" id="exportModal" tabindex="-1" aria-labelledby="exportModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exportModalLabel">Export Your Progress</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>What would you like to export?</p>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="exportOption" id="exportCurrent" value="current" checked>
+                        <label class="form-check-label" for="exportCurrent">
+                            Current module only
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="exportOption" id="exportAll" value="all">
+                        <label class="form-check-label" for="exportAll">
+                            All completed modules
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="exportOption" id="exportAI" value="ai">
+                        <label class="form-check-label" for="exportAI">
+                            AI Prompts for my data
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="confirmExport">Export as PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    
+    <!-- Page Components -->
+    <script src="js/components/navigation.js"></script>
+    <script src="js/components/theme.js"></script>
+    <script src="js/components/export.js"></script>
+    <script src="js/pages/ai-prompts.js"></script>
+    
+    <!-- Add AI Prompts Sample Image -->
+    <script>
+        // Add placeholder SORA-like images for visual effect
+        document.addEventListener('DOMContentLoaded', function() {
+            // When each collapse section is shown, trigger a reflow of elements to ensure proper animation
+            document.querySelectorAll('.collapse').forEach(collapse => {
+                collapse.addEventListener('shown.bs.collapse', function() {
+                    window.dispatchEvent(new Event('resize'));
+                });
+            });
+            
+            // Initialize animations
+            const fadeElements = document.querySelectorAll('.fade-in-up');
+            fadeElements.forEach(element => {
+                element.classList.add('active');
+            });
+        });
+    </script>
+
+    <!-- AI Prompts Page Specific JS -->
+    <script>
+        $(document).ready(function() {
+            // Handle copy button functionality
+            $('.copy-btn').on('click', function() {
+                const promptText = $(this).siblings('.prompt-text').text();
+                navigator.clipboard.writeText(promptText).then(function() {
+                    // Change button text temporarily for feedback
+                    const $btn = $(this);
+                    const originalText = $btn.text();
+                    $btn.text('Copied!');
+                    $btn.addClass('btn-success').removeClass('btn-outline-primary btn-outline-success btn-outline-danger');
+                    
+                    setTimeout(function() {
+                        $btn.text(originalText);
+                        if ($btn.closest('.prompt-template').find('h5').text().includes('Pattern')) {
+                            $btn.addClass('btn-outline-primary').removeClass('btn-success');
+                        } else if ($btn.closest('.prompt-template').find('h5').text().includes('Leverage') ||
+                                   $btn.closest('.prompt-template').find('h5').text().includes('Resource') ||
+                                   $btn.closest('.prompt-template').find('h5').text().includes('System')) {
+                            $btn.addClass('btn-outline-success').removeClass('btn-success');
+                        } else {
+                            $btn.addClass('btn-outline-danger').removeClass('btn-success');
+                        }
+                    }, 1500);
+                }.bind(this));
+            });
+        });
+    </script>
+</body>
+</html>

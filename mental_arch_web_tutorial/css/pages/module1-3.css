@@ -1,0 +1,198 @@
+/* Module 1.3 Specific Styling */
+
+/* Structure Visualization Styling */
+.structure-visual {
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.structure-visual:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.structure-visual.hierarchy {
+    border-left: 5px solid #4b6cb7;
+    background: linear-gradient(135deg, rgba(75, 108, 183, 0.1), rgba(255, 255, 255, 0));
+}
+
+.structure-visual.network {
+    border-left: 5px solid #ff9d00;
+    background: linear-gradient(135deg, rgba(255, 157, 0, 0.1), rgba(255, 255, 255, 0));
+}
+
+.structure-visual.models {
+    border-left: 5px solid #4CAF50;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(255, 255, 255, 0));
+}
+
+/* Structure List Styling */
+.structure-list {
+    padding-left: 0;
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.structure-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.1);
+    display: flex;
+    align-items: flex-start;
+}
+
+.structure-list li i {
+    margin-right: 0.75rem;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-top: 0.2rem;
+}
+
+.structure-list li strong {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+    font-weight: 600;
+}
+
+body.dark-theme .structure-list li {
+    border-bottom-color: rgba(255,255,255,0.1);
+}
+
+/* Model Types Styling */
+.model-type {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--primary-color);
+}
+
+.model-type:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.model-type h5 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.model-type h5 i {
+    margin-right: 0.5rem;
+}
+
+.model-type.cause-effect {
+    border-left-color: #3949AB;
+}
+
+.model-type.zero-sum {
+    border-left-color: #E53935;
+}
+
+.model-type.growth {
+    border-left-color: #43A047;
+}
+
+.model-type.systems {
+    border-left-color: #00ACC1;
+}
+
+.model-type.probability {
+    border-left-color: #7B1FA2;
+}
+
+/* Interactive Exercise Styling */
+.archaeology-exercise {
+    background: linear-gradient(135deg, rgba(75, 108, 183, 0.1), rgba(255, 255, 255, 0));
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    position: relative;
+    border: 1px solid rgba(75, 108, 183, 0.2);
+    box-shadow: var(--card-shadow);
+}
+
+.archaeology-exercise h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.exercise-step {
+    margin-bottom: 1.5rem;
+    padding-left: 2.5rem;
+    position: relative;
+}
+
+.exercise-step::before {
+    content: attr(data-step);
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Structure Toggles */
+.structure-toggle {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.structure-toggle .btn {
+    flex: 1;
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+/* Animation Styles */
+.animate-shift {
+    transition: all 0.5s ease;
+}
+
+@keyframes shiftStructure {
+    0% { opacity: 0.3; transform: translateX(-20px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+.shifted-in {
+    animation: shiftStructure 0.5s forwards;
+}
+
+/* Dark Mode Adjustments */
+body.dark-theme .structure-visual.hierarchy {
+    background: linear-gradient(135deg, rgba(75, 108, 183, 0.2), rgba(24, 40, 72, 0.1));
+}
+
+body.dark-theme .structure-visual.network {
+    background: linear-gradient(135deg, rgba(255, 157, 0, 0.2), rgba(72, 36, 0, 0.1));
+}
+
+body.dark-theme .structure-visual.models {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(24, 56, 24, 0.1));
+}
+
+body.dark-theme .archaeology-exercise {
+    background: linear-gradient(135deg, rgba(75, 108, 183, 0.2), rgba(20, 20, 20, 0.2));
+    border-color: rgba(75, 108, 183, 0.3);
+}
+
+body.dark-theme .model-type {
+    background-color: rgba(42, 42, 42, 0.7);
+}

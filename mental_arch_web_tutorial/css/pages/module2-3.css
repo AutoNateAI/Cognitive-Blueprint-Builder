@@ -1,0 +1,465 @@
+/* Module 2.3 Specific Styling */
+
+/* Cycle Visualizations */
+.cycle-container {
+    position: relative;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(75, 108, 183, 0.1), rgba(255, 255, 255, 0));
+    border: 1px solid rgba(75, 108, 183, 0.2);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.cycle-visualization {
+    height: 300px;
+    position: relative;
+}
+
+.cycle-node {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.cycle-node:hover {
+    transform: scale(1.1);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.cycle-node i {
+    font-size: 2rem;
+}
+
+.cycle-node .node-label {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    color: var(--text-color);
+}
+
+.cycle-connector {
+    position: absolute;
+    height: 3px;
+    background: rgba(75, 108, 183, 0.6);
+    transform-origin: 0 0;
+    z-index: 1;
+}
+
+.cycle-connector.positive {
+    background: linear-gradient(90deg, #4caf50, #81c784);
+}
+
+.cycle-connector.negative {
+    background: linear-gradient(90deg, #f44336, #e57373);
+}
+
+.cycle-connector.neutral {
+    background: linear-gradient(90deg, #2196f3, #64b5f6);
+}
+
+.cycle-connector:after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: -4px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid rgba(75, 108, 183, 0.6);
+}
+
+.cycle-connector.positive:after {
+    border-left-color: #81c784;
+}
+
+.cycle-connector.negative:after {
+    border-left-color: #e57373;
+}
+
+.cycle-connector.neutral:after {
+    border-left-color: #64b5f6;
+}
+
+/* Cycle Types */
+.cycle-card {
+    border-radius: 12px;
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    height: 100%;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cycle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.cycle-card h4 {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.cycle-card h4 i {
+    margin-right: 0.75rem;
+}
+
+.cycle-card .example {
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.cycle-card.reinforcing-virtuous {
+    border-left: 5px solid #4caf50;
+}
+
+.cycle-card.reinforcing-vicious {
+    border-left: 5px solid #f44336;
+}
+
+.cycle-card.balancing {
+    border-left: 5px solid #2196f3;
+}
+
+.cycle-steps {
+    list-style: none;
+    counter-reset: cycle-counter;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.cycle-steps li {
+    counter-increment: cycle-counter;
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.cycle-steps li::before {
+    content: counter(cycle-counter);
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    font-size: 0.85rem;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.cycle-steps .arrow {
+    display: block;
+    color: var(--text-muted);
+    margin: 0.3rem 0 0.5rem 0.5rem;
+}
+
+/* Resource Leaks */
+.leak-detector {
+    background: linear-gradient(135deg, rgba(75, 108, 183, 0.1), rgba(255, 255, 255, 0));
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border: 1px solid rgba(75, 108, 183, 0.2);
+}
+
+.leak-container {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.leak-type {
+    margin-bottom: 2.5rem;
+}
+
+.leak-type h4 {
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.leak-type h4 i {
+    margin-right: 0.75rem;
+    font-size: 1.4rem;
+}
+
+.leak-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    background-color: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+}
+
+.leak-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.leak-item .leak-description {
+    flex: 1;
+}
+
+.leak-item .leak-impact {
+    flex: 0 0 100px;
+    display: flex;
+    align-items: center;
+}
+
+.leak-item .leak-impact .impact-bar {
+    flex: 1;
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.leak-item .leak-impact .impact-bar .fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff9800, #f44336);
+}
+
+.leak-item .leak-impact .impact-value {
+    flex: 0 0 30px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-align: right;
+}
+
+/* Generator Styles */
+.generator-builder {
+    background: linear-gradient(135deg, rgba(75, 108, 183, 0.1), rgba(255, 255, 255, 0));
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border: 1px solid rgba(75, 108, 183, 0.2);
+}
+
+.generator-type {
+    margin-bottom: 2rem;
+}
+
+.generator-type h4 {
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.generator-type h4 i {
+    margin-right: 0.75rem;
+    font-size: 1.4rem;
+}
+
+.generator-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    height: 100%;
+}
+
+.generator-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.generator-card h5 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.generator-card h5 i {
+    margin-right: 0.5rem;
+}
+
+.generator-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.generator-card ul li {
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.generator-card ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.generator-effectiveness {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.generator-effectiveness .stars {
+    color: #ffc107;
+}
+
+.generator-card.attention {
+    border-left: 5px solid #e91e63;
+}
+
+.generator-card.energy {
+    border-left: 5px solid #ff9800;
+}
+
+.generator-card.willpower {
+    border-left: 5px solid #673ab7;
+}
+
+.generator-card.creativity {
+    border-left: 5px solid #4caf50;
+}
+
+/* System Optimization Simulator */
+.system-simulator {
+    background: linear-gradient(135deg, rgba(75, 108, 183, 0.1), rgba(255, 255, 255, 0));
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border: 1px solid rgba(75, 108, 183, 0.2);
+}
+
+.system-simulator h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.simulator-controls {
+    margin-bottom: 1.5rem;
+}
+
+.simulator-visualization {
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.intervention-list {
+    list-style: none;
+    padding: 0;
+}
+
+.intervention-item {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.intervention-item:hover {
+    background-color: rgba(var(--primary-rgb), 0.05);
+    transform: translateY(-3px);
+}
+
+.intervention-item.active {
+    background-color: rgba(var(--primary-rgb), 0.1);
+    border-left: 3px solid var(--primary-color);
+}
+
+.intervention-item h5 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.intervention-item .description {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Complete Resource Map */
+.resource-map-final {
+    height: 400px;
+    position: relative;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.05);
+    margin: 2rem 0;
+    overflow: hidden;
+}
+
+/* Conclusion Section */
+.completion-section {
+    text-align: center;
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    background: linear-gradient(135deg, rgba(75, 108, 183, 0.1), rgba(255, 255, 255, 0));
+    border-radius: 12px;
+    border: 1px solid rgba(75, 108, 183, 0.2);
+}
+
+.completion-icon {
+    font-size: 4rem;
+    color: #4caf50;
+    margin-bottom: 1.5rem;
+}
+
+/* Dark Mode Adjustments */
+body.dark-theme .cycle-card,
+body.dark-theme .leak-item,
+body.dark-theme .generator-card,
+body.dark-theme .intervention-item {
+    background-color: rgba(42, 42, 42, 0.7);
+}
+
+body.dark-theme .cycle-card .example {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme .leak-item .leak-impact .impact-bar {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .simulator-visualization,
+body.dark-theme .resource-map-final {
+    background-color: rgba(255, 255, 255, 0.05);
+}

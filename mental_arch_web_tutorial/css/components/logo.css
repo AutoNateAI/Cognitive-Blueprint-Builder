@@ -1,0 +1,47 @@
+/* Logo Styling and Animations */
+
+.navbar-brand img {
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.navbar-brand:hover img {
+    transform: rotate(15deg) scale(1.1);
+}
+
+/* Enlarged logo styling for sidebar */
+.sidebar-logo {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.sidebar-logo:hover {
+    transform: rotate(15deg) scale(1.1);
+}
+
+/* Pulsing effect for the logo in dark mode */
+body.dark-theme .sidebar-logo {
+    animation: pulse-glow 3s infinite alternate;
+}
+
+@keyframes pulse-glow {
+    0% {
+        filter: drop-shadow(0 0 3px rgba(75, 108, 183, 0.4));
+    }
+    100% {
+        filter: drop-shadow(0 0 8px rgba(75, 108, 183, 0.8));
+    }
+}
+
+/* Special media queries for responsive logos */
+@media (max-width: 576px) {
+    .sidebar-logo {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+    }
+}
