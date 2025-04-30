@@ -11,21 +11,36 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Get full history for proper branch creation
       
-      - name: Copy web app to gh-pages branch
+      - name: List directory contents for debugging
+        run: ls -la
+      
+      - name: Deploy to GitHub Pages
         run: |
+          # Configure git
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
-          git checkout -b gh-pages || git checkout gh-pages
-          git pull origin gh-pages --rebase || true
           
-          # Remove all files except .git to ensure clean deployment
-          find . -mindepth 1 -maxdepth 1 -not -name '.git' -exec rm -rf {} \;
+          # Create and switch to orphan gh-pages branch (no history)
+          git checkout --orphan gh-pages
           
-          # Copy mental_arch_web_tutorial contents to root
-          cp -r mental_arch_web_tutorial/* .
+          # Clear everything except the web app directory
+          find . -maxdepth 1 ! -name 'mental_arch_web_tutorial' ! -name '.git' -exec rm -rf {} \;
           
-          # Add, commit and push
+          # Verify the web app directory exists
+          ls -la
+          
+          # Move web app contents to root
+          mv mental_arch_web_tutorial/* .
+          rm -rf mental_arch_web_tutorial/
+          
+          # Add all content to git
           git add .
-          git commit -m "Update GitHub Pages" || echo "No changes to commit"
+          
+          # Commit changes
+          git commit -m "Deploy to GitHub Pages" || echo "Nothing to commit"
+          
+          # Force push to gh-pages branch
           git push -f origin gh-pages
