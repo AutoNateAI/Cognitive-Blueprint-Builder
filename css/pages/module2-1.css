@@ -1,0 +1,299 @@
+/* Module 2.1 Specific Styling */
+
+/* Resource Cards */
+.resource-card {
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    border-left: 5px solid var(--primary-color);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.resource-card h4 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.resource-card h4 i {
+    margin-right: 0.75rem;
+    opacity: 0.9;
+}
+
+.resource-card .resource-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.resource-card .resource-list li {
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.resource-card .resource-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* Resource Card Colors */
+.resource-card.attention {
+    border-left-color: #e91e63;
+}
+
+.resource-card.energy {
+    border-left-color: #ff9800;
+}
+
+.resource-card.willpower {
+    border-left-color: #673ab7;
+}
+
+.resource-card.memory {
+    border-left-color: #2196f3;
+}
+
+.resource-card.creativity {
+    border-left-color: #4caf50;
+}
+
+.resource-card.emotional {
+    border-left-color: #9c27b0;
+}
+
+/* Resource Indicator */
+.resource-indicator {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.resource-indicator .label {
+    flex: 0 0 120px;
+    font-weight: 600;
+}
+
+.resource-indicator .bar {
+    flex: 1;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.resource-indicator .fill {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 1s ease-in-out;
+}
+
+.resource-indicator.attention .fill {
+    background-color: #e91e63;
+}
+
+.resource-indicator.energy .fill {
+    background-color: #ff9800;
+}
+
+.resource-indicator.willpower .fill {
+    background-color: #673ab7;
+}
+
+.resource-indicator.memory .fill {
+    background-color: #2196f3;
+}
+
+.resource-indicator.creativity .fill {
+    background-color: #4caf50;
+}
+
+.resource-indicator.emotional .fill {
+    background-color: #9c27b0;
+}
+
+.resource-indicator .value {
+    flex: 0 0 40px;
+    text-align: right;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* Tracking Tool */
+.tracking-tool {
+    background: linear-gradient(135deg, rgba(75, 108, 183, 0.1), rgba(255, 255, 255, 0));
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border: 1px solid rgba(75, 108, 183, 0.2);
+}
+
+.tracking-tool h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.tracking-tool .form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Daily Fluctuation Chart */
+.fluctuation-chart {
+    height: 300px;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.fluctuation-chart .time-axis {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.fluctuation-chart .time-point {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.fluctuation-chart .resource-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Resource Info Boxes */
+.resource-info {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--card-shadow);
+    border-top: 3px solid var(--primary-color);
+}
+
+.resource-info h5 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+
+.resource-info p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Dark Mode Adjustments */
+body.dark-theme .resource-card {
+    background-color: rgba(42, 42, 42, 0.7);
+}
+
+body.dark-theme .tracking-tool {
+    background: linear-gradient(135deg, rgba(75, 108, 183, 0.2), rgba(20, 20, 20, 0.2));
+    border-color: rgba(75, 108, 183, 0.3);
+}
+
+body.dark-theme .resource-indicator .bar {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .fluctuation-chart .resource-line {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Resource Flip Cards */
+.flip-card {
+    perspective: 1000px;
+    height: 280px;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner, 
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.flip-card-front {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    align-items: center;
+    text-align: center;
+}
+
+.flip-card-front i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    background-color: var(--primary-color);
+    color: white;
+    overflow-y: auto;
+}
+
+.flip-card.attention .flip-card-back {
+    background: linear-gradient(135deg, #e91e63, #ad1457);
+}
+
+.flip-card.energy .flip-card-back {
+    background: linear-gradient(135deg, #ff9800, #e65100);
+}
+
+.flip-card.willpower .flip-card-back {
+    background: linear-gradient(135deg, #673ab7, #4527a0);
+}
+
+.flip-card.memory .flip-card-back {
+    background: linear-gradient(135deg, #2196f3, #0d47a1);
+}
+
+.flip-card.creativity .flip-card-back {
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+}
+
+.flip-card.emotional .flip-card-back {
+    background: linear-gradient(135deg, #9c27b0, #6a1b9a);
+}

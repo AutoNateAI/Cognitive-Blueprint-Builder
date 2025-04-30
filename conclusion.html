@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conclusion | Cognitive Blueprint Builder</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components/navigation.css">
+    <link rel="stylesheet" href="css/components/theme.css">
+    <link rel="stylesheet" href="css/components/export.css">
+    <link rel="stylesheet" href="css/pages/module.css">
+    <link rel="stylesheet" href="css/pages/conclusion.css">
+    <link rel="stylesheet" href="css/sora-gallery.css">
+    <link rel="stylesheet" href="css/implementation-path-fix.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler border-0" type="button" id="sidebarToggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.svg" width="30" height="30" alt="Cognitive Blueprint Builder Logo" class="d-inline-block align-top">
+                <span class="ms-2 d-none d-sm-inline-block">Cognitive Blueprint Builder</span>
+            </a>
+            <div class="d-flex align-items-center">
+                <button class="btn theme-toggle-btn" id="themeToggle">
+                    <i class="bi bi-sun-fill light-icon"></i>
+                    <i class="bi bi-moon-fill dark-icon"></i>
+                </button>
+                <button class="btn export-btn ms-2" id="exportBtn">
+                    <i class="bi bi-download"></i>
+                </button>
+                <button class="btn restart-btn ms-2" id="restartBtn">
+                    <i class="bi bi-arrow-counterclockwise"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar and Main Content -->
+    <div class="wrapper">
+        <!-- Sidebar Navigation -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h5>Tutorial Navigation</h5>
+                <button type="button" id="sidebarCollapseIn" class="btn">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <div class="progress-indicator">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small class="text-muted">100% Complete</small>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="index.html">Introduction</a>
+                </li>
+                <!-- Phase 1 -->
+                <li>
+                    <a href="#phase1Submenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        Phase 1: Foundations
+                    </a>
+                    <ul class="collapse list-unstyled" id="phase1Submenu">
+                        <li>
+                            <a href="module1-1.html">1.1: Welcome to Mental Architecture</a>
+                        </li>
+                        <li>
+                            <a href="module1-2.html">1.2: Creating Your Mental Taxonomy</a>
+                        </li>
+                        <li>
+                            <a href="module1-3.html">1.3: Hierarchies, Networks, & Mental Models</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Phase 2 -->
+                <li>
+                    <a href="#phase2Submenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        Phase 2: Dynamics
+                    </a>
+                    <ul class="collapse list-unstyled" id="phase2Submenu">
+                        <li>
+                            <a href="module2-1.html">2.1: Understanding Mental Resources</a>
+                        </li>
+                        <li>
+                            <a href="module2-2.html">2.2: Resource Flows and Exchanges</a>
+                        </li>
+                        <li>
+                            <a href="module2-3.html">2.3: Cycles, Leaks, and Generators</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Phase 3 -->
+                <li>
+                    <a href="#phase3Submenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        Phase 3: Integration
+                    </a>
+                    <ul class="collapse list-unstyled" id="phase3Submenu">
+                        <li>
+                            <a href="module3-1.html">3.1: Creating Your Unified Mental Resource Map</a>
+                        </li>
+                        <li>
+                            <a href="module3-2.html">3.2: High-Leverage Points and Optimization</a>
+                        </li>
+                        <li>
+                            <a href="module3-3.html">3.3: From Map to Action</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Additional Pages -->
+                <li>
+                    <a href="ai-prompts.html">AI Prompts Guide</a>
+                </li>
+                <li class="active">
+                    <a href="conclusion.html">Conclusion</a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <p class="small text-muted">&copy; 2025 AutoNate</p>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <!-- Overlay for sidebar on mobile -->
+            <div class="overlay"></div>
+            
+            <!-- Main Content Area -->
+            <div class="container-fluid px-md-5 py-5">
+                <!-- Conclusion Content -->
+                <section class="module-section">
+                    <div class="module-header mb-4">
+                        <h1 class="display-5 fw-bold mb-3">Your Blueprint for Conscious Evolution</h1>
+                    </div>
+                    
+                    <!-- Hero Section -->
+                    <div class="conclusion-hero mb-5">
+                        <div class="conclusion-hero-content">
+                            <h2 class="mb-3">Congratulations, Consciousness Engineer!</h2>
+                            <p class="lead mb-4">You've completed an extraordinary journey from observer to architect of your own mind.</p>
+                            <div class="trophy-container">
+                                <div class="trophy-rays"></div>
+                                <div class="trophy-glow"></div>
+                                <i class="bi bi-trophy-fill trophy-icon"></i>
+                            </div>
+                            <p>This isn't just another personal development exercise you've completed—it's a fundamental shift in how you relate to your own consciousness. You've developed the eyes to see and the tools to work with your mind as the complex, dynamic system it truly is.</p>
+                        </div>
+                        <i class="bi bi-stars conclusion-floating-icon conclusion-icon-1"></i>
+                        <i class="bi bi-diagram-3 conclusion-floating-icon conclusion-icon-2"></i>
+                        <i class="bi bi-circle-square conclusion-floating-icon conclusion-icon-3"></i>
+                        <i class="bi bi-gear-wide-connected conclusion-floating-icon conclusion-icon-4"></i>
+                    </div>
+                    
+                    <!-- Blueprint Visualization -->
+                    <div class="sora-image-container fade-in-up mb-5" data-delay="0.2">
+                        <div class="sora-placeholder">
+                            <i class="bi bi-boxes placeholder-icon"></i>
+                        </div>
+                        <div class="sora-caption">
+                            <h4>Your Complete Mental Architecture Blueprint</h4>
+                            <p>A three-dimensional visualization of your mind's structure and flow, now evolved into a dynamic system</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Completion Message -->
+                    <div class="completion-card visible mb-5">
+                        <h2>The Journey You've Completed</h2>
+                        <p class="lead mb-4">Let's take a moment to acknowledge what you've accomplished:</p>
+                        <div class="row justify-content-center text-start">
+                            <div class="col-md-8">
+                                <ul class="future-list mb-0" style="padding-left: 1rem;">
+                                    <li class="visible">You've mapped the components of your mental architecture with precision</li>
+                                    <li class="visible">You've traced the flow of resources through this architecture</li>
+                                    <li class="visible">You've identified cycles, leaks, and generators in your system</li>
+                                    <li class="visible">You've integrated these insights into a unified blueprint</li>
+                                    <li class="visible">You've pinpointed high-leverage opportunities for optimization</li>
+                                    <li class="visible">You've created a strategic plan for consciously evolving your mind</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- What you've accomplished -->
+                    <div class="content-card mb-5">
+                        <h2 class="section-header">From Blueprint to Reality: Your Implementation Path</h2>
+                        
+                        <div class="sora-image-container fade-in-up mb-4">
+                            <div class="sora-placeholder">
+                                <i class="bi bi-signpost-split placeholder-icon"></i>
+                            </div>
+                            <div class="sora-caption">
+                                <h4>Implementation Roadmap</h4>
+                                <p>Key milestones and checkpoints in your journey from blueprint to realized mental architecture</p>
+                            </div>
+                        </div>
+                        
+                        <p class="lead">As you move from mapping to implementation, remember that consciousness engineering is an iterative process. Your blueprint isn't meant to be created once and followed blindly—it's a living document that evolves as you do.</p>
+                        
+                        <p>Your implementation journey will generally follow these phases:</p>
+                        
+                        <div class="row mt-4 fade-in-up" style="--delay: 0.3s">
+                            <div class="col-md-3 mb-4">
+                                <div class="card h-100 achievement-card">
+                                    <div class="card-body">
+                                        <div class="achievement-icon mb-3">
+                                            <i class="bi bi-1-circle"></i>
+                                        </div>
+                                        <h3 class="card-title">Phase 1</h3>
+                                        <h5 class="text-muted">Foundation Changes</h5>
+                                        <p class="card-text"><strong>Weeks 1-2:</strong> Implementing your highest-leverage interventions to create a stable base for further evolution.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 mb-4">
+                                <div class="card h-100 achievement-card">
+                                    <div class="card-body">
+                                        <div class="achievement-icon mb-3">
+                                            <i class="bi bi-2-circle"></i>
+                                        </div>
+                                        <h3 class="card-title">Phase 2</h3>
+                                        <h5 class="text-muted">System Adaptation</h5>
+                                        <p class="card-text"><strong>Weeks 3-8:</strong> Observing how your system responds and making calibration adjustments as needed.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 mb-4">
+                                <div class="card h-100 achievement-card">
+                                    <div class="card-body">
+                                        <div class="achievement-icon mb-3">
+                                            <i class="bi bi-3-circle"></i>
+                                        </div>
+                                        <h3 class="card-title">Phase 3</h3>
+                                        <h5 class="text-muted">Advanced Engineering</h5>
+                                        <p class="card-text"><strong>Months 3-6:</strong> Introducing more sophisticated changes as your consciousness engineering skills develop.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 mb-4">
+                                <div class="card h-100 achievement-card">
+                                    <div class="card-body">
+                                        <div class="achievement-icon mb-3">
+                                            <i class="bi bi-infinity"></i>
+                                        </div>
+                                        <h3 class="card-title">Phase 4</h3>
+                                        <h5 class="text-muted">Continuous Evolution</h5>
+                                        <p class="card-text"><strong>Ongoing:</strong> Maintaining an evolving blueprint that grows with your understanding and goals.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-primary mt-3">
+                            <i class="bi bi-lightbulb-fill me-2"></i>
+                            <strong>Pro tip:</strong> Your weekly worksheets and AI deep dive prompts are designed to support you through each of these phases, providing structure while allowing for organic growth.
+                        </div>
+                    </div>
+                    
+                    <!-- Using Your AI-Enhanced Worksheets -->
+                    <div class="content-card mb-5">
+                        <h2 class="section-header">Using Your AI-Enhanced Worksheets</h2>
+                        
+                        <div class="sora-image-container fade-in-up mb-4">
+                            <div class="sora-placeholder">
+                                <i class="bi bi-file-earmark-text-fill placeholder-icon"></i>
+                            </div>
+                            <div class="sora-caption">
+                                <h4>Example Worksheet with AI Prompts</h4>
+                                <p>Interactive elements highlighting the AI prompt sections to guide your continued exploration</p>
+                            </div>
+                        </div>
+                        
+                        <p class="lead">One of the most powerful aspects of your Consciousness Engineering toolkit is the integration of AI-assisted insight through your worksheets.</p>
+                        
+                        <h4 class="mt-4 mb-3">Here's how to get the most from this system:</h4>
+                        
+                        <div class="row mt-4">
+                            <div class="col-lg-6 mb-4 fade-in-left" style="--delay: 0.2s">
+                                <div class="next-step-card">
+                                    <div class="next-step-icon">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </div>
+                                    <div class="next-step-content">
+                                        <h4>1. Complete Your Module Worksheets</h4>
+                                        <p>After each module, fill out the corresponding worksheet with your personal data and observations.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 mb-4 fade-in-right" style="--delay: 0.2s">
+                                <div class="next-step-card">
+                                    <div class="next-step-icon">
+                                        <i class="bi bi-download"></i>
+                                    </div>
+                                    <div class="next-step-content">
+                                        <h4>2. Export and Save Your Data</h4>
+                                        <p>Save both digital and (optionally) physical copies of your completed worksheets for reference and later analysis.</p>
+                                        <button class="btn btn-primary" id="exportFullBtn">
+                                            <i class="bi bi-download me-2"></i> Export Blueprint Package
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-lg-6 mb-4 fade-in-left" style="--delay: 0.4s">
+                                <div class="next-step-card">
+                                    <div class="next-step-icon">
+                                        <i class="bi bi-robot"></i>
+                                    </div>
+                                    <div class="next-step-content">
+                                        <h4>3. Use the AI Deep Dive Prompts</h4>
+                                        <p>Copy the specialized prompts from each worksheet into ChatGPT or Claude, along with your personal data.</p>
+                                        <a href="ai-prompts.html" class="btn btn-outline-primary">
+                                            <i class="bi bi-arrow-right me-2"></i> Explore AI Prompts
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 mb-4 fade-in-right" style="--delay: 0.4s">
+                                <div class="next-step-card">
+                                    <div class="next-step-icon">
+                                        <i class="bi bi-lightbulb"></i>
+                                    </div>
+                                    <div class="next-step-content">
+                                        <h4>4. Explore the AI-Generated Insights</h4>
+                                        <p>Use the AI's observations as a starting point for deeper exploration, not as definitive answers.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-lg-6 mb-4 fade-in-up" style="--delay: 0.6s">
+                                <div class="next-step-card">
+                                    <div class="next-step-icon">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                    </div>
+                                    <div class="next-step-content">
+                                        <h4>5. Update Your Blueprint</h4>
+                                        <p>Incorporate valuable insights back into your master mental architecture blueprint.</p>
+                                        <button class="btn btn-outline-primary" id="viewActionPlanBtn">
+                                            <i class="bi bi-list-check me-2"></i> View Action Plan
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 mb-4 fade-in-up" style="--delay: 0.6s">
+                                <div class="next-step-card">
+                                    <div class="next-step-icon">
+                                        <i class="bi bi-people"></i>
+                                    </div>
+                                    <div class="next-step-content">
+                                        <h4>Join the Community</h4>
+                                        <p>Connect with others who are mapping and optimizing their mental architecture. Share insights and learn from diverse perspectives.</p>
+                                        <a href="#" class="btn btn-outline-primary">
+                                            <i class="bi bi-arrow-up-right-square me-2"></i> Join Community
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-info mt-4">
+                            <i class="bi bi-info-circle-fill me-2"></i>
+                            <strong>Pro tip:</strong> Alternate between Claude and ChatGPT for different perspectives on your data—each AI has different strengths and may notice different patterns.
+                        </div>
+                    </div>
+                    
+                    <!-- Future Opportunities -->
+                    <div class="content-card mb-5">
+                        <h2 class="section-header">Ongoing Resources and Support</h2>
+                        
+                        <div class="sora-image-container fade-in-up mb-4">
+                            <div class="sora-placeholder">
+                                <i class="bi bi-collection placeholder-icon"></i>
+                            </div>
+                            <div class="sora-caption">
+                                <h4>Resource Library with Categories</h4>
+                                <p>Access to specialized techniques, intervention databases, measurement tools, and research updates</p>
+                            </div>
+                        </div>
+                        
+                        <p class="lead">Your Cognitive Blueprint Builder pack includes ongoing resources to support your consciousness engineering practice.</p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <div class="card h-100 achievement-card fade-in-left" style="--delay: 0.2s">
+                                    <div class="card-body">
+                                        <div class="achievement-icon mb-3">
+                                            <i class="bi bi-journal-richtext"></i>
+                                        </div>
+                                        <h3 class="card-title">Advanced Learning</h3>
+                                        <h5 class="text-muted mb-3">Deepen Your Understanding</h5>
+                                        <p class="card-text mb-4">This next stage will take you deeper into advanced consciousness engineering concepts.</p>
+                                        <ul class="future-list">
+                                            <li>Emergent properties of complex mental systems</li>
+                                            <li>Second-order thinking applied to consciousness</li>
+                                            <li>Minimal effective intervention techniques</li>
+                                            <li>Design for emergence rather than direct control</li>
+                                            <li>Advanced pattern recognition across multiple scales</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="card h-100 achievement-card fade-in-right" style="--delay: 0.2s">
+                                    <div class="card-body">
+                                        <div class="achievement-icon mb-3">
+                                            <i class="bi bi-database-check"></i>
+                                        </div>
+                                        <h3 class="card-title">Resource Collection</h3>
+                                        <h5 class="text-muted mb-3">Tools and Databases</h5>
+                                        <p class="card-text mb-4">Your practice is supported by these evolving resources:</p>
+                                        <ul class="future-list">
+                                            <li>The Blueprint Library - Specialized mapping techniques for specific aspects of consciousness</li>
+                                            <li>The Intervention Database - Evidence-based approaches to mental architecture optimization</li>
+                                            <li>The Measurement Toolkit - Tools for assessing the effects of your engineering efforts</li>
+                                            <li>The Research Updates - Quarterly briefings on new developments in related fields</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-12 text-center fade-in-up" style="--delay: 0.4s">
+                                <h3 class="mt-3 mb-4">Coming Soon</h3>
+                                <div class="row justify-content-center">
+                                    <div class="col-md-8">
+                                        <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+                                            <span class="badge bg-primary rounded-pill p-2 px-3"><i class="bi bi-robot me-2"></i>Personal AI Coach</span>
+                                            <span class="badge bg-success rounded-pill p-2 px-3"><i class="bi bi-phone me-2"></i>Mobile Resource Tracking</span>
+                                            <span class="badge bg-info rounded-pill p-2 px-3"><i class="bi bi-people me-2"></i>Team Mapping Tools</span>
+                                            <span class="badge bg-warning rounded-pill p-2 px-3"><i class="bi bi-award me-2"></i>Certification Program</span>
+                                            <span class="badge bg-danger rounded-pill p-2 px-3"><i class="bi bi-pie-chart me-2"></i>Resource Analytics</span>
+                                            <span class="badge bg-secondary rounded-pill p-2 px-3"><i class="bi bi-book me-2"></i>Advanced Workshops</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Feedback section -->
+                    <div class="content-card mb-5">
+                        <h2 class="section-header">Share Your Feedback</h2>
+                        <p>We're constantly improving the Cognitive Blueprint Builder. Your thoughts and suggestions are invaluable to us!</p>
+                        
+                        <form class="mt-4">
+                            <div class="mb-3">
+                                <label for="feedbackRating" class="form-label">How would you rate your overall experience?</label>
+                                <select class="form-select" id="feedbackRating">
+                                    <option value="5">Excellent - Transformative experience</option>
+                                    <option value="4">Very Good - Highly valuable</option>
+                                    <option value="3">Good - Helpful but could be improved</option>
+                                    <option value="2">Fair - Some value but significant issues</option>
+                                    <option value="1">Poor - Not valuable</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="feedbackText" class="form-label">What specific feedback do you have for us?</label>
+                                <textarea class="form-control" id="feedbackText" rows="4" placeholder="Share your thoughts, suggestions, or any issues you encountered..."></textarea>
+                            </div>
+                            
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="contactConsent">
+                                <label class="form-check-label" for="contactConsent">I'm open to being contacted about my feedback</label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">
+                                <i class="bi bi-send me-2"></i> Submit Feedback
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- The Consciousness Engineer's Mindset -->
+                    <div class="content-card mb-5">
+                        <h2 class="section-header">The Consciousness Engineer's Mindset</h2>
+                        
+                        <div class="sora-image-container fade-in-up mb-4">
+                            <div class="sora-placeholder">
+                                <i class="bi bi-diagram-2 placeholder-icon"></i>
+                            </div>
+                            <div class="sora-caption">
+                                <h4>Evolution of Consciousness Through Engineering Perspective</h4>
+                                <p>Visualization of the transformation sequence showing how applying engineering principles evolves your mental landscape</p>
+                            </div>
+                        </div>
+                        
+                        <p class="lead">As you conclude this tutorial and begin applying its principles, remember that consciousness engineering is both a science and an art.</p>
+                        
+                        <p>The science gives you precision tools—maps, models, and methods—while the art comes in how you apply these tools to your unique mental architecture and goals.</p>
+                        
+                        <div class="row justify-content-center mt-4">
+                            <div class="col-lg-8">
+                                <h4 class="text-center mb-4">The most successful consciousness engineers cultivate a mindset that balances:</h4>
+                                
+                                <div class="d-flex justify-content-between flex-wrap mb-3">
+                                    <div class="mindset-pair fade-in-left" style="--delay: 0.2s">
+                                        <span class="badge bg-primary p-2">Precision</span>
+                                        <span class="mindset-with">with</span>
+                                        <span class="badge bg-info p-2">Curiosity</span>
+                                    </div>
+                                    
+                                    <div class="mindset-pair fade-in-right" style="--delay: 0.3s">
+                                        <span class="badge bg-primary p-2">Analysis</span>
+                                        <span class="mindset-with">with</span>
+                                        <span class="badge bg-info p-2">Intuition</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between flex-wrap mb-3">
+                                    <div class="mindset-pair fade-in-left" style="--delay: 0.4s">
+                                        <span class="badge bg-primary p-2">Structure</span>
+                                        <span class="mindset-with">with</span>
+                                        <span class="badge bg-info p-2">Flexibility</span>
+                                    </div>
+                                    
+                                    <div class="mindset-pair fade-in-right" style="--delay: 0.5s">
+                                        <span class="badge bg-primary p-2">Optimization</span>
+                                        <span class="mindset-with">with</span>
+                                        <span class="badge bg-info p-2">Appreciation</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-center mb-3">
+                                    <div class="mindset-pair fade-in-up" style="--delay: 0.6s">
+                                        <span class="badge bg-primary p-2">Control</span>
+                                        <span class="mindset-with">with</span>
+                                        <span class="badge bg-info p-2">Emergence</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-primary mt-4">
+                            <p class="mb-0"><strong>Your mind is the most sophisticated system you'll ever work with.</strong> It's also the system that generates your every experience. By mapping and consciously evolving this system, you're not just optimizing functionality—you're authoring the very quality of your existence.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Final message -->
+                    <div class="text-center mb-5 final-message">
+                        <h3>Welcome to the practice of consciousness engineering</h3>
+                        <p class="lead mb-4">Your evolution is now in your hands.</p>
+                        
+                        <div class="mb-5">
+                            <div class="d-flex justify-content-center flex-wrap gap-3 mb-4">
+                                <button class="btn btn-lg btn-primary" id="downloadPackageBtn">
+                                    <i class="bi bi-download me-2"></i> Download Complete Blueprint Package
+                                </button>
+                                <a href="module3-3.html" class="btn btn-lg btn-outline-primary">
+                                    <i class="bi bi-arrow-right me-2"></i> Strategic Consciousness Evolution
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-5 pt-4 border-top">
+                            <h5 class="mb-3">Special Thanks and Acknowledgements</h5>
+                            <p class="small text-muted">This tutorial draws on insights from many fields and thinkers including systems thinking, mental models, flow psychology, cognitive architecture, complexity theory, and resource allocation in cognitive systems.</p>
+                            <p class="small">And most importantly, it builds on the pioneering work in consciousness engineering developed by the AutoNate team through their Engineer of Consciousness framework.</p>
+                            <p class="lead mt-4">Thank you for joining us on this journey of discovery and evolution.</p>
+                            
+                            <div class="mt-4">
+                                <a href="index.html" class="btn btn-outline-secondary me-3">
+                                    <i class="bi bi-house-door me-2"></i> Return to Home
+                                </a>
+                                <button class="btn btn-outline-primary" id="shareExperienceBtn">
+                                    <i class="bi bi-share me-2"></i> Share Your Experience
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Footer -->
+            <footer class="mt-auto py-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="mb-0">&copy; 2025 AutoNate - Cognitive Blueprint Builder</p>
+                        </div>
+                        <div class="col-md-6 text-md-end">
+                            <p class="mb-0">
+                                <a href="#" class="text-decoration-none">Privacy Policy</a> | 
+                                <a href="#" class="text-decoration-none">Terms of Use</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Restart Confirmation Modal -->
+    <div class="modal fade" id="restartModal" tabindex="-1" aria-labelledby="restartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="restartModalLabel">Restart Tutorial</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to restart the tutorial? This will clear all your saved progress and responses.</p>
+                    <p class="text-danger"><strong>This action cannot be undone.</strong></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirmRestart">Yes, Restart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Export Modal -->
+    <div class="modal fade" id="exportModal" tabindex="-1" aria-labelledby="exportModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exportModalLabel">Export Your Progress</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>What would you like to export?</p>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="exportOption" id="exportCurrent" value="current">
+                        <label class="form-check-label" for="exportCurrent">
+                            Current module only
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="exportOption" id="exportAll" value="all" checked>
+                        <label class="form-check-label" for="exportAll">
+                            All completed modules
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="exportOption" id="exportAI" value="ai">
+                        <label class="form-check-label" for="exportAI">
+                            AI Prompts for my data
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="confirmExport">Export as PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Share Experience Modal -->
+    <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="shareModalLabel">Share Your Experience</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Share your Cognitive Blueprint Builder experience with others:</p>
+                    
+                    <div class="d-flex justify-content-center social-share-buttons">
+                        <button class="btn btn-outline-primary mx-2">
+                            <i class="bi bi-facebook"></i>
+                        </button>
+                        <button class="btn btn-outline-info mx-2">
+                            <i class="bi bi-twitter"></i>
+                        </button>
+                        <button class="btn btn-outline-success mx-2">
+                            <i class="bi bi-whatsapp"></i>
+                        </button>
+                        <button class="btn btn-outline-secondary mx-2">
+                            <i class="bi bi-envelope"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <label for="shareLink" class="form-label">Or copy this link:</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="shareLink" value="https://cognitiveblueprintbuilder.com/share/your-unique-id" readonly>
+                            <button class="btn btn-outline-secondary" type="button" id="copyLinkBtn">
+                                <i class="bi bi-clipboard"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    
+    <!-- Page Components -->
+    <script src="js/components/navigation.js"></script>
+    <script src="js/components/theme.js"></script>
+    <script src="js/components/export.js"></script>
+    <script src="js/pages/conclusion.js"></script>
+    
+    <!-- Activate Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Force all elements to be immediately visible for better user experience
+            // Initialize animations for fade elements
+            const fadeElements = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right');
+            fadeElements.forEach(element => {
+                element.classList.add('active');
+            });
+            
+            // Show completion card and final message
+            document.querySelector('.completion-card').classList.add('visible');
+            document.querySelector('.final-message').classList.add('visible');
+            
+            // Initialize animations for SORA containers
+            const soraContainers = document.querySelectorAll('.sora-image-container');
+            soraContainers.forEach(container => {
+                container.classList.add('visible');
+            });
+            
+            // Make sure all achievement cards are visible
+            const achievementCards = document.querySelectorAll('.achievement-card');
+            achievementCards.forEach(card => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            });
+            
+            // Make sure all future list items are visible
+            const futureItems = document.querySelectorAll('.future-list li');
+            futureItems.forEach(item => {
+                item.classList.add('visible');
+            });
+        });
+    </script>
+
+    <!-- Conclusion Page Specific JS -->
+    <script>
+        $(document).ready(function() {
+            // Export full blueprint button
+            $('#exportFullBtn').on('click', function() {
+                // Select the "All completed modules" option
+                $('#exportAll').prop('checked', true);
+                // Show the export modal
+                $('#exportModal').modal('show');
+            });
+            
+            // View Action Plan button
+            $('#viewActionPlanBtn').on('click', function() {
+                // This would typically pull from completed module data
+                // For the stub, we'll just alert
+                alert('In the full implementation, this would show your personalized action plan based on your module responses.');
+            });
+            
+            // Share experience button
+            $('#shareExperienceBtn').on('click', function() {
+                $('#shareModal').modal('show');
+            });
+            
+            // Copy link button
+            $('#copyLinkBtn').on('click', function() {
+                const linkInput = document.getElementById('shareLink');
+                linkInput.select();
+                document.execCommand('copy');
+                
+                // Show feedback
+                const $btn = $(this);
+                const originalIcon = $btn.html();
+                $btn.html('<i class="bi bi-check"></i>');
+                setTimeout(function() {
+                    $btn.html(originalIcon);
+                }, 1500);
+            });
+            
+            // Animate achievement cards
+            gsap.from('.achievement-card', {
+                y: 50,
+                opacity: 0,
+                stagger: 0.2,
+                duration: 0.8,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: '.achievement-card',
+                    start: "top 80%"
+                }
+            });
+            
+            // Mark tutorial as complete in data manager
+            if (window.DataManager) {
+                // This would mark all modules as complete for demonstration
+                const moduleIds = ['intro', 'module1-1', 'module1-2', 'module1-3', 
+                                   'module2-1', 'module2-2', 'module2-3',
+                                   'module3-1', 'module3-2', 'module3-3', 'conclusion'];
+                                   
+                // Just for demo purposes, we'll mark the final module complete
+                DataManager.completeCurrentModule();
+            }
+        });
+    </script>
+</body>
+</html>

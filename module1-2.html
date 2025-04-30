@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1.2: Creating Your Mental Taxonomy | Cognitive Blueprint Builder</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components/navigation.css">
+    <link rel="stylesheet" href="css/components/theme.css">
+    <link rel="stylesheet" href="css/components/export.css">
+    <link rel="stylesheet" href="css/components/logo.css">
+    <link rel="stylesheet" href="css/pages/module.css">
+    <link rel="stylesheet" href="css/pages/module1-2.css">
+    <!-- Fixes for SVG and carousel styling -->
+    <link rel="stylesheet" href="css/fixes.css">
+    <!-- Sora Image Gallery styling -->
+    <link rel="stylesheet" href="css/sora-gallery.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler border-0" type="button" id="sidebarToggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.svg" width="30" height="30" alt="Cognitive Blueprint Builder Logo" class="d-inline-block align-top">
+                <span class="ms-2 d-none d-sm-inline-block">Cognitive Blueprint Builder</span>
+            </a>
+            <div class="d-flex align-items-center">
+                <button class="btn theme-toggle-btn" id="themeToggle">
+                    <i class="bi bi-sun-fill light-icon"></i>
+                    <i class="bi bi-moon-fill dark-icon"></i>
+                </button>
+                <button class="btn export-btn ms-2" id="exportBtn">
+                    <i class="bi bi-download"></i>
+                </button>
+                <button class="btn restart-btn ms-2" id="restartBtn">
+                    <i class="bi bi-arrow-counterclockwise"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar and Main Content -->
+    <div class="wrapper">
+        <!-- Sidebar Navigation -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h5>Tutorial Navigation</h5>
+                <button type="button" id="sidebarCollapseIn" class="btn">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <a href="index.html" class="d-block text-center mb-4">
+                <img src="assets/images/logo.svg" class="sidebar-logo" alt="Cognitive Blueprint Builder Logo">
+            </a>
+            <div class="progress-indicator">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small class="text-muted progress-text">20% Complete</small>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="index.html">Introduction</a>
+                </li>
+                <!-- Phase 1 -->
+                <li>
+                    <a href="#phase1Submenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        Phase 1: Foundations
+                    </a>
+                    <ul class="collapse list-unstyled show" id="phase1Submenu">
+                        <li>
+                            <a href="module1-1.html">1.1: Welcome to Mental Architecture</a>
+                        </li>
+                        <li class="active">
+                            <a href="module1-2.html">1.2: Creating Your Mental Taxonomy</a>
+                        </li>
+                        <li>
+                            <a href="module1-3.html">1.3: Hierarchies, Networks, & Mental Models</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Phase 2 -->
+                <li>
+                    <a href="#phase2Submenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        Phase 2: Dynamics
+                    </a>
+                    <ul class="collapse list-unstyled" id="phase2Submenu">
+                        <li>
+                            <a href="module2-1.html">2.1: Understanding Mental Resources</a>
+                        </li>
+                        <li>
+                            <a href="module2-2.html">2.2: Resource Flows and Exchanges</a>
+                        </li>
+                        <li>
+                            <a href="module2-3.html">2.3: Cycles, Leaks, and Generators</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Phase 3 -->
+                <li>
+                    <a href="#phase3Submenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        Phase 3: Integration
+                    </a>
+                    <ul class="collapse list-unstyled" id="phase3Submenu">
+                        <li>
+                            <a href="module3-1.html">3.1: Creating Your Unified Mental Resource Map</a>
+                        </li>
+                        <li>
+                            <a href="module3-2.html">3.2: High-Leverage Points and Optimization</a>
+                        </li>
+                        <li>
+                            <a href="module3-3.html">3.3: From Map to Action</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Additional Pages -->
+                <li>
+                    <a href="ai-prompts.html">AI Prompts Guide</a>
+                </li>
+                <li>
+                    <a href="conclusion.html">Conclusion</a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <p class="small text-muted">© 2025 AutoNate</p>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <!-- Overlay for sidebar on mobile -->
+            <div class="overlay"></div>
+            
+            <!-- Main Content Area -->
+            <div class="container-fluid px-md-5 py-5">
+                <!-- Module Content -->
+                <section class="module-section">
+                    <div class="module-header mb-5">
+                        <h1 class="display-5 fw-bold mb-3">Module 1.2: Creating Your Mental Taxonomy</h1>
+                        <p class="lead fst-italic">Classifying the components of your unique mental architecture</p>
+                    </div>
+                    
+                    <div class="content-card mb-5">
+                        <h2 class="section-header">The Power of Classification</h2>
+                        
+                        <!-- Opening Sora Image -->
+                        <div class="sora-image-container full-width fade-in-up" data-delay="0.2">
+                            <div class="sora-placeholder meme-effect">
+                                <i class="bi bi-diagram-2 placeholder-icon"></i>
+                            </div>
+                            <div class="meme-text top">TAXONOMY</div>
+                            <div class="meme-text bottom">NOT JUST FOR BIOLOGISTS ANYMORE</div>
+                            <div class="sora-caption">
+                                <h4>Your Mental Classification System</h4>
+                                <p>Organizing the complex landscape of your mind</p>
+                            </div>
+                        </div>
+                        
+                        <p>Taxonomy: it's not just for biologists cataloging weird insects anymore. It's your new secret weapon for understanding the architecture of your mind.</p>
+                        
+                        <p>Remember libraries before search engines? (If you don't, congratulations on your youth, and please explain TikTok to the rest of us.) Finding information meant understanding the Dewey Decimal System—a classification system that organized all human knowledge into neat categories.</p>
+                        
+                        <p>Your mind needs something similar, but far more personalized. After all, your mental architecture is uniquely yours—like a fingerprint, except infinitely more complex and occasionally playing that embarrassing memory from seventh grade when you're trying to fall asleep.</p>
+                    </div>
+                    
+                    <!-- Mental Component Types Section -->
+                    <div class="content-card mb-5">
+                        <h2 class="section-header">Mental Component Types</h2>
+                        
+                        <!-- Component Carousel -->
+                        <div id="componentCarousel" class="carousel slide component-carousel" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#componentCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Thoughts"></button>
+                                <button type="button" data-bs-target="#componentCarousel" data-bs-slide-to="1" aria-label="Emotions"></button>
+                                <button type="button" data-bs-target="#componentCarousel" data-bs-slide-to="2" aria-label="Beliefs"></button>
+                                <button type="button" data-bs-target="#componentCarousel" data-bs-slide-to="3" aria-label="Habits"></button>
+                                <button type="button" data-bs-target="#componentCarousel" data-bs-slide-to="4" aria-label="Values"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" style="background: linear-gradient(135deg, #4b6cb7, #182848)">
+                                    <div class="text-white">
+                                        <h3>Thoughts</h3>
+                                        <p>The conscious and unconscious processing units of your mental architecture</p>
+                                        <div class="mt-3">
+                                            <span class="badge bg-light text-dark me-2 mb-2">Analytical</span>
+                                            <span class="badge bg-light text-dark me-2 mb-2">Creative</span>
+                                            <span class="badge bg-light text-dark me-2 mb-2">Reflective</span>
+                                            <span class="badge bg-light text-dark me-2 mb-2">Anticipatory</span>
+                                            <span class="badge bg-light text-dark me-2 mb-2">Critical</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" style="background: linear-gradient(135deg, #ff9d00, #ff7300)">
+                                    <div class="text-white">
+                                        <h3>Emotions</h3>
+                                        <p>The feeling dimensions of your experience that color and energize your mental world</p>
+                                        <div class="mt-3">
+                                            <span class="badge bg-light text-dark me-2 mb-2">Core</span>
+                                            <span class="badge bg-light text-dark me-2 mb-2">Complex</span>
+                                            <span class="badge bg-light text-dark me-2 mb-2">Background</span>
+                                            <span class="badge bg-light text-dark me-2 mb-2">Reactive</span>
+                                            <span class="badge bg-light text-dark me-2 mb-2">Cultivated</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" style="background: linear-gradient(135deg, #4CAF50, #2E7D32)">
+                                    <div class="text-white">
+                                        <h3>Beliefs</h3>
+                                        <p>The foundational assumptions and perspectives that shape how you interpret reality</p>
+                                        <div class="mt-3">
+                                            <span class="badge bg-light text-dark me-2 mb-2">Core</span>
+                                            <span class="badge bg-light text-dark me-2 mb-2">Derived</span>
+                                            <span class="badge bg-light text-dark me-2 mb-2">Explicit</span>
+                                            <span class="badge bg-light text-dark me-2 mb-2">Implicit</span>
+                                            <span class="badge bg-light text-dark me-2 mb-2">Flexible/Rigid</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" style="background: linear-gradient(135deg, #9C27B0, #6A1B9A)">
+                                    <div class="text-white">
+                                        <h3>Habits</h3>
+                                        <p>The automated routines and patterns that efficiently handle repetitive aspects of life</p>
+                                        <div class="mt-3">
+                                            <span class="badge bg-light text-dark me-2 mb-2">Behavioral</span>
+                                            <span class="badge bg-light text-dark me-2 mb-2">Cognitive</span>
+                                            <span class="badge bg-light text-dark me-2 mb-2">Attentional</span>
+                                            <span class="badge bg-light text-dark me-2 mb-2">Emotional</span>
+                                            <span class="badge bg-light text-dark me-2 mb-2">Meta-habits</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" style="background: linear-gradient(135deg, #2196F3, #0D47A1)">
+                                    <div class="text-white">
+                                        <h3>Values</h3>
+                                        <p>The principles and priorities that guide your choices and define what matters to you</p>
+                                        <div class="mt-3">
+                                            <span class="badge bg-light text-dark me-2 mb-2">Terminal</span>
+                                            <span class="badge bg-light text-dark me-2 mb-2">Instrumental</span>
+                                            <span class="badge bg-light text-dark me-2 mb-2">Stated</span>
+                                            <span class="badge bg-light text-dark me-2 mb-2">Revealed</span>
+                                            <span class="badge bg-light text-dark me-2 mb-2">Hierarchies</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#componentCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#componentCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        
+                        <p class="mt-4">Let's start exploring the basic building blocks of your mental architecture. Think of these as the primary materials in your consciousness construction kit:</p>
+                        
+                        <div class="row mt-4">
+                            <!-- Thoughts Card -->
+                            <div class="col-lg-6 mb-4">
+                                <div class="component-type thoughts">
+                                    <h4><i class="bi bi-lightbulb me-2"></i>Thoughts</h4>
+                                    <p>Not just the casual "I should get groceries" variety, but the full spectrum:</p>
+                                    <ul class="component-list">
+                                        <li><strong>Analytical thoughts</strong> - Your inner problem-solver and logic engine</li>
+                                        <li><strong>Creative thoughts</strong> - The idea generator and pattern mixer</li>
+                                        <li><strong>Reflective thoughts</strong> - Your mental review system</li>
+                                        <li><strong>Anticipatory thoughts</strong> - The future simulator and planner</li>
+                                        <li><strong>Critical thoughts</strong> - Your quality control department (sometimes a bit overstaffed!)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Emotions Card -->
+                            <div class="col-lg-6 mb-4">
+                                <div class="component-type emotions">
+                                    <h4><i class="bi bi-emoji-smile me-2"></i>Emotions</h4>
+                                    <p>More than just "happy" or "sad":</p>
+                                    <ul class="component-list">
+                                        <li><strong>Core emotions</strong> - The primary colors of your emotional palette (joy, fear, anger, etc.)</li>
+                                        <li><strong>Complex emotions</strong> - The blended shades (nostalgia, anticipation, ambivalence)</li>
+                                        <li><strong>Background emotions</strong> - The emotional weather that colors your day</li>
+                                        <li><strong>Reactive emotions</strong> - Your immediate emotional responses</li>
+                                        <li><strong>Cultivated emotions</strong> - The emotional states you deliberately foster</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Emotion Mapping Placeholder -->
+                            <div class="col-12 mb-4">
+                                <div class="sora-image-container full-width">
+                                    <div class="sora-placeholder">
+                                        <i class="bi bi-graph-up placeholder-icon"></i>
+                                    </div>
+                                    <div class="sora-caption">
+                                        <h4>Emotion Mapping Tool</h4>
+                                        <p>An interactive visualization showing emotional intensity and frequency</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Beliefs Card -->
+                            <div class="col-lg-6 mb-4">
+                                <div class="component-type beliefs">
+                                    <h4><i class="bi bi-building me-2"></i>Beliefs</h4>
+                                    <p>The load-bearing structures of your mental architecture:</p>
+                                    <ul class="component-list">
+                                        <li><strong>Core beliefs</strong> - Fundamental assumptions about reality, yourself, and others</li>
+                                        <li><strong>Derived beliefs</strong> - Secondary beliefs that follow from your core beliefs</li>
+                                        <li><strong>Explicit beliefs</strong> - What you consciously think you believe</li>
+                                        <li><strong>Implicit beliefs</strong> - What your actions reveal you actually believe</li>
+                                        <li><strong>Flexible vs. rigid beliefs</strong> - How easily they adapt to new information</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Habits Card -->
+                            <div class="col-lg-6 mb-4">
+                                <div class="component-type habits">
+                                    <h4><i class="bi bi-arrow-repeat me-2"></i>Habits</h4>
+                                    <p>The automated routines that run much of your daily life:</p>
+                                    <ul class="component-list">
+                                        <li><strong>Behavioral habits</strong> - Regular actions and routines</li>
+                                        <li><strong>Cognitive habits</strong> - Your default thinking patterns</li>
+                                        <li><strong>Attentional habits</strong> - Where your focus naturally goes</li>
+                                        <li><strong>Emotional habits</strong> - Your typical emotional responses</li>
+                                        <li><strong>Meta-habits</strong> - Habits about how you form or break other habits (now we're getting meta!)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Habit Loop Visualization -->
+                            <div class="col-12 mb-4">
+                                <div class="sora-image-container full-width">
+                                    <div class="sora-placeholder">
+                                        <i class="bi bi-arrow-clockwise placeholder-icon"></i>
+                                    </div>
+                                    <div class="sora-caption">
+                                        <h4>Habit Loop Cycle</h4>
+                                        <p>Animated visualization of the trigger, routine, reward cycle</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Values Card -->
+                            <div class="col-12 mb-4">
+                                <div class="component-type values">
+                                    <h4><i class="bi bi-compass me-2"></i>Values</h4>
+                                    <p>The compass points that guide your mental navigation:</p>
+                                    <ul class="component-list">
+                                        <li><strong>Terminal values</strong> - What you consider inherently important</li>
+                                        <li><strong>Instrumental values</strong> - What you value as a means to other ends</li>
+                                        <li><strong>Stated values</strong> - What you say is important</li>
+                                        <li><strong>Revealed values</strong> - What your choices show is actually important</li>
+                                        <li><strong>Value hierarchies</strong> - How you prioritize competing values</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Building Your Personal Taxonomy Section -->
+                    <div class="content-card mb-5">
+                        <h2 class="section-header">Building Your Personal Taxonomy</h2>
+                        
+                        <!-- Mind Map Builder Placeholder -->
+                        <div class="sora-image-container full-width mb-4">
+                            <div class="sora-placeholder">
+                                <i class="bi bi-diagram-3 placeholder-icon"></i>
+                            </div>
+                            <div class="sora-caption">
+                                <h4>Mind Map Builder</h4>
+                                <p>Interactive tool for creating your personalized mental taxonomy</p>
+                            </div>
+                        </div>
+                        
+                        <p>Now for the fun part: creating a classification system that reflects <em>your</em> unique mental architecture. This isn't one-size-fits-all—your taxonomy should be as distinctive as your fingerprint.</p>
+                        
+                        <p>Here's how to approach this:</p>
+                        
+                        <ol class="taxonomy-steps">
+                            <li><strong>Start broad, get specific</strong>: Begin with major categories, then subdivide. Like organizing your digital files, you want folders before subfolders.</li>
+                            
+                            <li><strong>Use your own language</strong>: If official-sounding terms like "cognitive distortion" don't resonate with you, but "thought traps" does—use your terminology! This is your mental map; label it in a way that makes sense to you.</li>
+                            
+                            <li><strong>Look for patterns</strong>: As you categorize, pay attention to similarities and relationships. "Hmm, these thought patterns seem to cluster around uncertainty..."</li>
+                            
+                            <li><strong>Be descriptive, not judgmental</strong>: Label your mental components neutrally. This isn't about deciding which parts are "good" or "bad"—it's about accurate classification. Your inner critic isn't a villain; it's a component with specific functions (and sometimes questionable timing).</li>
+                            
+                            <li><strong>Iterate and refine</strong>: Your first draft won't be perfect, and that's perfectly fine. Taxonomy is an evolving practice.</li>
+                        </ol>
+                        
+                        <!-- Taxonomy Evolution Visualization -->
+                        <div class="sora-image-container full-width mb-4">
+                            <div class="sora-placeholder">
+                                <i class="bi bi-diagram-2-fill placeholder-icon"></i>
+                            </div>
+                            <div class="sora-caption">
+                                <h4>Taxonomy Evolution</h4>
+                                <p>Example taxonomy expanding and refining over multiple iterations</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Component Collector Exercise -->
+                    <div class="interactive-element mb-5">
+                        <h3 class="interactive-element-header">The Component Collector Exercise</h3>
+                        <div class="p-4">
+                            <div class="row">
+                                <div class="col-lg-12 mb-4">
+                                    <div class="sora-image-container">
+                                        <div class="sora-placeholder">
+                                            <i class="bi bi-collection placeholder-icon"></i>
+                                        </div>
+                                        <div class="sora-caption">
+                                            <h4>Component Collecting Game</h4>
+                                            <p>Game-like interface for identifying and collecting mental components</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mt-4">
+                                        <p>Time to roll up your sleeves and start collecting specimens for your mental museum!</p>
+                                        
+                                        <p>For the next 10 minutes, you're going to catalog as many of your mental components as you can identify. Like a naturalist on an expedition, you're looking for examples of thoughts, emotions, beliefs, habits, and values that make up your unique mental ecosystem.</p>
+                                        
+                                        <h5 class="mt-4">How it works:</h5>
+                                        
+                                        <ol>
+                                            <li>Set a timer for 10 minutes (we've provided one below)</li>
+                                            <li>For each component type, identify as many personal examples as you can</li>
+                                            <li>Drag each example to its category</li>
+                                            <li>Watch your personal taxonomy grow!</li>
+                                        </ol>
+                                        
+                                        <div class="alert alert-info mt-3">
+                                            <i class="bi bi-lightbulb-fill me-2"></i>
+                                            <strong>Pro tip:</strong> Don't overthink this! Speed is your friend. The goal is quantity first, organization second. We can refine later.
+                                        </div>
+                                        
+                                        <!-- Timer and Progress Tracking -->
+                                        <div class="card mt-4">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Component Collector Timer</h5>
+                                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                                    <span id="timerDisplay" class="h3">10:00</span>
+                                                    <div>
+                                                        <button id="startTimer" class="btn btn-primary me-2">Start</button>
+                                                        <button id="resetTimer" class="btn btn-secondary">Reset</button>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="row mt-3">
+                                                    <div class="col-md-4 mb-3">
+                                                        <div class="card">
+                                                            <div class="card-header bg-primary text-white">Thoughts</div>
+                                                            <div class="card-body">
+                                                                <span id="thoughtCount" class="h3">0</span> identified
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <div class="card">
+                                                            <div class="card-header" style="background-color: #ff9d00; color: white">Emotions</div>
+                                                            <div class="card-body">
+                                                                <span id="emotionCount" class="h3">0</span> identified
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <div class="card">
+                                                            <div class="card-header" style="background-color: #4CAF50; color: white">Beliefs</div>
+                                                            <div class="card-body">
+                                                                <span id="beliefCount" class="h3">0</span> identified
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Finding Patterns and Relationships -->
+                    <div class="content-card mb-5">
+                        <h2 class="section-header">Finding Patterns and Relationships</h2>
+                        
+                        <!-- Network Visualization Placeholder -->
+                        <div class="sora-image-container full-width mb-4">
+                            <div class="sora-placeholder">
+                                <i class="bi bi-share-fill placeholder-icon"></i>
+                            </div>
+                            <div class="sora-caption">
+                                <h4>Mental Component Network</h4>
+                                <p>Network visualization showing connections between different mental components</p>
+                            </div>
+                        </div>
+                        
+                        <p>Now that you've collected a good sample of your mental components, let's look for patterns and relationships:</p>
+                        
+                        <div class="pattern-analysis">
+                            <h4>Look For These Patterns</h4>
+                            <ul class="pattern-list">
+                                <li><strong>Clusters</strong>: Where do you see unusual concentrations of components?</li>
+                                <li><strong>Gaps</strong>: Are there categories with surprisingly few entries?</li>
+                                <li><strong>Connections</strong>: Which components seem to trigger or influence others?</li>
+                                <li><strong>Contradictions</strong>: Where do you spot mental components that seem to be working at cross-purposes?</li>
+                            </ul>
+                        </div>
+                        
+                        <p class="mt-4">Pay special attention to unexpected discoveries. Often, the most valuable insights come from noticing what you didn't expect to find.</p>
+                        
+                        <!-- Pattern Suggestion Tool Placeholder -->
+                        <div class="sora-image-container full-width mb-4">
+                            <div class="sora-placeholder">
+                                <i class="bi bi-lightbulb placeholder-icon"></i>
+                            </div>
+                            <div class="sora-caption">
+                                <h4>Pattern Suggestion Tool</h4>
+                                <p>Interactive tool that highlights potential relationships based on user input</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- From Taxonomy to Architecture -->
+                    <div class="content-card mb-5">
+                        <h2 class="section-header">From Taxonomy to Architecture</h2>
+                        
+                        <p>You've now created the beginnings of your mental blueprint—a taxonomy of the components that make up your consciousness. This is the foundation upon which we'll build the rest of your mental architecture map.</p>
+                        
+                        <p>Think of what you've done as creating an inventory of building materials. Next, we'll explore how these materials are structured into the systems and subsystems that make up your mental architecture.</p>
+                        
+                        <p>Remember: A good engineering blueprint doesn't just list components—it shows how they fit together. That's where we're headed next.</p>
+                        
+                        <div class="text-center mt-5">
+                            <a href="module1-3.html" class="btn btn-primary btn-lg">Continue to Module 1.3:<br>Hierarchies, Networks, and Mental Models</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Exercise Card for Reflection -->
+                    <div class="exercise-card mb-5">
+                        <h3><i class="bi bi-pencil-square me-2"></i>Exercise: Your Mental Categories</h3>
+                        <p>Before moving on, take a moment to reflect on the main categories of your mental architecture that you've identified so far. What patterns have you noticed?</p>
+                        
+                        <div class="response-area mt-4">
+                            <label for="mentalCategoriesResponse" class="form-label">List your top 5-7 mental categories:</label>
+                            <textarea id="mentalCategoriesResponse" class="form-control" placeholder="Enter your response here..."></textarea>
+                            <div class="d-flex justify-content-end mt-2">
+                                <button class="save-response-btn">Save Response</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Completion Card (Hidden by default) -->
+                    <div class="completion-card">
+                        <div class="completion-icon">
+                            <i class="bi bi-check-circle"></i>
+                        </div>
+                        <h3>Module Completed!</h3>
+                        <p>You've successfully created your mental taxonomy. This will be a valuable reference as you progress through the remaining modules.</p>
+                    </div>
+                    
+                    <!-- Navigation Buttons -->
+                    <div class="module-navigation d-flex justify-content-between">
+                        <a href="module1-1.html" class="btn btn-outline-primary">
+                            <i class="bi bi-arrow-left me-2"></i> Back to Module 1.1
+                        </a>
+                        <a href="module1-3.html" class="btn btn-primary">
+                            Next: Hierarchies, Networks, & Mental Models <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Footer -->
+            <footer class="mt-auto py-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="mb-0">© 2025 AutoNate - Cognitive Blueprint Builder</p>
+                        </div>
+                        <div class="col-md-6 text-md-end">
+                            <p class="mb-0">
+                                <a href="#" class="text-decoration-none">Privacy Policy</a> | 
+                                <a href="#" class="text-decoration-none">Terms of Use</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Restart Confirmation Modal -->
+    <div class="modal fade" id="restartModal" tabindex="-1" aria-labelledby="restartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="restartModalLabel">Restart Tutorial</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to restart the tutorial? This will clear all your saved progress and responses.</p>
+                    <p class="text-danger"><strong>This action cannot be undone.</strong></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirmRestart">Yes, Restart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Export Modal -->
+    <div class="modal fade" id="exportModal" tabindex="-1" aria-labelledby="exportModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exportModalLabel">Export Your Progress</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>What would you like to export?</p>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="exportOption" id="exportCurrent" value="current" checked>
+                        <label class="form-check-label" for="exportCurrent">
+                            Current module only
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="exportOption" id="exportAll" value="all">
+                        <label class="form-check-label" for="exportAll">
+                            All completed modules
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="exportOption" id="exportAI" value="ai">
+                        <label class="form-check-label" for="exportAI">
+                            AI Prompts for my data
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="confirmExport">Export as PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/components/navigation.js"></script>
+    <script src="js/components/theme.js"></script>
+    <script src="js/components/export.js"></script>
+    <script src="js/components/dataManager.js"></script>
+    <script src="js/pages/module1-2.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

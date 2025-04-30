@@ -1,0 +1,40 @@
+/* Emergency fix for implementation path visibility */
+
+/* Force achievement cards to be visible */
+.achievement-card {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    visibility: visible !important;
+}
+
+/* Force all fade elements to be visible */
+.fade-in-up,
+.fade-in-left,
+.fade-in-right {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transform: translateX(0) !important;
+    visibility: visible !important;
+}
+
+/* Force SORA containers to be visible */
+.sora-image-container {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    visibility: visible !important;
+}
+
+/* Force future list items to be visible */
+.future-list li {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    visibility: visible !important;
+}
+
+/* Ensure completion card and final message are visible */
+.completion-card,
+.final-message {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    visibility: visible !important;
+}

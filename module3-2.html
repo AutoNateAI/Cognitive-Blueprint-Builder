@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3.2: High-Leverage Points and Optimization | Cognitive Blueprint Builder</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components/navigation.css">
+    <link rel="stylesheet" href="css/components/theme.css">
+    <link rel="stylesheet" href="css/components/export.css">
+    <link rel="stylesheet" href="css/pages/module.css">
+    <link rel="stylesheet" href="css/pages/module3-2.css">
+    <link rel="stylesheet" href="css/sora-gallery.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler border-0" type="button" id="sidebarToggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.svg" width="30" height="30" alt="Cognitive Blueprint Builder Logo" class="d-inline-block align-top">
+                <span class="ms-2 d-none d-sm-inline-block">Cognitive Blueprint Builder</span>
+            </a>
+            <div class="d-flex align-items-center">
+                <button class="btn theme-toggle-btn" id="themeToggle">
+                    <i class="bi bi-sun-fill light-icon"></i>
+                    <i class="bi bi-moon-fill dark-icon"></i>
+                </button>
+                <button class="btn export-btn ms-2" id="exportBtn">
+                    <i class="bi bi-download"></i>
+                </button>
+                <button class="btn restart-btn ms-2" id="restartBtn">
+                    <i class="bi bi-arrow-counterclockwise"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar and Main Content -->
+    <div class="wrapper">
+        <!-- Sidebar Navigation -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h5>Tutorial Navigation</h5>
+                <button type="button" id="sidebarCollapseIn" class="btn">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <a href="index.html" class="d-block text-center mb-4">
+                <img src="assets/images/logo.svg" class="sidebar-logo" alt="Cognitive Blueprint Builder Logo">
+            </a>
+            <div class="progress-indicator">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small class="text-muted progress-text">80% Complete</small>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="index.html">Introduction</a>
+                </li>
+                <!-- Phase 1 -->
+                <li>
+                    <a href="#phase1Submenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        Phase 1: Foundations
+                    </a>
+                    <ul class="collapse list-unstyled" id="phase1Submenu">
+                        <li>
+                            <a href="module1-1.html">1.1: Welcome to Mental Architecture</a>
+                        </li>
+                        <li>
+                            <a href="module1-2.html">1.2: Creating Your Mental Taxonomy</a>
+                        </li>
+                        <li>
+                            <a href="module1-3.html">1.3: Hierarchies, Networks, & Mental Models</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Phase 2 -->
+                <li>
+                    <a href="#phase2Submenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        Phase 2: Dynamics
+                    </a>
+                    <ul class="collapse list-unstyled" id="phase2Submenu">
+                        <li>
+                            <a href="module2-1.html">2.1: Understanding Mental Resources</a>
+                        </li>
+                        <li>
+                            <a href="module2-2.html">2.2: Resource Flows and Exchanges</a>
+                        </li>
+                        <li>
+                            <a href="module2-3.html">2.3: Cycles, Leaks, and Generators</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Phase 3 -->
+                <li>
+                    <a href="#phase3Submenu" data-bs-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                        Phase 3: Integration
+                    </a>
+                    <ul class="collapse list-unstyled show" id="phase3Submenu">
+                        <li>
+                            <a href="module3-1.html">3.1: Creating Your Unified Mental Resource Map</a>
+                        </li>
+                        <li class="active">
+                            <a href="module3-2.html">3.2: High-Leverage Points and Optimization</a>
+                        </li>
+                        <li>
+                            <a href="module3-3.html">3.3: From Map to Action</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Additional Pages -->
+                <li>
+                    <a href="ai-prompts.html">AI Prompts Guide</a>
+                </li>
+                <li>
+                    <a href="conclusion.html">Conclusion</a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <p class="small text-muted">&copy; 2025 AutoNate</p>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <!-- Overlay for sidebar on mobile -->
+            <div class="overlay"></div>
+            
+            <!-- Main Content Area -->
+            <div class="container-fluid px-md-5 py-5">
+                <!-- Module Content -->
+                <section class="module-section">
+                    <div class="module-header mb-5">
+                        <h1 class="display-5 fw-bold mb-3">Module 3.2: High-Leverage Points and Optimization</h1>
+                        <div class="progress mb-3" style="height: 5px;">
+                            <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p class="lead">Module 8 of 9 &bull; Phase 3: Integration</p>
+                    </div>
+                    
+                    <!-- Engineering Strategic Change Section -->
+                    <div class="content-section mb-5" id="strategic-change-section">
+                        <h2 class="section-title">Engineering Strategic Change</h2>
+                        
+                        <div class="row align-items-center mb-4">
+                            <div class="col-md-7">
+                                <p>Welcome to the strategist's perspective on your mental architecture! Now that you have a unified map of your consciousness, you're ready for one of the most powerful applications of systems thinking: identifying high-leverage points.</p>
+                                <p>A high-leverage point is a place in a system where a small change can produce large effects throughout the whole. It's the difference between pushing a boulder uphill (low leverage) and tapping a pebble that starts an avalanche (high leverage).</p>
+                                <p>This module is about finding those magical spots in your mental architecture where minimal effort yields maximum impact. It's not about working harder—it's about working smarter by understanding the inherent leverage points in your system.</p>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="sora-image-container fade-in-up" data-delay="0.2">
+                                    <div class="sora-placeholder">
+                                        <i class="bi bi-lightning-charge-fill placeholder-icon"></i>
+                                    </div>
+                                    <div class="sora-caption">
+                                        <h4>Ripple Effect Visualization</h4>
+                                        <p>Small input creating large effects throughout a system</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- The Systems Approach to Leverage Section -->
+                    <div class="content-section mb-5" id="systems-approach-section">
+                        <h2 class="section-title">The Systems Approach to Leverage</h2>
+                        
+                        <div class="interactive-element mb-4">
+                            <div class="card">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="bi bi-sliders me-2"></i>System Leverage Calculator</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <p>This tool helps you understand how different types of interventions can create varying levels of impact in your mental system.</p>
+                                            <div class="leverage-calculator-controls">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Select an intervention type:</label>
+                                                    <select class="form-select" id="leverageTypeSelect">
+                                                        <option value="parameters">Constants and parameters</option>
+                                                        <option value="buffers">Buffer sizes</option>
+                                                        <option value="structure">System structure</option>
+                                                        <option value="delays">Delays</option>
+                                                        <option value="balancing">Balancing feedback loops</option>
+                                                        <option value="reinforcing">Reinforcing feedback loops</option>
+                                                        <option value="information">Information flows</option>
+                                                        <option value="rules">Rules</option>
+                                                        <option value="organization">Self-organization</option>
+                                                        <option value="goals">Goals</option>
+                                                        <option value="paradigms">Paradigms</option>
+                                                        <option value="transcending">Transcending paradigms</option>
+                                                    </select>
+                                                </div>
+                                                <button type="button" class="btn btn-primary" id="calculateLeverage">Calculate Impact</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="leverage-result p-3 border rounded">
+                                                <h5>Impact Analysis</h5>
+                                                <div id="leverageImpactResult">
+                                                    <p>Select an intervention type and calculate its potential impact on your system.</p>
+                                                </div>
+                                                <div class="impact-meter mt-3">
+                                                    <div class="progress" style="height: 25px;">
+                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 0%" id="impactMeter"></div>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mt-1">
+                                                        <small>Low Impact</small>
+                                                        <small>High Impact</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <!-- Leverage Points Hierarchy -->
+                    <div class="leverage-hierarchy-container p-4 bg-light rounded mb-5">
+                        <h4 class="mb-3">Donella Meadows' Hierarchy of Leverage Points</h4>
+                        <p class="mb-3">From least to most powerful places to intervene in a system:</p>
+                        
+                        <div class="leverage-hierarchy">
+                            <div class="leverage-item" data-level="12">
+                                <div class="level-badge">12</div>
+                                <div class="level-content">
+                                    <strong>Constants and parameters</strong>
+                                    <span>Tweaking numbers</span>
+                                </div>
+                            </div>
+                            
+                            <div class="leverage-item" data-level="11">
+                                <div class="level-badge">11</div>
+                                <div class="level-content">
+                                    <strong>Buffer sizes</strong>
+                                    <span>Changing capacities</span>
+                                </div>
+                            </div>
+                            
+                            <div class="leverage-item" data-level="10">
+                                <div class="level-badge">10</div>
+                                <div class="level-content">
+                                    <strong>System structure</strong>
+                                    <span>Changing connections</span>
+                                </div>
+                            </div>
+                            
+                            <div class="leverage-item" data-level="9">
+                                <div class="level-badge">9</div>
+                                <div class="level-content">
+                                    <strong>Delays</strong>
+                                    <span>Changing response times</span>
+                                </div>
+                            </div>
+                            
+                            <div class="leverage-item" data-level="8">
+                                <div class="level-badge">8</div>
+                                <div class="level-content">
+                                    <strong>Balancing feedback loops</strong>
+                                    <span>Adding stabilizers</span>
+                                </div>
+                            </div>
+                            
+                            <div class="leverage-item" data-level="7">
+                                <div class="level-badge">7</div>
+                                <div class="level-content">
+                                    <strong>Reinforcing feedback loops</strong>
+                                    <span>Amplifying effects</span>
+                                </div>
+                            </div>
+                            
+                            <div class="leverage-item" data-level="6">
+                                <div class="level-badge">6</div>
+                                <div class="level-content">
+                                    <strong>Information flows</strong>
+                                    <span>Changing who knows what</span>
+                                </div>
+                            </div>
+                            
+                            <div class="leverage-item" data-level="5">
+                                <div class="level-badge">5</div>
+                                <div class="level-content">
+                                    <strong>Rules</strong>
+                                    <span>Changing constraints</span>
+                                </div>
+                            </div>
+                            
+                            <div class="leverage-item" data-level="4">
+                                <div class="level-badge">4</div>
+                                <div class="level-content">
+                                    <strong>Self-organization</strong>
+                                    <span>Ability to evolve</span>
+                                </div>
+                            </div>
+                            
+                            <div class="leverage-item" data-level="3">
+                                <div class="level-badge">3</div>
+                                <div class="level-content">
+                                    <strong>Goals</strong>
+                                    <span>Changing system purpose</span>
+                                </div>
+                            </div>
+                            
+                            <div class="leverage-item" data-level="2">
+                                <div class="level-badge">2</div>
+                                <div class="level-content">
+                                    <strong>Paradigms</strong>
+                                    <span>Changing mindsets</span>
+                                </div>
+                            </div>
+                            
+                            <div class="leverage-item" data-level="1">
+                                <div class="level-badge">1</div>
+                                <div class="level-content">
+                                    <strong>Transcending paradigms</strong>
+                                    <span>Flexibility of perspective</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="mt-4">Applying this to your mental architecture means looking beyond surface-level changes (like trying to think more positive thoughts) to deeper interventions (like changing the mental models that generate your thoughts in the first place).</p>
+                    </div>
+                    
+                    <!-- Finding Your Personal Leverage Points Section -->
+                    <div class="content-section mb-5" id="personal-leverage-section">
+                        <h2 class="section-title">Finding Your Personal Leverage Points</h2>
+                        
+                        <div class="interactive-element mb-4">
+                            <div class="card">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="bi bi-bullseye me-2"></i>Personal Leverage Point Identifier</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p>Your unified mental resource map contains numerous potential leverage points. Let's identify them using several complementary approaches:</p>
+                                    
+                                    <div class="analysis-tabs">
+                                        <ul class="nav nav-tabs" id="analysisTab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="flow-tab" data-bs-toggle="tab" data-bs-target="#flow-analysis" type="button" role="tab">Flow Analysis</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="structural-tab" data-bs-toggle="tab" data-bs-target="#structural-analysis" type="button" role="tab">Structural Analysis</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="cycle-tab" data-bs-toggle="tab" data-bs-target="#cycle-analysis" type="button" role="tab">Cycle Analysis</button>
+                                            </li>
+                                        </ul>
+                                        
+                                        <div class="tab-content p-3 border border-top-0 rounded-bottom" id="analysisTabContent">
+                                            <div class="tab-pane fade show active" id="flow-analysis" role="tabpanel">
+                                                <h5>Flow Analysis</h5>
+                                                <p>Examine your resource flows to find:</p>
+                                                <ul>
+                                                    <li><strong>Bottlenecks:</strong> Where resources get constricted</li>
+                                                    <li><strong>Diversions:</strong> Where resources go to low-value uses</li>
+                                                    <li><strong>Amplifiers:</strong> Where small inputs get naturally multiplied</li>
+                                                    <li><strong>Dampers:</strong> Where potentially useful outputs get diminished</li>
+                                                </ul>
+                                                
+                                                <div class="flow-analyzer mt-3">
+                                                    <label class="form-label">Select a resource flow to analyze:</label>
+                                                    <select class="form-select mb-3" id="flowSelect">
+                                                        <option value="attention">Attention Flow</option>
+                                                        <option value="energy">Energy Flow</option>
+                                                        <option value="willpower">Willpower Flow</option>
+                                                        <option value="creativity">Creativity Flow</option>
+                                                    </select>
+                                                    <button type="button" class="btn btn-primary" id="analyzeFlowBtn">Analyze Flow</button>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="tab-pane fade" id="structural-analysis" role="tabpanel">
+                                                <h5>Structural Analysis</h5>
+                                                <p>Examine your mental components and their organization to find:</p>
+                                                <ul>
+                                                    <li><strong>Central nodes:</strong> Components with many connections</li>
+                                                    <li><strong>Bridge components:</strong> Elements that connect otherwise separate regions</li>
+                                                    <li><strong>Redundancies:</strong> Multiple elements serving the same function</li>
+                                                    <li><strong>Gaps:</strong> Functions that lack sufficient supporting structure</li>
+                                                </ul>
+                                                
+                                                <div class="structure-analyzer mt-3">
+                                                    <label class="form-label">Select a structural aspect to analyze:</label>
+                                                    <select class="form-select mb-3" id="structureSelect">
+                                                        <option value="nodes">Central Nodes</option>
+                                                        <option value="bridges">Bridge Components</option>
+                                                        <option value="redundancies">Redundancies</option>
+                                                        <option value="gaps">Structural Gaps</option>
+                                                    </select>
+                                                    <button type="button" class="btn btn-primary" id="analyzeStructureBtn">Analyze Structure</button>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="tab-pane fade" id="cycle-analysis" role="tabpanel">
+                                                <h5>Cycle Analysis</h5>
+                                                <p>Examine your mental feedback loops to find:</p>
+                                                <ul>
+                                                    <li><strong>Self-reinforcing loops:</strong> Cycles that amplify over time</li>
+                                                    <li><strong>Balancing loops with delays:</strong> Cycles that cause oscillation</li>
+                                                    <li><strong>Competing loops:</strong> Cycles that counteract each other</li>
+                                                    <li><strong>Unrecognized loops:</strong> Cycles operating outside awareness</li>
+                                                </ul>
+                                                
+                                                <div class="cycle-analyzer mt-3">
+                                                    <label class="form-label">Select a cycle type to analyze:</label>
+                                                    <select class="form-select mb-3" id="cycleSelect">
+                                                        <option value="reinforcing">Self-reinforcing Loops</option>
+                                                        <option value="balancing">Balancing Loops with Delays</option>
+                                                        <option value="competing">Competing Loops</option>
+                                                        <option value="unrecognized">Unrecognized Loops</option>
+                                                    </select>
+                                                    <button type="button" class="btn btn-primary" id="analyzeCycleBtn">Analyze Cycles</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="analysis-results mt-4" id="leveragePointResults">
+                                        <div class="sora-image-container fade-in-up" data-delay="0.3">
+                                            <div class="sora-placeholder">
+                                                <i class="bi bi-graph-up-arrow placeholder-icon"></i>
+                                            </div>
+                                            <div class="sora-caption">
+                                                <h4>Analysis Visualization</h4>
+                                                <p>Diagram showing how different analysis types reveal different types of leverage points</p>
+                                            </div>
+                                        </div>
+                                        <p class="mt-3">The most powerful leverage points often occur at the intersection of these analyses—where a structural feature creates a flow pattern that forms a consequential cycle.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Consumption-Production Analysis Section -->
+                    <div class="content-section mb-5" id="consumption-production-section">
+                        <h2 class="section-title">Consumption-Production Analysis: The Mental Economy</h2>
+                        
+                        <div class="interactive-element mb-4">
+                            <div class="card">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="bi bi-bar-chart-line me-2"></i>Resource Balance Sheet</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p>Another powerful way to identify optimization opportunities is to analyze the consumption and production of resources across your mental architecture.</p>
+                                    
+                                    <p>Every component in your mind can be viewed as both a consumer and producer of resources:</p>
+                                    <ul>
+                                        <li>Your analytical thinking consumes attention but produces insights</li>
+                                        <li>Your worry habit consumes energy without producing proportional value</li>
+                                    </ul>
+                                    
+                                    <div class="resource-balance-tabs mt-4">
+                                        <ul class="nav nav-tabs" id="resourceTab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="attention-tab" data-bs-toggle="tab" data-bs-target="#attention-balance" type="button" role="tab">Attention</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="energy-tab" data-bs-toggle="tab" data-bs-target="#energy-balance" type="button" role="tab">Energy</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="willpower-tab" data-bs-toggle="tab" data-bs-target="#willpower-balance" type="button" role="tab">Willpower</button>
+                                            </li>
+                                        </ul>
+                                        
+                                        <div class="tab-content p-3 border border-top-0 rounded-bottom" id="resourceTabContent">
+                                            <div class="tab-pane fade show active" id="attention-balance" role="tabpanel">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <h5>Top Attention Consumers</h5>
+                                                        <div class="resource-item d-flex justify-content-between mb-2">
+                                                            <span>Multitasking</span>
+                                                            <span class="badge bg-danger">High</span>
+                                                        </div>
+                                                        <div class="resource-item d-flex justify-content-between mb-2">
+                                                            <span>Digital distractions</span>
+                                                            <span class="badge bg-danger">High</span>
+                                                        </div>
+                                                        <div class="resource-item d-flex justify-content-between mb-2">
+                                                            <span>Rumination</span>
+                                                            <span class="badge bg-warning">Medium</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <h5>Top Attention Producers</h5>
+                                                        <div class="resource-item d-flex justify-content-between mb-2">
+                                                            <span>Meditation</span>
+                                                            <span class="badge bg-success">High</span>
+                                                        </div>
+                                                        <div class="resource-item d-flex justify-content-between mb-2">
+                                                            <span>Single-tasking</span>
+                                                            <span class="badge bg-success">High</span>
+                                                        </div>
+                                                        <div class="resource-item d-flex justify-content-between mb-2">
+                                                            <span>Digital detox</span>
+                                                            <span class="badge bg-success">High</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="resource-balance-chart mt-4">
+                                                    <h5>Attention Balance</h5>
+                                                    <div class="progress" style="height: 25px;">
+                                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65% Consumption</div>
+                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">35% Production</div>
+                                                    </div>
+                                                    <div class="balance-analysis mt-2">
+                                                        <p><strong>Net Position:</strong> <span class="text-danger">Deficit (-30%)</span></p>
+                                                        <p>Your attention consumption significantly exceeds production, creating a deficit that leads to mental fatigue and reduced cognitive performance.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="tab-pane fade" id="energy-balance" role="tabpanel">
+                                                <!-- Energy balance content would go here, similar structure -->
+                                                <p>Select this tab to analyze your energy consumption and production patterns.</p>
+                                            </div>
+                                            
+                                            <div class="tab-pane fade" id="willpower-balance" role="tabpanel">
+                                                <!-- Willpower balance content would go here, similar structure -->
+                                                <p>Select this tab to analyze your willpower consumption and production patterns.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="module-navigation d-flex justify-content-between">
+                        <a href="module3-1.html" class="btn btn-outline-primary">
+                            <i class="bi bi-arrow-left me-2"></i> Back to Module 3.1
+                        </a>
+                        <a href="module3-3.html" class="btn btn-primary">
+                            Next: From Map to Action <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Footer -->
+            <footer class="mt-auto py-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="mb-0">&copy; 2025 AutoNate - Cognitive Blueprint Builder</p>
+                        </div>
+                        <div class="col-md-6 text-md-end">
+                            <p class="mb-0">
+                                <a href="#" class="text-decoration-none">Privacy Policy</a> | 
+                                <a href="#" class="text-decoration-none">Terms of Use</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Restart Confirmation Modal -->
+    <div class="modal fade" id="restartModal" tabindex="-1" aria-labelledby="restartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="restartModalLabel">Restart Tutorial</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to restart the tutorial? This will clear all your saved progress and responses.</p>
+                    <p class="text-danger"><strong>This action cannot be undone.</strong></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirmRestart">Yes, Restart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Export Modal -->
+    <div class="modal fade" id="exportModal" tabindex="-1" aria-labelledby="exportModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exportModalLabel">Export Your Progress</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>What would you like to export?</p>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="exportOption" id="exportCurrent" value="current" checked>
+                        <label class="form-check-label" for="exportCurrent">
+                            Current module only
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="exportOption" id="exportAll" value="all">
+                        <label class="form-check-label" for="exportAll">
+                            All completed modules
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="exportOption" id="exportAI" value="ai">
+                        <label class="form-check-label" for="exportAI">
+                            AI Prompts for my data
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="confirmExport">Export as PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/components/navigation.js"></script>
+    <script src="js/components/theme.js"></script>
+    <script src="js/components/export.js"></script>
+    <script src="js/components/dataManager.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pages/module3-2.js"></script>
+</body>
+</html>

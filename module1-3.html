@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1.3: Hierarchies, Networks, & Mental Models | Cognitive Blueprint Builder</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components/navigation.css">
+    <link rel="stylesheet" href="css/components/theme.css">
+    <link rel="stylesheet" href="css/components/export.css">
+    <link rel="stylesheet" href="css/components/logo.css">
+    <link rel="stylesheet" href="css/pages/module.css">
+    <link rel="stylesheet" href="css/pages/module1-3.css">
+    <!-- Fixes for SVG and carousel styling -->
+    <link rel="stylesheet" href="css/fixes.css">
+    <!-- Sora Image Gallery styling -->
+    <link rel="stylesheet" href="css/sora-gallery.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler border-0" type="button" id="sidebarToggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.svg" width="30" height="30" alt="Cognitive Blueprint Builder Logo" class="d-inline-block align-top">
+                <span class="ms-2 d-none d-sm-inline-block">Cognitive Blueprint Builder</span>
+            </a>
+            <div class="d-flex align-items-center">
+                <button class="btn theme-toggle-btn" id="themeToggle">
+                    <i class="bi bi-sun-fill light-icon"></i>
+                    <i class="bi bi-moon-fill dark-icon"></i>
+                </button>
+                <button class="btn export-btn ms-2" id="exportBtn">
+                    <i class="bi bi-download"></i>
+                </button>
+                <button class="btn restart-btn ms-2" id="restartBtn">
+                    <i class="bi bi-arrow-counterclockwise"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar and Main Content -->
+    <div class="wrapper">
+        <!-- Sidebar Navigation -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h5>Tutorial Navigation</h5>
+                <button type="button" id="sidebarCollapseIn" class="btn">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <a href="index.html" class="d-block text-center mb-4">
+                <img src="assets/images/logo.svg" class="sidebar-logo" alt="Cognitive Blueprint Builder Logo">
+            </a>
+            <div class="progress-indicator">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small class="text-muted progress-text">30% Complete</small>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="index.html">Introduction</a>
+                </li>
+                <!-- Phase 1 -->
+                <li>
+                    <a href="#phase1Submenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        Phase 1: Foundations
+                    </a>
+                    <ul class="collapse list-unstyled show" id="phase1Submenu">
+                        <li>
+                            <a href="module1-1.html">1.1: Welcome to Mental Architecture</a>
+                        </li>
+                        <li>
+                            <a href="module1-2.html">1.2: Creating Your Mental Taxonomy</a>
+                        </li>
+                        <li class="active">
+                            <a href="module1-3.html">1.3: Hierarchies, Networks, & Mental Models</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Phase 2 -->
+                <li>
+                    <a href="#phase2Submenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        Phase 2: Dynamics
+                    </a>
+                    <ul class="collapse list-unstyled" id="phase2Submenu">
+                        <li>
+                            <a href="module2-1.html">2.1: Understanding Mental Resources</a>
+                        </li>
+                        <li>
+                            <a href="module2-2.html">2.2: Resource Flows and Exchanges</a>
+                        </li>
+                        <li>
+                            <a href="module2-3.html">2.3: Cycles, Leaks, and Generators</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Phase 3 -->
+                <li>
+                    <a href="#phase3Submenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        Phase 3: Integration
+                    </a>
+                    <ul class="collapse list-unstyled" id="phase3Submenu">
+                        <li>
+                            <a href="module3-1.html">3.1: Creating Your Unified Mental Resource Map</a>
+                        </li>
+                        <li>
+                            <a href="module3-2.html">3.2: High-Leverage Points and Optimization</a>
+                        </li>
+                        <li>
+                            <a href="module3-3.html">3.3: From Map to Action</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Additional Pages -->
+                <li>
+                    <a href="ai-prompts.html">AI Prompts Guide</a>
+                </li>
+                <li>
+                    <a href="conclusion.html">Conclusion</a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <p class="small text-muted">u00a9 2025 AutoNate</p>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <!-- Overlay for sidebar on mobile -->
+            <div class="overlay"></div>
+            
+            <!-- Main Content Area -->
+            <div class="container-fluid px-md-5 py-5">
+                <!-- Module Content -->
+                <section class="module-section">
+                    <div class="module-header mb-5">
+                        <h1 class="display-5 fw-bold mb-3">Module 1.3: Hierarchies, Networks, & Mental Models</h1>
+                        <p class="lead fst-italic">Discovering how components fit together in your mental architecture</p>
+                    </div>
+                    
+                    <div class="content-card mb-5">
+                        <h2 class="section-header">Understanding System Structures</h2>
+                        
+                        <!-- Opening Sora Image -->
+                        <div class="sora-image-container full-width fade-in-up" data-delay="0.2">
+                            <div class="sora-placeholder">
+                                <i class="bi bi-boxes placeholder-icon"></i>
+                            </div>
+                            <div class="sora-caption">
+                                <h4>Multiple Structural Views</h4>
+                                <p>Same components organizing into hierarchy, network, and model arrangements</p>
+                            </div>
+                        </div>
+                        
+                        <p>Now that you've cataloged the components of your mental architecture, it's time to examine how these pieces fit together. Like any complex system, your mind isn't just a random collection of parts—it's organized in specific ways that enable its functioning.</p>
+                        
+                        <p>Just as architects don't just list materials but show how they're arranged, we're now going to explore the structural organization of your mind. And here's where things get interesting—your mental architecture isn't limited to just one type of structure. Instead, it operates simultaneously as:</p>
+                        
+                        <ul class="structure-list">
+                            <li><i class="bi bi-diagram-3"></i><strong>A hierarchy</strong> of nested systems</li>
+                            <li><i class="bi bi-share"></i><strong>A network</strong> of interconnected nodes</li>
+                            <li><i class="bi bi-grid-3x3"></i><strong>A collection</strong> of operating mental models</li>
+                        </ul>
+                        
+                        <p>Think of these as different "views" of the same system—like looking at a building through its blueprint, electrical wiring diagram, and plumbing schematic all at once. Each reveals different but complementary aspects of the same structure.</p>
+                    </div>
+                    
+                    <!-- Hierarchical Structures Section -->
+                    <div class="content-card mb-5">
+                        <h2 class="section-header">Hierarchical Structures: The Mind's Organization Chart</h2>
+                        
+                        <!-- Hierarchy Visualization -->
+                        <div class="sora-image-container full-width mb-4">
+                            <div class="sora-placeholder">
+                                <i class="bi bi-diagram-3-fill placeholder-icon"></i>
+                            </div>
+                            <div class="sora-caption">
+                                <h4>Expandable Hierarchy Visualization</h4>
+                                <p>Interactive tool showing nested mental components and their relationships</p>
+                            </div>
+                        </div>
+                        
+                        <p>Hierarchies are like the org chart of your mental operations—showing which components contain or control others. Some examples of mental hierarchies include:</p>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="structure-visual hierarchy">
+                                    <h4><i class="bi bi-heart me-2"></i>Value Hierarchies</h4>
+                                    <p>Which values take precedence over others when they conflict?</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="structure-visual hierarchy">
+                                    <h4><i class="bi bi-building me-2"></i>Belief Systems</h4>
+                                    <p>How do core beliefs give rise to derivative beliefs?</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="structure-visual hierarchy">
+                                    <h4><i class="bi bi-bullseye me-2"></i>Goal Hierarchies</h4>
+                                    <p>How do your ultimate aims break down into objectives, projects, and tasks?</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="structure-visual hierarchy">
+                                    <h4><i class="bi bi-person-badge me-2"></i>Identity Structures</h4>
+                                    <p>How do different aspects of your self-concept relate to each other?</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p>Mapping your mental hierarchies reveals power dynamics within your own mind. For instance, discovering that your "need to be right" consistently outranks your "desire to learn" in your value hierarchy might explain some stubborn patterns in your life.</p>
+                        
+                        <div class="alert alert-primary">
+                            <i class="bi bi-lightbulb-fill me-2"></i>
+                            <strong>Pro tip:</strong> Look for what sits at the top of your various hierarchies—these are often your mind's "executives" with outsized influence on everything below them.
+                        </div>
+                        
+                        <!-- Hierarchical Executive Visual -->
+                        <div class="sora-image-container full-width mb-4">
+                            <div class="sora-placeholder">
+                                <i class="bi bi-people-fill placeholder-icon"></i>
+                            </div>
+                            <div class="sora-caption">
+                                <h4>Mental Hierarchy Example</h4>
+                                <p>Hierarchical breakdown with executives, middle managers, and worker level elements</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Network Structures Section -->
+                    <div class="content-card mb-5">
+                        <h2 class="section-header">Network Structures: The Mind's Social Web</h2>
+                        
+                        <!-- Network Visualization -->
+                        <div class="sora-image-container full-width mb-4">
+                            <div class="sora-placeholder">
+                                <i class="bi bi-share-fill placeholder-icon"></i>
+                            </div>
+                            <div class="sora-caption">
+                                <h4>Network Visualization Tool</h4>
+                                <p>Interactive tool with node and connection manipulation</p>
+                            </div>
+                        </div>
+                        
+                        <p>While hierarchies show containment and control, networks reveal connections and influence. Your mental architecture is also a vast network where components are linked in complex ways.</p>
+                        
+                        <p>Consider how:</p>
+                        
+                        <ul class="structure-list">
+                            <li><i class="bi bi-lightning"></i>A specific thought might trigger several emotions simultaneously</li>
+                            <li><i class="bi bi-clock-history"></i>An emotion might activate related memories</li>
+                            <li><i class="bi bi-arrow-repeat"></i>A belief might strengthen some habits while inhibiting others</li>
+                            <li><i class="bi bi-filter-square"></i>A value might influence which thoughts you tend to dwell on</li>
+                        </ul>
+                        
+                        <p>Mapping these connections reveals the "social dynamics" of your mental components—how they communicate, influence, and relate to each other. Sometimes the most interesting insights come from discovering unexpected connections, like how a seemingly minor habit might be directly linked to a core value.</p>
+                        
+                        <!-- Network Animation -->
+                        <div class="sora-image-container full-width mb-4">
+                            <div class="sora-placeholder">
+                                <i class="bi bi-activity placeholder-icon"></i>
+                            </div>
+                            <div class="sora-caption">
+                                <h4>Network Activation Flow</h4>
+                                <p>Animated example showing how activation spreads through a mental network</p>
+                            </div>
+                        </div>
+                        
+                        <p>Pay special attention to highly connected nodes (hubs) in your mental network—these "popular" components often have disproportionate influence over your entire system.</p>
+                    </div>
+                    
+                    <!-- Mental Models Section -->
+                    <div class="content-card mb-5">
+                        <h2 class="section-header">Mental Models: The Mind's Operating Systems</h2>
+                        
+                        <!-- Mental Model Explorer -->
+                        <div class="sora-image-container full-width mb-4">
+                            <div class="sora-placeholder">
+                                <i class="bi bi-grid-3x3-gap placeholder-icon"></i>
+                            </div>
+                            <div class="sora-caption">
+                                <h4>Mental Model Explorer</h4>
+                                <p>Interactive tool with examples and applications of different mental models</p>
+                            </div>
+                        </div>
+                        
+                        <p>If components are the parts and structures show their arrangement, mental models are the operational patterns that determine how your system actually runs.</p>
+                        
+                        <p>A mental model is essentially a representation of how something works—a simplified version of reality that helps you make sense of complex situations. We all have hundreds of these running in our minds, often without realizing it.</p>
+                        
+                        <p>Some common mental models include:</p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6 mb-3">
+                                <div class="model-type cause-effect">
+                                    <h5><i class="bi bi-arrow-right"></i>Cause and Effect</h5>
+                                    <p>"If X, then Y"</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="model-type zero-sum">
+                                    <h5><i class="bi bi-distribute-vertical"></i>Zero-sum Thinking</h5>
+                                    <p>"If you win, I lose"</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="model-type growth">
+                                    <h5><i class="bi bi-graph-up-arrow"></i>Growth Mindset</h5>
+                                    <p>"Abilities can be developed through effort"</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="model-type systems">
+                                    <h5><i class="bi bi-diagram-3"></i>Systems Thinking</h5>
+                                    <p>"Everything is connected in feedback loops"</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="model-type probability">
+                                    <h5><i class="bi bi-percent"></i>Probabilistic Thinking</h5>
+                                    <p>"Nothing is certain, only more or less likely"</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Mental Model Illustration -->
+                        <div class="sora-image-container full-width mb-4">
+                            <div class="sora-placeholder">
+                                <i class="bi bi-eyeglasses placeholder-icon"></i>
+                            </div>
+                            <div class="sora-caption">
+                                <h4>Mental Model Filters</h4>
+                                <p>Illustration showing how the same situation is processed differently through different mental models</p>
+                            </div>
+                        </div>
+                        
+                        <p>These models act like interpretive filters, shaping how you perceive, think about, and respond to the world. The models you use most frequently become your default operating systems—running automatically in the background and influencing everything you do.</p>
+                        
+                        <p>Identifying your dominant mental models is like discovering which software is currently installed and running on your mental computer. Some of these programs may be serving you brilliantly, while others might be outdated, buggy, or poorly suited to your current needs.</p>
+                    </div>
+                    
+                    <!-- Mental Archaeology Exercise -->
+                    <div class="content-card mb-5">
+                        <h2 class="section-header">The Mental Archaeology Exercise</h2>
+                        
+                        <!-- Exercise Tool Visual -->
+                        <div class="sora-image-container full-width mb-4">
+                            <div class="sora-placeholder">
+                                <i class="bi bi-shovel placeholder-icon"></i>
+                            </div>
+                            <div class="sora-caption">
+                                <h4>Mental Archaeology Tool</h4>
+                                <p>Guided excavation tool for uncovering deeper mental structures</p>
+                            </div>
+                        </div>
+                        
+                        <p>Now it's time to dig beneath the surface of your conscious awareness to uncover the structures that shape your mental landscape. Like an archaeological expedition, we're looking for foundations that may have been buried over time but continue to influence what's built on top of them.</p>
+                        
+                        <div class="archaeology-exercise">
+                            <h4><i class="bi bi-geo-alt me-2"></i>Exploring Your Mental Structures</h4>
+                            <p>In this exercise, you'll explore:</p>
+                            
+                            <div class="exercise-step" data-step="1">
+                                <strong>Your deepest hierarchies</strong> - What ultimately calls the shots in your mental kingdom?
+                            </div>
+                            
+                            <div class="exercise-step" data-step="2">
+                                <strong>Your most influential network connections</strong> - Which pathways are superhighways versus seldom-traveled backroads?
+                            </div>
+                            
+                            <div class="exercise-step" data-step="3">
+                                <strong>Your dominant mental models</strong> - Which interpretive frameworks do you rely on most heavily?
+                            </div>
+                            
+                            <h5 class="mt-4">How it works:</h5>
+                            <p>Follow the guided questions in each section, answering as honestly as possible. As you proceed, watch your personal structural map take shape, revealing the architecture that underpins your conscious experience.</p>
+                        </div>
+                        
+                        <!-- Guided Question Sequence Visual -->
+                        <div class="sora-image-container full-width mb-4">
+                            <div class="sora-placeholder">
+                                <i class="bi bi-list-check placeholder-icon"></i>
+                            </div>
+                            <div class="sora-caption">
+                                <h4>Guided Question Sequence</h4>
+                                <p>Interactive visualization that builds as user progresses through questions</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Creating Your Baseline Structural Map -->
+                    <div class="content-card mb-5">
+                        <h2 class="section-header">Creating Your Baseline Structural Map</h2>
+                        
+                        <!-- Structure Visualizer -->
+                        <div class="sora-image-container full-width mb-4">
+                            <div class="sora-placeholder">
+                                <i class="bi bi-layers-half placeholder-icon"></i>
+                            </div>
+                            <div class="sora-caption">
+                                <h4>Structure Visualizer</h4>
+                                <p>Interactive tool with toggle between different structural views</p>
+                            </div>
+                        </div>
+                        
+                        <p>Congratulations! You've now mapped the three fundamental structural aspects of your mental architecture:</p>
+                        
+                        <ul class="structure-list">
+                            <li><i class="bi bi-check2-circle"></i>The hierarchical organization of your mental components</li>
+                            <li><i class="bi bi-check2-circle"></i>The network connections between these components</li>
+                            <li><i class="bi bi-check2-circle"></i>The mental models that operate within your system</li>
+                        </ul>
+                        
+                        <p>Together, these form a comprehensive baseline map of your mental structure—a crucial reference point as we move forward. This map reveals not just what exists in your mind, but how it's all organized.</p>
+                        
+                        <p>Take some time to explore this map. Zoom in on areas of interest, toggle between different views, and note any patterns, surprises, or questions that arise. This exploration isn't just idle curiosity—it's developing your awareness as a consciousness engineer.</p>
+                        
+                        <div class="alert alert-primary">
+                            <i class="bi bi-lightbulb-fill me-2"></i>
+                            <strong>Pro tip:</strong> Save a copy of this baseline map! As you begin making changes to your mental architecture, you'll want to refer back to this original blueprint to track your progress.
+                        </div>
+                    </div>
+                    
+                    <!-- From Structure to Flow -->
+                    <div class="content-card mb-5">
+                        <h2 class="section-header">From Structure to Flow</h2>
+                        
+                        <p>With your structural map in hand, you've completed the first major phase of creating your mental architecture blueprint. You now have a clear picture of what exists in your mind and how it's organized.</p>
+                        
+                        <p>But a complete blueprint needs more than just structure—it needs to show how resources flow through the system. That's where we're headed next.</p>
+                        
+                        <p>Just as an architect needs to understand both the structural framework of a building AND the flow of electricity, water, and air through that structure, you're about to map the movement of resources through your mental architecture.</p>
+                        
+                        <p>Ready to see your mind in motion? Let's dive into Phase 2!</p>
+                        
+                        <div class="text-center mt-5">
+                            <a href="module2-1.html" class="btn btn-primary btn-lg">Continue to Phase 2:<br>Understanding Mental Resources</a>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="module-navigation d-flex justify-content-between">
+                        <a href="module1-2.html" class="btn btn-outline-primary">
+                            <i class="bi bi-arrow-left me-2"></i> Back to Module 1.2
+                        </a>
+                        <a href="module2-1.html" class="btn btn-primary">
+                            Next: Understanding Mental Resources <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Footer -->
+            <footer class="mt-auto py-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="mb-0">u00a9 2025 AutoNate - Cognitive Blueprint Builder</p>
+                        </div>
+                        <div class="col-md-6 text-md-end">
+                            <p class="mb-0">
+                                <a href="#" class="text-decoration-none">Privacy Policy</a> | 
+                                <a href="#" class="text-decoration-none">Terms of Use</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Restart Confirmation Modal -->
+    <div class="modal fade" id="restartModal" tabindex="-1" aria-labelledby="restartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="restartModalLabel">Restart Tutorial</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to restart the tutorial? This will clear all your saved progress and responses.</p>
+                    <p class="text-danger"><strong>This action cannot be undone.</strong></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirmRestart">Yes, Restart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Export Modal -->
+    <div class="modal fade" id="exportModal" tabindex="-1" aria-labelledby="exportModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exportModalLabel">Export Your Progress</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>What would you like to export?</p>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="exportOption" id="exportCurrent" value="current" checked>
+                        <label class="form-check-label" for="exportCurrent">
+                            Current module only
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="exportOption" id="exportAll" value="all">
+                        <label class="form-check-label" for="exportAll">
+                            All completed modules
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="exportOption" id="exportAI" value="ai">
+                        <label class="form-check-label" for="exportAI">
+                            AI Prompts for my data
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="confirmExport">Export as PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/components/navigation.js"></script>
+    <script src="js/components/theme.js"></script>
+    <script src="js/components/export.js"></script>
+    <script src="js/components/dataManager.js"></script>
+    <script src="js/pages/module1-3.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

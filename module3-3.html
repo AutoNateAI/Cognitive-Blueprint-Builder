@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3.3: From Map to Action | Cognitive Blueprint Builder</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components/navigation.css">
+    <link rel="stylesheet" href="css/components/theme.css">
+    <link rel="stylesheet" href="css/components/export.css">
+    <link rel="stylesheet" href="css/pages/module.css">
+    <link rel="stylesheet" href="css/pages/module3-3.css">
+    <link rel="stylesheet" href="css/sora-gallery.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler border-0" type="button" id="sidebarToggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.svg" width="30" height="30" alt="Cognitive Blueprint Builder Logo" class="d-inline-block align-top">
+                <span class="ms-2 d-none d-sm-inline-block">Cognitive Blueprint Builder</span>
+            </a>
+            <div class="d-flex align-items-center">
+                <button class="btn theme-toggle-btn" id="themeToggle">
+                    <i class="bi bi-sun-fill light-icon"></i>
+                    <i class="bi bi-moon-fill dark-icon"></i>
+                </button>
+                <button class="btn export-btn ms-2" id="exportBtn">
+                    <i class="bi bi-download"></i>
+                </button>
+                <button class="btn restart-btn ms-2" id="restartBtn">
+                    <i class="bi bi-arrow-counterclockwise"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar and Main Content -->
+    <div class="wrapper">
+        <!-- Sidebar Navigation -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h5>Tutorial Navigation</h5>
+                <button type="button" id="sidebarCollapseIn" class="btn">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <div class="progress-indicator">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small class="text-muted">0% Complete</small>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="index.html">Introduction</a>
+                </li>
+                <!-- Phase 1 -->
+                <li>
+                    <a href="#phase1Submenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        Phase 1: Foundations
+                    </a>
+                    <ul class="collapse list-unstyled" id="phase1Submenu">
+                        <li>
+                            <a href="module1-1.html">1.1: Welcome to Mental Architecture</a>
+                        </li>
+                        <li>
+                            <a href="module1-2.html">1.2: Creating Your Mental Taxonomy</a>
+                        </li>
+                        <li>
+                            <a href="module1-3.html">1.3: Hierarchies, Networks, & Mental Models</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Phase 2 -->
+                <li>
+                    <a href="#phase2Submenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        Phase 2: Dynamics
+                    </a>
+                    <ul class="collapse list-unstyled" id="phase2Submenu">
+                        <li>
+                            <a href="module2-1.html">2.1: Understanding Mental Resources</a>
+                        </li>
+                        <li>
+                            <a href="module2-2.html">2.2: Resource Flows and Exchanges</a>
+                        </li>
+                        <li>
+                            <a href="module2-3.html">2.3: Cycles, Leaks, and Generators</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Phase 3 -->
+                <li>
+                    <a href="#phase3Submenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        Phase 3: Integration
+                    </a>
+                    <ul class="collapse list-unstyled show" id="phase3Submenu">
+                        <li>
+                            <a href="module3-1.html">3.1: Creating Your Unified Mental Resource Map</a>
+                        </li>
+                        <li>
+                            <a href="module3-2.html">3.2: High-Leverage Points and Optimization</a>
+                        </li>
+                        <li class="active">
+                            <a href="module3-3.html">3.3: From Map to Action</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Additional Pages -->
+                <li>
+                    <a href="ai-prompts.html">AI Prompts Guide</a>
+                </li>
+                <li>
+                    <a href="conclusion.html">Conclusion</a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <p class="small text-muted">&copy; 2025 AutoNate</p>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <!-- Overlay for sidebar on mobile -->
+            <div class="overlay"></div>
+            
+            <!-- Main Content Area -->
+            <div class="container-fluid px-md-5 py-5">
+                <!-- Module Content -->
+                <section class="module-section">
+                    <div class="module-header mb-5">
+                        <h1 class="display-5 fw-bold mb-3">Module 3.3: From Map to Action</h1>
+                        <div class="progress mb-3" style="height: 5px;">
+                            <div class="progress-bar" role="progressbar" style="width: 99%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p class="lead">Module 9 of 9 &bull; Phase 3: Integration</p>
+                    </div>
+                    
+                    <!-- Hero Banner -->
+                    <div class="hero-banner mb-5">
+                        <div class="hero-content">
+                            <h2>Bridging Design and Implementation</h2>
+                            <p class="lead">Welcome to the final module of our consciousness engineering journey! You've mapped your mental architecture, identified high-leverage opportunities, and designed strategic interventions. Now comes the moment of truth—translating these insights into real-world action.</p>
+                            <p>This is where many systems thinking approaches fall short. They provide brilliant analysis but leave a gap between understanding and implementation. We're not going to make that mistake. Instead, we'll build a solid bridge from your mental blueprint to practical, everyday action.</p>
+                            <div class="mt-4">
+                                <button class="btn btn-light" id="startActionPlanBtn"><i class="bi bi-play-circle-fill me-2"></i>Let's Build Your Action Plan</button>
+                            </div>
+                        </div>
+                        <i class="bi bi-gear-fill animated-icon icon-gear"></i>
+                        <i class="bi bi-lightbulb-fill animated-icon icon-lightbulb"></i>
+                        <i class="bi bi-graph-up-arrow animated-icon icon-graph"></i>
+                    </div>
+                    
+                    <!-- Blueprint to Reality Visualization -->
+                    <div class="sora-image-container fade-in-up mb-5" data-delay="0.2">
+                        <div class="sora-placeholder">
+                            <i class="bi bi-layers-half placeholder-icon"></i>
+                        </div>
+                        <div class="sora-caption">
+                            <h4>Blueprint Transforming into Reality</h4>
+                            <p>A visualization of mental architecture designs converting into real-world implementation</p>
+                        </div>
+                    </div>
+
+                    <!-- The Action Plan Builder Section -->
+                    <div class="content-section mb-5" id="action-plan-section">
+                        <h2 class="section-title">The Action Plan Builder</h2>
+                        <p>First, we need to transform your high-leverage interventions into a concrete action plan. This isn't about creating a productivity system; it's about sequencing specific changes to your mental architecture for maximum effect.</p>
+
+                        <div class="action-plan-builder p-4 mt-4">
+                            <div class="card-header bg-primary text-white p-3 rounded-top">
+                                <h4 class="mb-0"><i class="bi bi-journal-check me-2"></i>Your Implementation Sequence</h4>
+                            </div>
+                            <div class="card-body p-4">
+                                <p>Your action plan includes a strategic sequence of interventions designed for optimal impact and sustainability:</p>
+                                
+                                <div class="action-steps-container mt-4">
+                                    <div class="action-step">
+                                        <div class="step-header">
+                                            <div class="step-number">1</div>
+                                            <h5>Foundation Setting</h5>
+                                        </div>
+                                        <p>Begin with interventions that create environmental supports and establish basic resource generators:</p>
+                                        <ul>
+                                            <li><strong>Attention anchors</strong> - Physical reminders of your architecture goals</li>
+                                            <li><strong>Resource tracking</strong> - Simple monitoring of key mental resources</li>
+                                            <li><strong>Environment optimization</strong> - Adjusting spaces to support new patterns</li>
+                                        </ul>
+                                        <div class="d-flex justify-content-end">
+                                            <button class="btn btn-sm btn-outline-primary" data-action="customize-step" data-step="1">Customize for Your System <i class="bi bi-pencil ms-1"></i></button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="action-step">
+                                        <div class="step-header">
+                                            <div class="step-number">2</div>
+                                            <h5>Flow Optimization</h5>
+                                        </div>
+                                        <p>Once foundations are in place, focus on interventions that improve resource flows:</p>
+                                        <ul>
+                                            <li><strong>Bottleneck reduction</strong> - Removing key constraints in your system</li>
+                                            <li><strong>Connection strengthening</strong> - Enhancing pathways between components</li>
+                                            <li><strong>Diversion elimination</strong> - Reducing resource leaks to low-value activities</li>
+                                        </ul>
+                                        <div class="d-flex justify-content-end">
+                                            <button class="btn btn-sm btn-outline-primary" data-action="customize-step" data-step="2">Customize for Your System <i class="bi bi-pencil ms-1"></i></button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="action-step">
+                                        <div class="step-header">
+                                            <div class="step-number">3</div>
+                                            <h5>Feedback Loop Engineering</h5>
+                                        </div>
+                                        <p>Next, implement interventions that create or modify feedback loops:</p>
+                                        <ul>
+                                            <li><strong>Reinforcing loop creation</strong> - Building virtuous cycles</li>
+                                            <li><strong>Balancing loop adjustments</strong> - Fine-tuning stabilizing mechanisms</li>
+                                            <li><strong>Delay reduction</strong> - Shortening time between action and feedback</li>
+                                        </ul>
+                                        <div class="d-flex justify-content-end">
+                                            <button class="btn btn-sm btn-outline-primary" data-action="customize-step" data-step="3">Customize for Your System <i class="bi bi-pencil ms-1"></i></button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="action-step">
+                                        <div class="step-header">
+                                            <div class="step-number">4</div>
+                                            <h5>Deep Architecture Shifts</h5>
+                                        </div>
+                                        <p>Finally, implement the highest-leverage interventions that transform your architecture:</p>
+                                        <ul>
+                                            <li><strong>Goal recalibration</strong> - Adjusting what your system optimizes for</li>
+                                            <li><strong>Mental model updates</strong> - Changing fundamental interpretive frameworks</li>
+                                            <li><strong>Identity evolution</strong> - Shifting self-concept to align with new architecture</li>
+                                        </ul>
+                                        <div class="d-flex justify-content-end">
+                                            <button class="btn btn-sm btn-outline-primary" data-action="customize-step" data-step="4">Customize for Your System <i class="bi bi-pencil ms-1"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="success-indicators mt-4 p-3 bg-light rounded">
+                                    <h5><i class="bi bi-check2-circle me-2 text-success"></i>Success Indicators</h5>
+                                    <p>You'll know your interventions are working when you observe:</p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li><strong>Subjective experiences:</strong> Greater clarity, reduced internal friction, increased flow states</li>
+                                                <li><strong>Behavioral changes:</strong> More consistent actions, reduced effort for key tasks, new automatic patterns</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li><strong>Resource flows:</strong> Increased energy maintenance, better attention allocation, improved willpower sustainability</li>
+                                                <li><strong>Feedback patterns:</strong> Faster learning cycles, more consistent self-correction, reduced oscillation</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resource Allocation Strategy Section -->
+                    <div class="content-section mb-5" id="resource-allocation-section">
+                        <h2 class="section-title">Resource Allocation Strategy</h2>
+                        <p>Implementing changes in your mental architecture requires an investment of the very resources you're working to optimize. It's a bootstrapping challenge that needs careful planning.</p>
+
+                        <div class="row align-items-center mb-4">
+                            <div class="col-lg-5 order-lg-2">
+                                <div class="sora-image-container fade-in-up" data-delay="0.3">
+                                    <div class="sora-placeholder">
+                                        <i class="bi bi-bar-chart-line-fill placeholder-icon"></i>
+                                    </div>
+                                    <div class="sora-caption">
+                                        <h4>Resource Distribution Dashboard</h4>
+                                        <p>Visualization showing optimal allocation of mental resources across implementation phases</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 order-lg-1">
+                                <div class="resource-allocation p-4">
+                                    <h4 class="mb-3"><i class="bi bi-distribute-vertical me-2"></i>Your Resource Allocation Plan</h4>
+                                    
+                                    <div class="resource-category mb-4">
+                                        <h5>Attention Budget</h5>
+                                        <p>How to distribute your limited attention:</p>
+                                        
+                                        <div class="resource-item mb-3">
+                                            <label class="d-flex justify-content-between">
+                                                <span>Awareness of current patterns</span>
+                                                <span>30%</span>
+                                            </label>
+                                            <div class="resource-meter">
+                                                <div class="resource-fill" style="width: 30%">
+                                                    <span class="resource-value">30%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="resource-item mb-3">
+                                            <label class="d-flex justify-content-between">
+                                                <span>Implementation of new patterns</span>
+                                                <span>40%</span>
+                                            </label>
+                                            <div class="resource-meter">
+                                                <div class="resource-fill" style="width: 40%">
+                                                    <span class="resource-value">40%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="resource-item mb-3">
+                                            <label class="d-flex justify-content-between">
+                                                <span>Monitoring of results</span>
+                                                <span>15%</span>
+                                            </label>
+                                            <div class="resource-meter">
+                                                <div class="resource-fill" style="width: 15%">
+                                                    <span class="resource-value">15%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="resource-item mb-3">
+                                            <label class="d-flex justify-content-between">
+                                                <span>Adaptation based on feedback</span>
+                                                <span>15%</span>
+                                            </label>
+                                            <div class="resource-meter">
+                                                <div class="resource-fill" style="width: 15%">
+                                                    <span class="resource-value">15%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="resource-category mb-4">
+                                        <h5>Energy Investment</h5>
+                                        <p>How to distribute your mental and physical energy:</p>
+                                        
+                                        <div class="resource-item mb-3">
+                                            <label class="d-flex justify-content-between">
+                                                <span>Initial setup efforts</span>
+                                                <span>35%</span>
+                                            </label>
+                                            <div class="resource-meter">
+                                                <div class="resource-fill" style="width: 35%">
+                                                    <span class="resource-value">35%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="resource-item mb-3">
+                                            <label class="d-flex justify-content-between">
+                                                <span>Ongoing practice requirements</span>
+                                                <span>30%</span>
+                                            </label>
+                                            <div class="resource-meter">
+                                                <div class="resource-fill" style="width: 30%">
+                                                    <span class="resource-value">30%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="resource-item mb-3">
+                                            <label class="d-flex justify-content-between">
+                                                <span>Recovery and regeneration</span>
+                                                <span>20%</span>
+                                            </label>
+                                            <div class="resource-meter">
+                                                <div class="resource-fill" style="width: 20%">
+                                                    <span class="resource-value">20%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="resource-item mb-3">
+                                            <label class="d-flex justify-content-between">
+                                                <span>Managing transition challenges</span>
+                                                <span>15%</span>
+                                            </label>
+                                            <div class="resource-meter">
+                                                <div class="resource-fill" style="width: 15%">
+                                                    <span class="resource-value">15%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="alert alert-primary">
+                                        <i class="bi bi-lightbulb-fill me-2"></i>
+                                        <strong>Pro tip:</strong> Always allocate fewer resources than you think you'll need—it forces more efficient design and creates a buffer for unexpected challenges.
+                                    </div>
+                                    
+                                    <button class="btn btn-primary mt-3" id="customizeAllocationBtn">
+                                        <i class="bi bi-sliders me-2"></i>Customize Your Resource Allocation
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Implementation Timeline Section -->
+                    <div class="content-section mb-5" id="implementation-timeline-section">
+                        <h2 class="section-title">Implementation Timeline: The Roadmap</h2>
+                        <p>Now let's map your implementation plan onto a realistic timeline—your roadmap for consciousness evolution.</p>
+                        <p>Unlike typical goal-setting approaches that focus on deadlines, your implementation roadmap emphasizes natural sequences, integration periods, feedback checkpoints, and transition phases.</p>
+                        
+                        <div class="timeline-container mt-5">
+                            <div class="timeline">
+                                <div class="timeline-item left">
+                                    <div class="timeline-content">
+                                        <h3>Immediate (Next 2 Weeks)</h3>
+                                        <ul>
+                                            <li>Set up environmental supports</li>
+                                            <li>Begin basic resource tracking</li>
+                                            <li>Implement first attention management practices</li>
+                                            <li>Establish daily reflection routine</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item right">
+                                    <div class="timeline-content">
+                                        <h3>Short-Term (1-2 Months)</h3>
+                                        <ul>
+                                            <li>Address primary bottlenecks</li>
+                                            <li>Implement new connection protocols</li>
+                                            <li>Begin installing reinforcing feedback loops</li>
+                                            <li>Conduct first monthly review</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item left">
+                                    <div class="timeline-content">
+                                        <h3>Medium-Term (3-6 Months)</h3>
+                                        <ul>
+                                            <li>Implement core process refinements</li>
+                                            <li>Begin deeper architectural shifts</li>
+                                            <li>Conduct quarterly effectiveness review</li>
+                                            <li>Make calibration adjustments based on data</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item right">
+                                    <div class="timeline-content">
+                                        <h3>Long-Term (6-12 Months)</h3>
+                                        <ul>
+                                            <li>Initiate high-leverage paradigm shifts</li>
+                                            <li>Begin identity-level integrations</li>
+                                            <li>Implement second-order changes</li>
+                                            <li>Prepare for next phase of architecture evolution</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-5">
+                            <h4>Your Feedback System</h4>
+                            <p>To ensure your implementation stays on track, you'll establish a multi-level feedback system:</p>
+                            
+                            <div class="row g-4 mt-2">
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="bi bi-clock-history me-2 text-primary"></i>Daily Micro-Checks</h5>
+                                            <p class="card-text">Quick awareness moments (30-60 seconds) to notice patterns and make micro-adjustments</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="bi bi-calendar-week me-2 text-primary"></i>Weekly Reviews</h5>
+                                            <p class="card-text">15-30 minute sessions for pattern recognition and minor calibration adjustments</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="bi bi-calendar-month me-2 text-primary"></i>Monthly Reflections</h5>
+                                            <p class="card-text">1-hour deeper analysis sessions for course corrections and strategic adjustments</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="bi bi-calendar3 me-2 text-primary"></i>Quarterly Evolutions</h5>
+                                            <p class="card-text">3-hour comprehensive reviews for major adjustments and next phase planning</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Implementation Rehearsal Section -->
+                    <div class="content-section mb-5" id="implementation-rehearsal-section">
+                        <h2 class="section-title">Mental Implementation Rehearsal</h2>
+                        <p>Before we finalize your implementation plan, let's use a powerful technique to prepare your mind for the changes ahead: mental implementation rehearsal.</p>
+                        <p>This practice involves mentally walking through the implementation process, which helps prime neural pathways, identify potential obstacles, and strengthen your commitment.</p>
+                        
+                        <div class="rehearsal-container" id="rehearsalContainer">
+                            <h4 class="mb-4"><i class="bi bi-person-workspace me-2"></i>Implementation Scenario Practice</h4>
+                            
+                            <p>Select a scenario to mentally rehearse implementation:</p>
+                            
+                            <div class="scenario-selector" id="scenarioSelector">
+                                <div class="scenario-card active" data-scenario="attention">
+                                    <div class="scenario-icon">
+                                        <i class="bi bi-eyeglasses"></i>
+                                    </div>
+                                    <h5>Attention Management</h5>
+                                    <p>Implementing new attention allocation practices</p>
+                                </div>
+                                
+                                <div class="scenario-card" data-scenario="feedback">
+                                    <div class="scenario-icon">
+                                        <i class="bi bi-arrow-repeat"></i>
+                                    </div>
+                                    <h5>Feedback Loop Creation</h5>
+                                    <p>Installing new mental feedback mechanisms</p>
+                                </div>
+                                
+                                <div class="scenario-card" data-scenario="bottleneck">
+                                    <div class="scenario-icon">
+                                        <i class="bi bi-funnel"></i>
+                                    </div>
+                                    <h5>Bottleneck Elimination</h5>
+                                    <p>Removing constraints in your mental processing</p>
+                                </div>
+                                
+                                <div class="scenario-card" data-scenario="model">
+                                    <div class="scenario-icon">
+                                        <i class="bi bi-diagram-3"></i>
+                                    </div>
+                                    <h5>Mental Model Updating</h5>
+                                    <p>Shifting fundamental interpretive frameworks</p>
+                                </div>
+                            </div>
+                            
+                            <div class="rehearsal-content mt-4 p-4 bg-light rounded">
+                                <h5>Scenario: Implementing Attention Management Practices</h5>
+                                <p>Imagine yourself implementing a new attention allocation system. Visualize each step of the process:</p>
+                                
+                                <div id="rehearsalSteps">
+                                    <div class="rehearsal-step p-3 mb-3 border-start border-primary border-3 rounded">
+                                        <h6>1. Setting up physical reminders</h6>
+                                        <p>You're placing visual cues in your workspace that remind you of your attention priorities. You feel a sense of clarity as you arrange these anchors.</p>
+                                    </div>
+                                    
+                                    <div class="rehearsal-step p-3 mb-3 border-start border-primary border-3 rounded">
+                                        <h6>2. First decision point: Incoming distraction</h6>
+                                        <p>A notification appears on your device. You notice the automatic urge to check it immediately, but pause as you remember your attention blueprint. You make a conscious choice about how to respond.</p>
+                                    </div>
+                                    
+                                    <div class="rehearsal-step p-3 mb-3 border-start border-primary border-3 rounded">
+                                        <h6>3. Encountering internal resistance</h6>
+                                        <p>You notice a feeling of restlessness as you maintain focused attention. Rather than fighting it, you acknowledge it as feedback from your system, making an adjustment to your approach.</p>
+                                    </div>
+                                    
+                                    <div class="rehearsal-step p-3 mb-3 border-start border-primary border-3 rounded">
+                                        <h6>4. End-of-day review process</h6>
+                                        <p>You take a moment to reflect on how your attention was allocated throughout the day, noting patterns and making a micro-adjustment for tomorrow.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="choice-container" id="choiceContainer">
+                                    <p><strong>How would you handle this obstacle?</strong></p>
+                                    <p>You find your attention management system working well for three days, but on day four, you wake up feeling resistance to continuing the practice.</p>
+                                    
+                                    <div class="choice-option" data-outcome="flexible">
+                                        <h6>Flexible Adaptation</h6>
+                                        <p>Modify your attention system for the day, implementing a lighter version while maintaining the core structure.</p>
+                                    </div>
+                                    
+                                    <div class="choice-option" data-outcome="motivational">
+                                        <h6>Motivational Reconnection</h6>
+                                        <p>Spend five minutes reconnecting with your original purpose for implementing the system before deciding how to proceed.</p>
+                                    </div>
+                                    
+                                    <div class="choice-option" data-outcome="consistency">
+                                        <h6>Consistency Focus</h6>
+                                        <p>Push through the resistance by focusing on maintaining the streak, emphasizing the importance of consistency.</p>
+                                    </div>
+                                </div>
+                                
+                                <div id="rehearsalOutcome" class="mt-4 d-none">
+                                    <!-- This will be populated via JavaScript when a choice is selected -->
+                                </div>
+                                
+                                <div class="mt-4 pt-3 border-top">
+                                    <p><strong>Mental rehearsal benefits:</strong></p>
+                                    <ul>
+                                        <li>Primes neural pathways for implementation</li>
+                                        <li>Identifies potential obstacles before they arise</li>
+                                        <li>Creates emotional readiness for the change process</li>
+                                        <li>Reduces implementation friction when you execute in reality</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Final Map Integration Section -->
+                    <div class="content-section mb-5" id="final-map-section">
+                        <h2 class="section-title">Your Complete Mental Architecture Resource Map</h2>
+                        
+                        <div class="final-map-container">
+                            <div class="sora-image-container fade-in-up mb-4" data-delay="0.2">
+                                <div class="sora-placeholder">
+                                    <i class="bi bi-map placeholder-icon"></i>
+                                </div>
+                                <div class="sora-caption">
+                                    <h4>Your Complete Mental Resource Map</h4>
+                                    <p>Unified visualization of your cognitive blueprint with all components, flows, and action plan integrated</p>
+                                </div>
+                            </div>
+                            
+                            <p>Congratulations! You've completed the Mental Architecture Resource Mapping tutorial and created a comprehensive blueprint of your consciousness.</p>
+                            
+                            <div class="map-interaction-panel">
+                                <div class="map-layer-toggle" data-layer="components">
+                                    <div class="toggle-icon"><i class="bi bi-grid-3x3"></i></div>
+                                    <div class="toggle-label">Component Layer</div>
+                                </div>
+                                
+                                <div class="map-layer-toggle" data-layer="flows">
+                                    <div class="toggle-icon"><i class="bi bi-arrow-left-right"></i></div>
+                                    <div class="toggle-label">Resource Flows</div>
+                                </div>
+                                
+                                <div class="map-layer-toggle" data-layer="cycles">
+                                    <div class="toggle-icon"><i class="bi bi-arrow-repeat"></i></div>
+                                    <div class="toggle-label">Feedback Cycles</div>
+                                </div>
+                                
+                                <div class="map-layer-toggle" data-layer="leverage">
+                                    <div class="toggle-icon"><i class="bi bi-lightning-charge"></i></div>
+                                    <div class="toggle-label">Leverage Points</div>
+                                </div>
+                                
+                                <div class="map-layer-toggle" data-layer="actions">
+                                    <div class="toggle-icon"><i class="bi bi-check2-square"></i></div>
+                                    <div class="toggle-label">Action Plans</div>
+                                </div>
+                                
+                                <div class="map-layer-toggle" data-layer="complete">
+                                    <div class="toggle-icon"><i class="bi bi-layers"></i></div>
+                                    <div class="toggle-label">Complete View</div>
+                                </div>
+                            </div>
+                            
+                            <div class="achievement-summary mt-5">
+                                <h4>Let's appreciate what you've accomplished:</h4>
+                                <div class="row mt-3">
+                                    <div class="col-md-6">
+                                        <ul class="achievement-list">
+                                            <li>Created a detailed map of your mental components—the building blocks of your consciousness</li>
+                                            <li>Traced the flow of resources through this architecture, revealing dynamics invisible to most people</li>
+                                            <li>Identified cycles, leaks, and generators that determine your system's sustainability</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="achievement-list">
+                                            <li>Integrated these insights into a unified mental blueprint</li>
+                                            <li>Pinpointed high-leverage opportunities for optimizing your mental architecture</li>
+                                            <li>Developed a concrete action plan to implement strategic changes</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <p class="mt-3">This represents an unprecedented level of self-understanding and agency. You now possess not just insights about your mind, but an engineer's blueprint for consciously evolving it.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Call to Action Section -->
+                    <div class="cta-container">
+                        <div class="cta-content">
+                            <h2 class="cta-title">Your Blueprint is Ready. Your Tools are at Hand.</h2>
+                            <p class="lead">Now it's time to build. Welcome to the ranks of consciousness engineers—those who have moved beyond being passive inhabitants of their minds to become active architects of their experience.</p>
+                            
+                            <div class="cta-buttons">
+                                <a href="#" class="btn btn-light cta-btn" id="downloadBlueprintBtn">
+                                    <i class="bi bi-download me-2"></i>Download Your Blueprint
+                                </a>
+                                <a href="conclusion.html" class="btn btn-light-outline cta-btn">
+                                    Continue Your Journey <i class="bi bi-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Next Steps Section -->
+                    <div class="content-section mb-5" id="next-steps-section">
+                        <h2 class="section-title">Next Steps and Implementation Support</h2>
+                        
+                        <p>As you begin implementing your consciousness engineering plan, remember that you're not alone on this journey. Your Cognitive Blueprint Builder pack includes additional resources to support your implementation:</p>
+                        
+                        <div class="row mt-4 g-4">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body text-center">
+                                        <i class="bi bi-file-earmark-text text-primary" style="font-size: 2.5rem;"></i>
+                                        <h5 class="card-title mt-3">Weekly Worksheets</h5>
+                                        <p class="card-text">Structured templates for ongoing mapping and optimization work</p>
+                                        <button class="btn btn-outline-primary btn-sm mt-2" id="viewWorksheetsBtn">Access Worksheets</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body text-center">
+                                        <i class="bi bi-journal-check text-primary" style="font-size: 2.5rem;"></i>
+                                        <h5 class="card-title mt-3">Implementation Guide</h5>
+                                        <p class="card-text">Detailed protocols for each type of mental architecture intervention</p>
+                                        <button class="btn btn-outline-primary btn-sm mt-2" id="viewGuideBtn">Access Guide</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body text-center">
+                                        <i class="bi bi-book text-primary" style="font-size: 2.5rem;"></i>
+                                        <h5 class="card-title mt-3">Resource Library</h5>
+                                        <p class="card-text">Expanded explanations of key concepts and techniques for deeper learning</p>
+                                        <button class="btn btn-outline-primary btn-sm mt-2" id="viewLibraryBtn">Access Library</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body text-center">
+                                        <i class="bi bi-people text-primary" style="font-size: 2.5rem;"></i>
+                                        <h5 class="card-title mt-3">Community Access</h5>
+                                        <p class="card-text">Optional connection with fellow consciousness engineers for support</p>
+                                        <button class="btn btn-outline-primary btn-sm mt-2" id="joinCommunityBtn">Join Community</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-primary mt-4">
+                            <i class="bi bi-info-circle-fill me-2"></i>
+                            <strong>Coming Soon:</strong> The next phase of your journey—Strategic Consciousness Evolution, where you'll learn to design emergent states, apply second-order thinking, and create self-evolving systems within your mental architecture.
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation Buttons -->
+                    <div class="module-navigation d-flex justify-content-between">
+                        <a href="module3-2.html" class="btn btn-outline-primary">
+                            <i class="bi bi-arrow-left me-2"></i> Back to Module 3.2
+                        </a>
+                        <a href="conclusion.html" class="btn btn-primary">
+                            Next: Conclusion <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Footer -->
+            <footer class="mt-auto py-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="mb-0">&copy; 2025 AutoNate - Cognitive Blueprint Builder</p>
+                        </div>
+                        <div class="col-md-6 text-md-end">
+                            <p class="mb-0">
+                                <a href="#" class="text-decoration-none">Privacy Policy</a> | 
+                                <a href="#" class="text-decoration-none">Terms of Use</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Restart Confirmation Modal -->
+    <div class="modal fade" id="restartModal" tabindex="-1" aria-labelledby="restartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="restartModalLabel">Restart Tutorial</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to restart the tutorial? This will clear all your saved progress and responses.</p>
+                    <p class="text-danger"><strong>This action cannot be undone.</strong></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirmRestart">Yes, Restart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Export Modal -->
+    <div class="modal fade" id="exportModal" tabindex="-1" aria-labelledby="exportModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exportModalLabel">Export Your Progress</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>What would you like to export?</p>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="exportOption" id="exportCurrent" value="current" checked>
+                        <label class="form-check-label" for="exportCurrent">
+                            Current module only
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="exportOption" id="exportAll" value="all">
+                        <label class="form-check-label" for="exportAll">
+                            All completed modules
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="exportOption" id="exportAI" value="ai">
+                        <label class="form-check-label" for="exportAI">
+                            AI Prompts for my data
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="confirmExport">Export as PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/components/navigation.js"></script>
+    <script src="js/components/theme.js"></script>
+    <script src="js/components/export.js"></script>
+    <script src="js/components/dataManager.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pages/module3-3.js"></script>
+</body>
+</html>

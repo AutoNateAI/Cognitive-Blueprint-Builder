@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3.1: Creating Your Unified Mental Resource Map | Cognitive Blueprint Builder</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components/navigation.css">
+    <link rel="stylesheet" href="css/components/theme.css">
+    <link rel="stylesheet" href="css/components/export.css">
+    <link rel="stylesheet" href="css/pages/module.css">
+    <link rel="stylesheet" href="css/pages/module3-1.css">
+    <link rel="stylesheet" href="css/sora-gallery.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler border-0" type="button" id="sidebarToggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.svg" width="30" height="30" alt="Cognitive Blueprint Builder Logo" class="d-inline-block align-top">
+                <span class="ms-2 d-none d-sm-inline-block">Cognitive Blueprint Builder</span>
+            </a>
+            <div class="d-flex align-items-center">
+                <button class="btn theme-toggle-btn" id="themeToggle">
+                    <i class="bi bi-sun-fill light-icon"></i>
+                    <i class="bi bi-moon-fill dark-icon"></i>
+                </button>
+                <button class="btn export-btn ms-2" id="exportBtn">
+                    <i class="bi bi-download"></i>
+                </button>
+                <button class="btn restart-btn ms-2" id="restartBtn">
+                    <i class="bi bi-arrow-counterclockwise"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar and Main Content -->
+    <div class="wrapper">
+        <!-- Sidebar Navigation -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h5>Tutorial Navigation</h5>
+                <button type="button" id="sidebarCollapseIn" class="btn">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <div class="progress-indicator">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small class="text-muted">0% Complete</small>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="index.html">Introduction</a>
+                </li>
+                <!-- Phase 1 -->
+                <li>
+                    <a href="#phase1Submenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        Phase 1: Foundations
+                    </a>
+                    <ul class="collapse list-unstyled" id="phase1Submenu">
+                        <li>
+                            <a href="module1-1.html">1.1: Welcome to Mental Architecture</a>
+                        </li>
+                        <li>
+                            <a href="module1-2.html">1.2: Creating Your Mental Taxonomy</a>
+                        </li>
+                        <li>
+                            <a href="module1-3.html">1.3: Hierarchies, Networks, & Mental Models</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Phase 2 -->
+                <li>
+                    <a href="#phase2Submenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        Phase 2: Dynamics
+                    </a>
+                    <ul class="collapse list-unstyled" id="phase2Submenu">
+                        <li>
+                            <a href="module2-1.html">2.1: Understanding Mental Resources</a>
+                        </li>
+                        <li>
+                            <a href="module2-2.html">2.2: Resource Flows and Exchanges</a>
+                        </li>
+                        <li>
+                            <a href="module2-3.html">2.3: Cycles, Leaks, and Generators</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Phase 3 -->
+                <li>
+                    <a href="#phase3Submenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        Phase 3: Integration
+                    </a>
+                    <ul class="collapse list-unstyled show" id="phase3Submenu">
+                        <li class="active">
+                            <a href="module3-1.html">3.1: Creating Your Unified Mental Resource Map</a>
+                        </li>
+                        <li>
+                            <a href="module3-2.html">3.2: High-Leverage Points and Optimization</a>
+                        </li>
+                        <li>
+                            <a href="module3-3.html">3.3: From Map to Action</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Additional Pages -->
+                <li>
+                    <a href="ai-prompts.html">AI Prompts Guide</a>
+                </li>
+                <li>
+                    <a href="conclusion.html">Conclusion</a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <p class="small text-muted">&copy; 2025 AutoNate</p>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <!-- Overlay for sidebar on mobile -->
+            <div class="overlay"></div>
+            
+            <!-- Main Content Area -->
+            <div class="container-fluid px-md-5 py-5">
+                <!-- Module Content -->
+                <section class="module-section">
+                    <div class="module-header mb-5">
+                        <h1 class="display-5 fw-bold mb-3">Module 3.1: Creating Your Unified Mental Resource Map</h1>
+                        <div class="progress mb-3" style="height: 5px;">
+                            <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p class="lead">Module 7 of 9 &bull; Phase 3: Integration</p>
+                    </div>
+                    
+                    <!-- From Layers to Integration Section -->
+                    <div class="content-section mb-5" id="layers-integration-section">
+                        <h2 class="section-title">From Layers to Integration</h2>
+                        
+                        <div class="row align-items-center mb-4">
+                            <div class="col-md-8">
+                                <p>Welcome to Phase 3, where all the pieces come together! You've mapped your mental structure (the components and their organization) and your mental dynamics (the resources and their flows). Now it's time for the magic of integration—merging these layers into a single, unified blueprint of your mental architecture.</p>
+                                <p>Think of what we're doing as similar to how Google Maps combines different data layers—roads, terrain, traffic, businesses—into one usable map. Each layer is valuable on its own, but the real power comes from seeing how they all interact.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="sora-image-container fade-in-up" data-delay="0.2">
+                                    <div class="sora-placeholder">
+                                        <i class="bi bi-layers-half placeholder-icon"></i>
+                                    </div>
+                                    <div class="sora-caption">
+                                        <h4>Integration Visualization</h4>
+                                        <p>Separate structural and flow layers merging into a comprehensive view</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p>This integration is where the true engineering perspective emerges. It's one thing to understand individual aspects of a system; it's another to grasp how everything works together as a unified whole.</p>
+                    </div>
+                    
+                    <!-- The Power of Unified Visualization Section -->
+                    <div class="content-section mb-5" id="unified-visualization-section">
+                        <h2 class="section-title">The Power of Unified Visualization</h2>
+                        
+                        <div class="interactive-element mb-4">
+                            <div class="card">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="bi bi-layers-half me-2"></i>Map Integration Tool</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="map-tool-controls p-3">
+                                                <p><strong>Combine your structural and flow maps:</strong></p>
+                                                <div class="mb-3">
+                                                    <label for="structureOpacity" class="form-label">Structure Map Opacity: <span id="structureOpacityValue">50%</span></label>
+                                                    <input type="range" class="form-range" id="structureOpacity" min="0" max="100" value="50">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="flowOpacity" class="form-label">Flow Map Opacity: <span id="flowOpacityValue">50%</span></label>
+                                                    <input type="range" class="form-range" id="flowOpacity" min="0" max="100" value="50">
+                                                </div>
+                                                <button type="button" class="btn btn-primary" id="toggleIntegration">Toggle Combined View</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="map-visualization">
+                                                <div class="sora-placeholder">
+                                                    <i class="bi bi-map placeholder-icon"></i>
+                                                </div>
+                                                <div class="sora-caption">
+                                                    <p>Map integration visualization</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p>Why go to the trouble of creating a unified map? Because it reveals patterns and opportunities that aren't visible when looking at structure or flow in isolation:</p>
+                        
+                        <ul class="feature-list">
+                            <li><strong>Structural bottlenecks</strong> that restrict important resource flows</li>
+                            <li><strong>Flow inefficiencies</strong> caused by suboptimal structural arrangements</li>
+                            <li><strong>Resource imbalances</strong> across different structural regions</li>
+                            <li><strong>Unexpected connections</strong> between seemingly unrelated components</li>
+                            <li><strong>Emergent properties</strong> that arise from the interaction of structure and flow</li>
+                        </ul>
+                        
+                        <p>Imagine trying to understand a city by looking separately at a street map and traffic data—you'd miss how the street design creates traffic patterns. Similarly, your mental architecture can only be fully understood by seeing how structure and dynamics interact.</p>
+                    </div>
+                    
+                    <!-- Creating Your Integrated Map Section -->
+                    <div class="content-section mb-5" id="creating-map-section">
+                        <h2 class="section-title">Creating Your Integrated Map</h2>
+                        
+                        <div class="sora-image-container full-width fade-in-up" data-delay="0.3">
+                            <div class="sora-placeholder">
+                                <i class="bi bi-diagram-3-fill placeholder-icon"></i>
+                            </div>
+                            <div class="sora-caption">
+                                <h4>Integration Process</h4>
+                                <p>Step-by-step process showing how the two maps are overlaid and integrated</p>
+                            </div>
+                        </div>
+                        
+                        <p>Let's walk through the process of creating your unified mental resource map:</p>
+                        
+                        <div class="step-process">
+                            <div class="step-item">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Align the Maps</h4>
+                                    <p>First, we need to ensure your structural map and flow map use the same scale and orientation. This means matching up the key components so that every element has a consistent location across both maps.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step-item">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Create Visualization Layers</h4>
+                                    <p>Next, we'll arrange the maps as layers that can be viewed together, with options to adjust transparency and visibility to highlight different aspects as needed.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step-item">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Identify Integration Points</h4>
+                                    <p>Now we'll mark the critical intersections where structure and flow most significantly interact—these are often the most revealing areas of your mental architecture.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step-item">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h4>Add a Unified Legend</h4>
+                                    <p>Finally, we'll create a comprehensive legend that incorporates both structural symbols and flow indicators into a coherent notation system.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="theory-box bg-light p-4 rounded mb-4">
+                            <p>The result is a single visualization that shows your complete mental architecture—like having the architectural plans, electrical wiring diagram, and plumbing blueprint of a building all accurately overlaid.</p>
+                        </div>
+                    </div>
+
+                    <!-- Creating Your Personal Legend -->
+                    <div class="content-section mb-5" id="personal-legend-section">
+                        <h2 class="section-title">Creating Your Personal Legend</h2>
+                        
+                        <div class="interactive-element mb-4">
+                            <div class="card">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="bi bi-map me-2"></i>Legend Builder Tool</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p>Every engineer needs a clear notation system, and as a consciousness engineer, you're no exception! Your unified map needs a legend that makes sense to YOU—one that uses symbols, colors, and terminology that resonate with how you think about your mind.</p>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <h5>Structural Notation</h5>
+                                            <ul>
+                                                <li>Symbols for different component types (thoughts, emotions, beliefs, etc.)</li>
+                                                <li>Indicators for hierarchical relationships</li>
+                                                <li>Markers for network connections and their strengths</li>
+                                                <li>Representation of mental models and their domains</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <h5>Flow Notation</h5>
+                                            <ul>
+                                                <li>Resource type indicators (attention, energy, willpower, etc.)</li>
+                                                <li>Flow direction and volume symbols</li>
+                                                <li>Cycle identifiers (reinforcing, balancing)</li>
+                                                <li>Markers for leaks, generators, and exchanges</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3">
+                                        <h5>Integration Notation</h5>
+                                        <ul>
+                                            <li>Symbols for high-activity intersections</li>
+                                            <li>Indicators for structural-flow misalignments</li>
+                                        </ul>
+                                    </div>
+                                    <div class="legend-builder-placeholder mt-3">
+                                        <div class="sora-placeholder">
+                                            <i class="bi bi-journal-text placeholder-icon"></i>
+                                        </div>
+                                        <div class="sora-caption">
+                                            <p>Legend Builder Interface</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Map Explorer Exercise -->
+                    <div class="content-section mb-5" id="map-explorer-section">
+                        <h2 class="section-title">Map Explorer Exercise</h2>
+                        
+                        <div class="row align-items-center mb-4">
+                            <div class="col-md-7">
+                                <p>Now it's time for an expedition through your completed mental resource map! Like an explorer with a new territory to discover, you'll embark on a guided journey through the landscape of your own consciousness.</p>
+                                
+                                <h5 class="mt-4">How it works:</h5>
+                                <p>This interactive tour will take you through specific regions and features of your unified map, prompting you to observe patterns, ask questions, and note insights. At each stop on the journey, you'll:</p>
+                                <ol>
+                                    <li>Examine a specific aspect of the map</li>
+                                    <li>Answer reflection questions about what you observe</li>
+                                    <li>Note potential implications and opportunities</li>
+                                    <li>Flag areas for deeper exploration</li>
+                                </ol>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="sora-image-container fade-in-up" data-delay="0.3">
+                                    <div class="sora-placeholder">
+                                        <i class="bi bi-compass placeholder-icon"></i>
+                                    </div>
+                                    <div class="sora-caption">
+                                        <h4>Map Explorer</h4>
+                                        <p>Interactive mental map exploration tool</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="exploring-stops p-4 bg-light rounded">
+                            <h5>The tour includes stops at:</h5>
+                            <ul class="exploring-stops-list">
+                                <li><i class="bi bi-geo-alt-fill text-primary"></i> High-activity intersections where structure and flow intensely interact</li>
+                                <li><i class="bi bi-geo-alt-fill text-primary"></i> Surprising or counterintuitive patterns you might not have noticed</li>
+                                <li><i class="bi bi-geo-alt-fill text-primary"></i> Areas of exceptional efficiency or inefficiency</li>
+                                <li><i class="bi bi-geo-alt-fill text-primary"></i> Regions with untapped potential or underutilized resources</li>
+                            </ul>
+                            
+                            <div class="sora-image-container fade-in-up" data-delay="0.4">
+                                <div class="sora-placeholder">
+                                    <i class="bi bi-signpost-2 placeholder-icon"></i>
+                                </div>
+                                <div class="sora-caption">
+                                    <h4>Guided Tour Interface</h4>
+                                    <p>Interactive map tour with stops and reflection prompts</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Key Insights Section -->
+                    <div class="content-section mb-5" id="key-insights-section">
+                        <h2 class="section-title">Key Insights from the Complete Picture</h2>
+                        
+                        <div class="interactive-element mb-4">
+                            <div class="card">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="bi bi-lightbulb me-2"></i>Insight Capture Tool</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p>As you explore your unified mental resource map, you'll have moments of insight—realizations that emerge from seeing the complete picture of your mental architecture. These aren't just interesting observations; they're valuable discoveries that can inform how you optimize your consciousness.</p>
+                                    
+                                    <div class="row mb-4">
+                                        <div class="col-md-6">
+                                            <div class="insight-category p-3 border rounded">
+                                                <h5><i class="bi bi-shuffle"></i> Structural-Flow Misalignments</h5>
+                                                <p>Discover where your mental structure isn't well-designed for the flows you want to support</p>
+                                                <div class="form-floating mb-3">
+                                                    <textarea class="form-control" id="misalignmentInsights" style="height: 100px"></textarea>
+                                                    <label for="misalignmentInsights">Your insights...</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="insight-category p-3 border rounded">
+                                                <h5><i class="bi bi-arrow-left-right"></i> Hidden Resource Competitions</h5>
+                                                <p>Identify where different components or processes are competing for the same limited resources</p>
+                                                <div class="form-floating mb-3">
+                                                    <textarea class="form-control" id="competitionInsights" style="height: 100px"></textarea>
+                                                    <label for="competitionInsights">Your insights...</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="insight-category p-3 border rounded">
+                                                <h5><i class="bi bi-diamond"></i> Underutilized Capacities</h5>
+                                                <p>Spot areas where you have structural capability that isn't being effectively utilized</p>
+                                                <div class="form-floating mb-3">
+                                                    <textarea class="form-control" id="capacityInsights" style="height: 100px"></textarea>
+                                                    <label for="capacityInsights">Your insights...</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="insight-category p-3 border rounded">
+                                                <h5><i class="bi bi-signpost-split"></i> Indirect Influence Paths</h5>
+                                                <p>Uncover non-obvious ways to influence one part of your system through changes in another</p>
+                                                <div class="form-floating mb-3">
+                                                    <textarea class="form-control" id="influenceInsights" style="height: 100px"></textarea>
+                                                    <label for="influenceInsights">Your insights...</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="text-center mt-4">
+                                        <button class="btn btn-primary">Save Insights</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- From Map to Meaning Section -->
+                    <div class="content-section mb-5" id="map-to-meaning-section">
+                        <h2 class="section-title">From Map to Meaning</h2>
+                        
+                        <div class="congratulations-box p-4 bg-success bg-opacity-10 rounded">
+                            <div class="row align-items-center">
+                                <div class="col-md-2 text-center">
+                                    <i class="bi bi-trophy-fill display-1 text-success"></i>
+                                </div>
+                                <div class="col-md-10">
+                                    <h4>Congratulations!</h4>
+                                    <p>You've created a unified mental resource map—a comprehensive blueprint of your consciousness that integrates both structure and dynamics.</p>
+                                    <p>This map isn't just a fascinating visualization; it's a powerful tool for conscious evolution. With it, you can move from reacting to your mental patterns to proactively designing them, from being subject to your mind's architecture to becoming its engineer.</p>
+                                    <p>In the next module, we'll use this map to identify high-leverage points for intervention—places where small, strategic changes can create significant positive effects throughout your system.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="next-step text-center mt-5">
+                            <h4>Ready to find your optimal upgrade points?</h4>
+                            <a href="module3-2.html" class="btn btn-lg btn-primary mt-3">
+                                Continue to Module 3.2: High-Leverage Points and Optimization Opportunities <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="module-navigation d-flex justify-content-between">
+                        <a href="module2-3.html" class="btn btn-outline-primary">
+                            <i class="bi bi-arrow-left me-2"></i> Back to Module 2.3
+                        </a>
+                        <a href="module3-2.html" class="btn btn-primary">
+                            Next: High-Leverage Points and Optimization <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Footer -->
+            <footer class="mt-auto py-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="mb-0">&copy; 2025 AutoNate - Cognitive Blueprint Builder</p>
+                        </div>
+                        <div class="col-md-6 text-md-end">
+                            <p class="mb-0">
+                                <a href="#" class="text-decoration-none">Privacy Policy</a> | 
+                                <a href="#" class="text-decoration-none">Terms of Use</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Restart Confirmation Modal -->
+    <div class="modal fade" id="restartModal" tabindex="-1" aria-labelledby="restartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="restartModalLabel">Restart Tutorial</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to restart the tutorial? This will clear all your saved progress and responses.</p>
+                    <p class="text-danger"><strong>This action cannot be undone.</strong></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirmRestart">Yes, Restart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Export Modal -->
+    <div class="modal fade" id="exportModal" tabindex="-1" aria-labelledby="exportModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exportModalLabel">Export Your Progress</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>What would you like to export?</p>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="exportOption" id="exportCurrent" value="current" checked>
+                        <label class="form-check-label" for="exportCurrent">
+                            Current module only
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="exportOption" id="exportAll" value="all">
+                        <label class="form-check-label" for="exportAll">
+                            All completed modules
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="exportOption" id="exportAI" value="ai">
+                        <label class="form-check-label" for="exportAI">
+                            AI Prompts for my data
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="confirmExport">Export as PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/components/navigation.js"></script>
+    <script src="js/components/theme.js"></script>
+    <script src="js/components/export.js"></script>
+    <script src="js/components/dataManager.js"></script>
+    <script src="js/components/soraGallery.js"></script>
+    <script src="js/pages/module3-1.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

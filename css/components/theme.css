@@ -1,0 +1,61 @@
+/* Theme Toggle Component Styles */
+
+/* Theme toggle button */
+.theme-toggle-btn {
+    position: relative;
+    padding: 0.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50%;
+}
+
+/* Icon styles */
+.dark-icon, .light-icon {
+    position: absolute;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Light theme (default) */
+.light-icon {
+    opacity: 0;
+    transform: rotate(-30deg) scale(0.7);
+    color: #ff9d00;
+}
+
+.dark-icon {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+    color: #2c3e50;
+}
+
+/* Dark theme */
+body.dark-theme .light-icon {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+}
+
+body.dark-theme .dark-icon {
+    opacity: 0;
+    transform: rotate(30deg) scale(0.7);
+}
+
+/* Hover effect */
+.theme-toggle-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+body.dark-theme .theme-toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Theme transition effects for body */
+body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.theme-transition * {
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease !important;
+}
