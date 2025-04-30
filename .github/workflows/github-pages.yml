@@ -5,33 +5,27 @@ on:
     branches: [ main, master ]
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: './mental_arch_web_tutorial'
-      
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+      - name: Copy web app to gh-pages branch
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git checkout -b gh-pages || git checkout gh-pages
+          git pull origin gh-pages --rebase || true
+          
+          # Remove all files except .git to ensure clean deployment
+          find . -mindepth 1 -maxdepth 1 -not -name '.git' -exec rm -rf {} \;
+          
+          # Copy mental_arch_web_tutorial contents to root
+          cp -r mental_arch_web_tutorial/* .
+          
+          # Add, commit and push
+          git add .
+          git commit -m "Update GitHub Pages" || echo "No changes to commit"
+          git push -f origin gh-pages
